@@ -15,7 +15,7 @@ const SecAcreditaciones = () => {
     const card = Object.values(cards);
 
     // search word 
-    const boldtWord = "ITICCOL";
+    const boldtWord = "ITICPER";
     const parts = subTitle.split(boldtWord);
 
     // silder......

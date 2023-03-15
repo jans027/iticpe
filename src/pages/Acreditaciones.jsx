@@ -26,7 +26,7 @@ const Contact = () => {
     // console.log(name)
 
     // search word 
-    const boldtWord = "ITICCOL";
+    const boldtWord = "ITICPER";
     const parts = subTitle.split(boldtWord);
 
     //.......................................................
@@ -68,9 +68,6 @@ const Contact = () => {
             }
         ]
     };
-
-
-
 
     return (
         <>

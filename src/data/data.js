@@ -154,7 +154,7 @@ export const data = [
           documentOnac: {
             title: "ACREDITACIONES",
             subTitle:
-              "Nuestros reconocimientos son el resultado del compromiso con la excelencia y los altos estándares técnicos que nos impulsan a ofrecer lo mejor. En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:",
+              "Nuestros reconocimientos son el resultado del compromiso con la excelencia y los altos estándares técnicos que nos impulsan a ofrecer lo mejor. En ITICPER contamos con acreditación ONAC, vigente a la fecha con código de acreditación:",
             cards: {
               document1: {
                 id: "cardInspec",
@@ -186,16 +186,16 @@ export const data = [
                 textP:
                   "12-CSG-001, bajo la norma \nISO/IEC 17021-1:2015 \npara la certificación de \nsistemas de gestión",
               },
-              document2: {
-                id: "cardPers",
-                url: "https://onac.org.co/certificados/14-OCP-006.pdf",
-                img: "ONAC_PERSONAS.png",
-                name: "PERSONAS",
-                acreditacion: 'personas',
-                text0: 'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
-                textP:
-                  "14-OCP-006, bajo la \nnorma ISO/IEC 17024:2012 \npara la certificación de \npersonas",
-              },
+              // document2: {
+              //   id: "cardPers",
+              //   url: "https://onac.org.co/certificados/14-OCP-006.pdf",
+              //   img: "ONAC_PERSONAS.png",
+              //   name: "PERSONAS",
+              //   acreditacion: 'personas',
+              //   text0: 'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
+              //   textP:
+              //     "14-OCP-006, bajo la \nnorma ISO/IEC 17024:2012 \npara la certificación de \npersonas",
+              // },
             },
           },
         },
@@ -1104,11 +1104,11 @@ export const data = [
           },
     },
     consulta: {
-      id: "consultaNav",
-        name: "CONSULTA TU CERTIFICADO",
+          id: "consultaNav",
+          name: "CONSULTA TU CERTIFICADO",
           url: "",
-            img: "modal-certificado.jpg",
-              input: {
+          img: "modal-certificado.jpg",
+          input: {
         input1: {
           id: "inputCertificado",
             label: "Categoría del certificado",
