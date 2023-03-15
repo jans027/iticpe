@@ -14,7 +14,7 @@ import ArrowDropDownSharpIcon from '@mui/icons-material/ArrowDropDownSharp';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 // images
 import Logo from '../images/Logo-itic.svg';
-import ImgCol from '../images/Bandera-col.png';
+import ImgPer from '../images/Bandera-Per.png';
 import MenuMobile from "../components/MenuMobile";
 import ModalForm from "../components/ModalForm";
 
@@ -195,8 +195,8 @@ const NavBar = () => {
                             onClick={(event) => handleClick3(event)}
                             name='servicios'
                         >
-                            <img src={ImgCol} alt="" />
-                            <Link>COL<ArrowDropDownSharpIcon /></Link>
+                            <img src={ImgPer} alt="" />
+                            <Link>PER<ArrowDropDownSharpIcon /></Link>
                         </BtnBase>
                         <MenuDrop
                             // id="basic-menu"

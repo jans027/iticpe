@@ -5,8 +5,8 @@ export const data = [
       name: "INICIO",
       url: "/home",
       logoNav: "Logo-itic.svg",
-      email: "contacto@iticco.com",
-      phone: "+57 314 3553180",
+      email: "contacto@iticpe.com",
+      phone: "+51 000 0000000",
       whatsappUrl: "https://api.whatsapp.com/send?phone=573143553180",
       whatsappImg: "boton.png",
       addressItic: "Of. Calle 108 #45-27 \nEd. ITICCOL - Bogotá Colombia",
@@ -1261,18 +1261,18 @@ export const data = [
           },
     },
     countries: {
-      // colombia: {
-      //   id: "colombia",
-      //     name: "COL",
-      //       url: "https://www.iticco.com/",
-      //         img: "Bandera-col.png",
-      //     },
-      peru: {
-          id: "peru",
-          name: "PER",
-          url: "https://xd.adobe.com/view/9b481622-0745-4457-b772-4cb1961cf04d-ce1b/?fullscreen",
-          img: "Bandera-Per.png",
-        },
+      colombia: {
+        id: "colombia",
+        name: "COL",
+        url: "https://www.iticco.com/",
+        img: "Bandera-col.png",
+      },
+      // peru: {
+      //     id: "peru",
+      //     name: "PER",
+      //     url: "https://xd.adobe.com/view/9b481622-0745-4457-b772-4cb1961cf04d-ce1b/?fullscreen",
+      //     img: "Bandera-Per.png",
+      //   },
     },
     home: {
       bannerHome1: "",

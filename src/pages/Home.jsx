@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>ITIC Colombia – Committed to our service Integrity</title>
+                <title>ITICPE Peru – Committed to our service Integrity</title>
                 <meta name="description" content="Helmet application" />
             </Helmet>
             <SimpleSlider/>
