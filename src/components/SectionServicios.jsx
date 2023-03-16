@@ -16,7 +16,7 @@ const SectionServicios = () => {
     // console.log(serviciosSub)
 
     // search word 
-    const boldtWord = "INSPECCIÓN, CERTIFICACIÓN Y ENSAYOS";
+    const boldtWord = "SUPERVISIÓN, INSPECCIÓN, CERTIFICACIÓN Y ENSAYOS";
     const parts = servicios.subTitle.split(boldtWord);
 
 

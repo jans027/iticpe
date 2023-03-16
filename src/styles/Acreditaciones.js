@@ -15,7 +15,7 @@ export const TitleAcred = styled.div`
 `
 export const ContCardsAcred = styled.div`
     /* border: 1px solid red;//....................... */
-    width: clamp(700px, 47vw, 870px);
+    /* width: clamp(700px, 47vw, 870px); */
     margin: auto;
     margin-bottom: 4em;
     display: flex;
@@ -90,6 +90,9 @@ export const CardAcredMobile = styled.div`
     height: auto;
     border-radius: 30px;
     padding-top: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .cardExperiencia{
         width: 480px;
         
@@ -99,18 +102,19 @@ export const CardAcredMobile = styled.div`
     background-color: var(--color5);
     span{
         p{
-        font-size: 1.3vw;
+        border: 1px solid transparent;//...............
+        font-size: 18px;
         line-height: 1.3em;
-        padding: .5em;
+        padding: .9em;
         text-align: center;
-        /* border: 1px solid red;//............... */
         @media(max-width:950px){
             font-size: 14px;
             }
         }
     }
     img{
-        width: 100%;
+        width: 85%;
+        margin: auto;
     }
     
     a{
@@ -147,7 +151,11 @@ export const CardAcredMobile = styled.div`
 `
 export const CardAcredt = styled.div`
     /* border: 1px solid blue;//....................... */
-    width: clamp(293px, 21vw, 330px);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: clamp(293px, 21vw, 330px); */
     border-radius: 30px;
     padding-top: 1.3rem;
     background-color: var(--color5);
@@ -170,12 +178,12 @@ export const CardAcredt = styled.div`
         }
     }
     img{
-        width: 85%;
         /* border: 1px solid red;//............... */
+        width: 85%;
     }
     
     a{
-        height: 5vw;
+        height: 4em;
         min-height: 40px;
         font-size: 1.5vw;
         font-weight: 700;

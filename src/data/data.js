@@ -154,7 +154,7 @@ export const data = [
           documentOnac: {
             title: "ACREDITACIONES",
             subTitle:
-              "Nuestros reconocimientos son el resultado del compromiso con la excelencia y los altos estándares técnicos que nos impulsan a ofrecer lo mejor. En ITICPER contamos con acreditación ONAC, vigente a la fecha con código de acreditación:",
+              "Nuestros reconocimientos son el resultado del compromiso con la excelencia y los altos estándares técnicos que nos impulsan a ofrecer lo mejor. En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:",
             cards: {
               document1: {
                 id: "cardInspec",
@@ -162,9 +162,9 @@ export const data = [
                 img: "ONAC_INSPECCION.png",
                 name: "INSPECCION",
                 acreditacion: 'inspeccion',
-                text0: 'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
+                text0: 'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
                 textP:
-                  "15-OIN-014, bajo la norma \nISO/IEC 17020:2012 \npara la certificación de \ninspecciones",
+                  "INTERNATIONAL TESTING INSPECTION &CERTIFICATION PERU S.A.C Organismo de inspección acreditado por el organismo de acreditación INACAL-DA con Registro No. OI-018",
               },
               document3: {
                 id: "cardProd",
@@ -172,9 +172,9 @@ export const data = [
                 img: "ONAC_PRODUCTO.png",
                 name: "PRODUCTOS",
                 acreditacion: 'productos',
-                text0:'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
+                text0:'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
                 textP:
-                  "15-CPR-002, bajo la \nnorma ISO/IEC 17065:2012 \npara la certificación de \nproducto",
+                  "En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación 15-CPR-002, bajo la norma ISO/IEC 17065:2012 para la certificación de producto",
               },
               document4: {
                 id: "cardGest",
@@ -182,9 +182,9 @@ export const data = [
                 img: "ONAC_GESTION.png",
                 name: "SISTEMAS DE \nGESTIÓN",
                 acreditacion: 'gestion',
-                text0: 'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
+                text0: 'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
                 textP:
-                  "12-CSG-001, bajo la norma \nISO/IEC 17021-1:2015 \npara la certificación de \nsistemas de gestión",
+                  "En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación 12-CSG-001, bajo la norma ISO/IEC 17021-1:2015 para la certificación de sistemas de gestión",
               },
               // document2: {
               //   id: "cardPers",
@@ -576,7 +576,7 @@ export const data = [
       name: "SERVICIOS",
       url: "",
       subTitle:
-        "Nuestra experiencia en proyectos de gran envergadura a nivel nacional e internacional nos permite ofrecer confianza, agilidad, integridad y seguridad en servicios de INSPECCIÓN, CERTIFICACIÓN Y ENSAYOS.",
+        "Nuestra experiencia en proyectos de gran envergadura a nivel nacional e internacional nos permite ofrecer confianza, agilidad, integridad y seguridad en servicios de SUPERVISIÓN, INSPECCIÓN, CERTIFICACIÓN Y ENSAYOS.",
       dropDownMenu: {
         industriales: {
           key: 3,
@@ -593,7 +593,7 @@ export const data = [
           nameBtn: "MÁS SERVICIOS",
           cardImg: "INDUSTRIALES.png",
           cardText:
-            " ▸ Servicios de Interventoría. \n▸ Evaluación de Integridad. \n▸ Servicios de Inspección. \n▸ Ensayos No Destructivos NDT. \n▸ Certificación Instalaciones RETIE/RETILAP",
+            "Contamos con experiencia en proyectos de gran envergadura tanto a nivel nacional como internacional",
           cards: {
             card0: {
               id: "certificacion-sistemas-retie-retilap",
@@ -787,7 +787,7 @@ export const data = [
           nameBtn: "MÁS SERVICIOS",
           cardImg: "PRODUCTO.png",
           cardText:
-            "▸ Certificación RETIE/RETILAP/RETIQ. \n▸ Certificación de Pilas. \n▸ Certificación de Gasodomésticos. \n▸ TCA ENEL",
+            "Tiene como finalidad demostrar al mercado y a los organismos reguladores que un proveedor fabrica productos, cumpliendo en todas sus etapas con los requisitos técnicos definidos.",
           cards: {
             card0: {
               id: "reglamento-refrigeracion-costa-rica",
@@ -954,7 +954,7 @@ export const data = [
           nameBtn: "VER MÁS",
           cardImg: "GESTION.png",
           cardText:
-            "▸ Certificación Sistemas de Gestión. \n▸ GAP Análisis. \n▸ Auditoria Interna. \n▸ Evaluación de Proveedores",
+            "Contamos con un amplio y competente equipo de profesionales con la experiencia y conocimientos para desarrollar una auditoría objetiva, imparcial y con valor agregado que le permita a la organización el mejoramiento de sus Sistemas de Gestión.",
           cards: {
             card0: {
               id: "certificacion",
@@ -1034,74 +1034,7 @@ export const data = [
             },
           },
         },
-        personas: {
-          key: 4,
-          id: "personas",
-          name: "CERTIFICACIÓN DE PERSONAS",
-          nameNav2: "Certificación de personas",
-          nameFooter: "Certificación de personas",
-          url: "/servicios/personas",
-          helmet: 'Certificación de personas',
-          btn1: 'MÁS SERVICIOS',
-          subTitle2:
-            "Nuestro servicio de certificación de personas es la mejor opción para aquellos que necesitan demostrar sus habilidades y conocimientos en una determinada área. Con nuestra certificación, puedes demostrar a empleadores y clientes tu compromiso con tu profesión.",
-          banner1: "",
-          nameBtn: "VER MÁS",
-          cardImg: "PERSONAS.png",
-          cardText:
-            "▸ Certificación Instalador / Inspector / Reparador. \nGas Natural Residencial y Comercial. \n▸ Certificación Suministro / Mantenimiento / Instalador.\nGas Natural Comprimido Vehicular.",
-          cards: {
-            card0: {
-              id: "gas-natural-comprimido-vehicular",
-              img: "certificacion-personas/cpersona-gas-vehicular.png",
-              imgPc: "certificacion-personas/cpersona-gas-vehicular-dk.png",
-              imgMobile: "certificacion-personas/cpersona-gas-vehicular-mb.png",
-              text1: "GAS NATURAL \nCOMPRIMIDO \nVEHICULAR",
-              text2: "GAS NATURAL COMPRIMIDO \nVEHICULAR",
-              helmet: 'Gas natural comprimido vehicular',
-              acreditacion: 'personas',
-              normaNumero: true,
-              paragraph1: 'GAS NATURAL VEHICULAR «GNCV»\n\n• Operador para suministrar gas natural comprimido vehicular en estaciones de servicio\n– NSCL 290302027 SENA V1\n– NSCL 210601020 SENA V1\n– NSCL 280202099 SENA V1\n\n• Operador para mantenimiento de equipos en estaciones de servicio para el suministro de GNCV\n– NSCL 290302025 SENA V1\n\n• Mecánico instalador de equipos de conversión a GNCV en vehículos automotores\n– NSCL 280601093 SENA V1\n– NSCL 280601096 SENA V1\n– NSCL 280601117 SENA V1\n',
-              btn1: "REGRESAR",
-            },
-            card1: {
-              id: "gas-natural-residencial-y-comercial",
-              img: "certificacion-personas/cpersona-gas-residencial.png",
-              imgPc: "certificacion-personas/cpersona-gas-residencial-dk.png",
-              imgMobile: "certificacion-personas/cpersona-gas-residencial-mb.png",
-              text1: "GAS NATURAL \nRESIDENCIAL \nY COMERCIAL",
-              text2: "GAS NATURAL RESIDENCIAL Y \nCOMERCIAL",
-              helmet: 'Gas natural residencial y comercial',
-              acreditacion: 'personas',
-              normaNumero: true,
-              paragraph1: "• Instalador de sistemas para el suministro de Gas combustible en edificaciones residenciales y comerciales- construcción mediante uniones roscadas\n• Instalador de sistemas para el suministro de Gas combustible en edificaciones residenciales y comerciales- construcción mediante uniones soldadas\n• Instalador de sistemas para el suministro de Gas combustible en edificaciones residenciales y comerciales- construcción mediante uniones abocinadas y/o anillo de compresión\n\n– NSCL 280202104 SENA V1\n– NSCL 280202105 SENA V1\n– NSCL 280202106 SENA V1\n– NSCL 280202107 SENA V1\n– NSCL 280202108 SENA V1\n– NSCL 290202083 SENA V1\n– NSCL 280202110 SENA V1\n– NSCL 280202096 SENA V2\n– NSCL 280202092 SENA V2″\n\n• Reparador de artefactos a gas de uso residencial y comercial\n– NSCL 280202086 SENA V2\n– NSCL 280202086 SENA V2\n\n• Inspector de instalaciones para suministro de gas a usuarios residenciales y comerciales\n– NSCL 280202086 SENA V2\n– NSCL 280202090 SENA V2\n",
-              btn1: "REGRESAR", 
-                          },
-                        },
-          documents: {
-      document0: {
-        id: "doc_n0",
-          text: "- Documento 1 (descargar)",
-            url: "",
-                },
-      document1: {
-        id: "doc_n1",
-          text: "- Documento 2 (descargar)",
-            url: "",
-                },
-      document2: {
-        id: "doc_n2",
-          text: "- Documento 3 (descargar)",
-            url: "",
-                },
-      document3: {
-        id: "doc_n3",
-          text: "- Documento 4 (descargar)",
-            url: "",
-                },
-    },
-            },
-          },
+      },
     },
     consulta: {
           id: "consultaNav",

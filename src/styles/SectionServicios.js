@@ -11,22 +11,22 @@ export const ConSectionServicios = styled.div`
     padding: 2rem 0;
 `
 export const ContCardsServi = styled.div`
+    /* border: 1px solid red;//....................... */
     width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 30px 0;
-    /* border: 1px solid red;//....................... */
 `
 export const CardServicios = styled.div`
-    width: 25%;
+    /* border: 1px solid red;//.................. */
+    width: 33%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     align-items: center;
     transition: 30ms;
-    /* border: 1px solid red;//.................. */
     @media(max-width:800px){
         width: 50%;
     }

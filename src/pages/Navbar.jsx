@@ -164,12 +164,12 @@ const NavBar = () => {
                         </MenuDrop>
                     </ul>
 
-                    {/* <BtnBase
+                    <BtnBase
                         id="inicio"
                         className="inicio"
                     >
                         <Link to={cotizacion.url}>{cotizacion.name}</Link>
-                    </BtnBase> */}
+                    </BtnBase>
 
                     <BtnBase
                         id="inicio"
