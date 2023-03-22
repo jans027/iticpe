@@ -21,7 +21,7 @@ import politica_confidencialidad from '../documents/ITIC-C-NA-DI-003-POLITICA-DE
 
 
 // Images
-import LogFooter from '../images/Logo-itic-blanco.svg';
+import LogFooter from '../images/Logo-iticpe-blanco.svg';
 import ModalForm from './ModalForm';
 import MenuMobile from './MenuMobile';
 //Acordion

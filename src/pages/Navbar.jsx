@@ -13,7 +13,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import ArrowDropDownSharpIcon from '@mui/icons-material/ArrowDropDownSharp';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 // images
-import Logo from '../images/Logo-itic.svg';
+import Logo from '../images/Logo-iticpe.svg';
 import ImgPer from '../images/Bandera-Per.png';
 import MenuMobile from "../components/MenuMobile";
 import ModalForm from "../components/ModalForm";

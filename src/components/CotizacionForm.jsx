@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { data } from '../data/data';
 import styled from "styled-components";
-import { BtnFormContact, CheckboxInput, CheckboxLabel, FormContact, TextArea } from '../styles/Contact';
+import { BtnFormCotizacion, CheckboxInputCotizacion, CheckboxLabelCotizacion, FormCotizacion } from '../styles/Cotizacion';
 
 
 
@@ -11,15 +11,7 @@ const CotizacionForm = (props) => {
 
     // get data
     const [datos] = data;
-    const { contacto: { contactanos: {
-        labelName,
-        labelDocument,
-        labelPhone,
-        labelEmail,
-        labelSolic,
-        placeholder_solic,
-        checkbox,
-        solicitud } } } = datos;
+    const { contacto: { contactanos: {placeholder_solic,checkbox,solicitud } } } = datos;
 
     // ...dinamic class name
     const [classAlert0, setClassAlert0] = useState('form_input')
@@ -149,7 +141,7 @@ const CotizacionForm = (props) => {
 
 
     return (
-        <FormContact>
+        <FormCotizacion>
             <div className='cont_form_mail'>
                 <form ref={formRef} onSubmit={sendEmail}>
 
@@ -259,7 +251,7 @@ const CotizacionForm = (props) => {
                         </select>
 
                         <label className='form_label'>Tipo de Servicio<span>*</span></label>
-                        <select name="seleccion" required>
+                        <select className='form_label2' name="seleccion" required>
                             <option value="" hidden>{placeholder_solic}</option>
                             <option value={solicitud[0]}>{solicitud[0]}</option>
                             <option value={solicitud[1]}>{solicitud[1]}</option>
@@ -269,29 +261,29 @@ const CotizacionForm = (props) => {
                         </select>
 
 
-                        <CheckboxLabel>
-                            <CheckboxInput
+                        <CheckboxLabelCotizacion>
+                            <CheckboxInputCotizacion
                                 required
                                 type="checkbox"
                                 id="cbox1"
                                 value="first_checkbox" />
                             <span>{checkbox}</span>
-                        </CheckboxLabel>
+                        </CheckboxLabelCotizacion>
 
-                        <BtnFormContact>
+                        <BtnFormCotizacion>
                             <button
                                 type="submit"
                                 value="Enviar"
                                 onFocus={handleFocus}
                             >Enviar
                             </button>
-                        </BtnFormContact>
+                        </BtnFormCotizacion>
                     </div>
 
                 </form>
             </div>
 
-        </FormContact>
+        </FormCotizacion>
     );
 }
 export default CotizacionForm;

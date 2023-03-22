@@ -3,11 +3,11 @@ import Address from '../components/Address';
 import ContactForm from '../components/ContactForm';
 import SecMap from '../components/SecMap';
 import { data } from '../data/data';
-import ImgBannerPc from '../images/shutterstock_150293498---copia.png';
+import ImgBannerPc from '../images/FormularioCotiza.png';
 import ImgBannerMobile from '../images/contacto_mobile.png';
-import { ContContact, ContContactForm, ContImgComtact } from '../styles/Contact';
 import { Helmet } from 'react-helmet';
 import CotizacionForm from '../components/CotizacionForm';
+import { ContCotizacion, ContCotizacionForm, ContImgCotizacion } from '../styles/Cotizacion';
 
 
 // get data
@@ -45,12 +45,12 @@ export default class Cotizacion extends Component {
       <>
         <Helmet><title>{helmet} – ITIC Colombia</title></Helmet>
 
-        <ContContact>
-          <ContImgComtact>
+        <ContCotizacion>
+          <ContImgCotizacion>
             <img src={screenWidth < 768 ? ImgBannerMobile : ImgBannerPc} alt={id} />
-          </ContImgComtact>
+          </ContImgCotizacion>
 
-          <ContContactForm >
+          <ContCotizacionForm >
             <div className='contContact2'>
               <p className='title'>{name}</p>
               <p className='subTitle'>
@@ -65,8 +65,8 @@ export default class Cotizacion extends Component {
               </p>
               <CotizacionForm />
             </div>
-          </ContContactForm>
-        </ContContact>
+          </ContCotizacionForm>
+        </ContCotizacion>
         {/* <Address /> */}
       </>
     )
