@@ -110,7 +110,7 @@ const SendMail = (props) => {
         } else {
             // console.log(dataForm)
             const url = SERVICE_URL;
-            const Nombre = 'Consulta Certificado';
+            const Nombre = 'CERTIFICADO';
             //we get exact time to generate a different conversation email each time
             const subject = new Date();
             const formatDate = subject.toLocaleTimeString();

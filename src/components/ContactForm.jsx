@@ -132,7 +132,7 @@ const ContactForm = (props) => {
             setClassAlert3('class_1');
 
         } else {
-            console.log(dataForm)
+            // console.log(dataForm)
 
             const url = SERVICE_URL;
             const Nombre = 'CONTACTO';
