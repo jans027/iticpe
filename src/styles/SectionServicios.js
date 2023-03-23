@@ -150,19 +150,15 @@ export const ContMapa = styled.div`
 `
 export const ContTexto1 = styled.div`
     /* border: 1px solid red;//..................... */
-    width: 60%;
-    left: 60px;
+    width: 50%;
+    left: 25%;
     z-index: 2;
     /* margin-top: 10px; */
     position:absolute;
     .text_title{
         margin-bottom:1em ;
-        font-size: 22px;
+        font-size: clamp(20px, 1.5vw, 42px);
         font-weight:900;
-    }
-    .countries{
-        font-size: 20px;
-        font-weight:600;
     }
     @media (max-width:1000px) {
             position:unset;
@@ -173,17 +169,15 @@ export const ContTexto1 = styled.div`
 export const ContTexto2 = styled.div`
     /* border: 1px solid red;//..................... */
     width: 60%;
-    right: 60px;
-    margin-top: 300px;
+    left: 20%;
+    margin-top: 32vw;
     position:absolute;
-    .text_title{
-        margin-bottom: 1em;
-        font-size: 22px;
-        font-weight:900;
-    }
     .countries{
-        font-size: 20px;
+        font-size: clamp(18px, 1.5vw, 36px);
         font-weight:600;
+    }
+    .text2{
+        font-size: clamp(16px, 1.3vw, 26px);
     }
     @media (max-width:1000px) {
             position:unset;

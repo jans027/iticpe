@@ -12,10 +12,6 @@ const SliderExperiencias = () => {
     const { empresa: { dropDownMenu: { proyectos: { url, cards } } } } = datos;
     const card = Object.values(cards);
 
-
-
-
-
     // silder......
     const settings = {
         // dots: true,
@@ -49,7 +45,6 @@ const SliderExperiencias = () => {
         <>
             <ContSliderAcr>
                 <ConSliderExp2 {...settings}>
-
                     {
                         card.map((item) =>
                             <div key={item.id} className='sub_cont_card2'>

@@ -59,7 +59,7 @@ const SecExperiencia = (props) => {
                     <img isVisible={isVisible} className='image' src={require(`../images/${banner1}`)} alt={banner1} />
                     <ContTexto2>
                         <p className='countries'>{text2}</p>
-                        <p>{text3}</p>
+                        <p className='text2'>{text3}</p>
                     </ContTexto2>
                 </ContMapa>
                 <SubTitleSection>{subTitle}</SubTitleSection>
