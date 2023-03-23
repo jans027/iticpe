@@ -231,11 +231,8 @@ export const CheckboxInput = styled.input `
   /* border-radius: 50%; */
   position: relative;
   transition: all 0.3s ease;
-  /* border-color: var(--color1); */
-
   &:checked {
-    border: 2px solid var(--color1);
-    background-color: var(--color1);
+    background-color: var(--color4);
   }
 
   &:checked::after {
