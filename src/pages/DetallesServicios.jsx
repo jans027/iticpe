@@ -32,7 +32,6 @@ const DetallesServicios = (props) => {
     const rute1 = Object.values(dropDownMenu.gestion.cards);
     const rute2 = Object.values(dropDownMenu.producto.cards);
     const rute3 = Object.values(dropDownMenu.industriales.cards);
-    const rute4 = Object.values(dropDownMenu.personas.cards);
 
     // obtaining and deconstructing dynamic data
     const [nuevoDatos, setNuevoDatos] = useState([]);
@@ -62,14 +61,6 @@ const DetallesServicios = (props) => {
             setAcreditacion(acreditaciones)
             setNuevoDatos((prevDatos) => [objetoEncontrado3]);
             setIdProp(props.industriales);
-
-        } else if (props.personas) {
-            const objetoEncontrado4 = rute4.find((objeto) => objeto.id === id);
-            const acreditaciones = rute0.find((objeto) => objeto.acreditacion === objetoEncontrado4.acreditacion);
-            setAcreditacion(acreditaciones)
-            setNuevoDatos((prevDatos) => [objetoEncontrado4]);
-            setIdProp(props.personas);
-
         }
     }
     // decision tree and prevent ifinite loop
@@ -79,11 +70,6 @@ const DetallesServicios = (props) => {
 
     // we assign path to key active
     const user = rute.find(item => item.id === idProp);
-
-
-
-
-
 
     return (
         <>

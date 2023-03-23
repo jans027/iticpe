@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-
+const spin = keyframes`
+    from {transform: translate(0);}
+    to {transform: translate(12.4%);}
+`
+const spin2 = keyframes`
+    from {transform: translate(-10%);}
+    to {transform: translate(1%);}
+`
 export const ConSectionServicios = styled.div` 
     /* border: 1px solid red;//....................... */
     background-color: var(--color2);
@@ -116,5 +123,71 @@ export const EnlaceBtnS = styled(Link)`
     &:active{
     background-color: var(--color7);
     
+    }
+`
+export const ContMapa = styled.div`
+    /* border: 1px solid red;//..................... */
+    display: flex;
+    @media (max-width:1000px) {
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+    img{
+        /* border: 1px solid red;//..................... */
+        width: 80%;
+        /* margin: 0 auto; */
+        transition: opacity 0.5s;
+        &.animate {
+            animation: ${spin} 1s alternate forwards;
+        }
+        @media (max-width:1000px) {
+            width: 100%;
+            &.animate {
+                animation: ${spin2} 1s alternate forwards;
+            }
+        }
+    }
+`
+export const ContTexto1 = styled.div`
+    /* border: 1px solid red;//..................... */
+    width: 60%;
+    left: 60px;
+    z-index: 2;
+    /* margin-top: 10px; */
+    position:absolute;
+    .text_title{
+        margin-bottom:1em ;
+        font-size: 22px;
+        font-weight:900;
+    }
+    .countries{
+        font-size: 20px;
+        font-weight:600;
+    }
+    @media (max-width:1000px) {
+            position:unset;
+            width: 90%;
+            margin:0 auto;
+    }
+`
+export const ContTexto2 = styled.div`
+    /* border: 1px solid red;//..................... */
+    width: 60%;
+    right: 60px;
+    margin-top: 300px;
+    position:absolute;
+    .text_title{
+        margin-bottom: 1em;
+        font-size: 22px;
+        font-weight:900;
+    }
+    .countries{
+        font-size: 20px;
+        font-weight:600;
+    }
+    @media (max-width:1000px) {
+            position:unset;
+            width: 90%;
+            margin:auto;
     }
 `

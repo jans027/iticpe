@@ -20,9 +20,9 @@ export const data = [
         card0: {
           id: "card-Banner1",
           title: "INSPECCIÓN",
-          imgDk:'banners-ppales/Banner-ppal-dk-itic.png',
-          imgTb:'banners-ppales/Banner-ppal-tb-itic.png',
-          imgMb:'banners-ppales/Banner-ppal-mb-itic.png',
+          imgDk:'banners-ppales/Banner-ppal-dk-iticpe.png',
+          imgTb:'banners-ppales/Banner-ppal-tb-iticpe.png',
+          imgMb:'banners-ppales/Banner-ppal-mb-iticpe.png',
           paragraph:
             "A través de nuestros servicios de inspección, ponemos a disposición de los clientes toda nuestra experticia y experiencia técnica para ser sus ojos en el lugar del mundo que lo requieran y de esta manera garantizar la calidad en sus procesos y evitar pérdidas de tiempo y dinero.",
           btn: "SOLICITAR INFORMACIÓN",
@@ -159,7 +159,7 @@ export const data = [
               document1: {
                 id: "cardInspec",
                 url: "https://onac.org.co/certificados/15-OIN-014.pdf",
-                img: "ONAC_INSPECCION.png",
+                img: "Inspeccion_peru.png",
                 name: "INSPECCION",
                 acreditacion: 'inspeccion',
                 text0: 'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
@@ -186,16 +186,6 @@ export const data = [
                 textP:
                   "En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación 12-CSG-001, bajo la norma ISO/IEC 17021-1:2015 para la certificación de sistemas de gestión",
               },
-              // document2: {
-              //   id: "cardPers",
-              //   url: "https://onac.org.co/certificados/14-OCP-006.pdf",
-              //   img: "ONAC_PERSONAS.png",
-              //   name: "PERSONAS",
-              //   acreditacion: 'personas',
-              //   text0: 'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
-              //   textP:
-              //     "14-OCP-006, bajo la \nnorma ISO/IEC 17024:2012 \npara la certificación de \npersonas",
-              // },
             },
           },
         },
@@ -342,9 +332,17 @@ export const data = [
           helmet: "Nuestras Experiencias",
           nameSecction: "NUESTRA EXPERIENCIA",
           url: "/empresa/proyectos",
-          banner1: "",
+          banner1: "Mapa.png",
           subTitle:
             "Con orgullo presentamos nuestros proyectos y procesos más importantes, los cuales han dejado huella en nuestros clientes y han contribuido a nuestro crecimiento y reconocimiento en el mercado.",
+          textMap: {
+            id: 'text_map',
+            text1:'Países donde se han prestado servicios en sitio con personal de Colombia (Sólo Producto)',
+            text2: 'EEUU, Alemania, Italia, Francia, España, México, Finlandia, Argentina, China, Salvador, India, Guatemala, Panamá, Costa Rica, Brasil, Ecuador',
+            text3: '*Hemos tenido Clientes de casi todo el mundo',
+            text4:'Departametnos donde se han prestado servicios en Colombia (Producto+Inspección RETIE):',
+            text5: 'Valle, Cundinamarca, Antioquia, Boyacá, Atlántico, Meta, Cesar, Santander, Guainía, Norte de Santander, Huila, Tolima, Putumayo, Caldas, Córdoba, Risaralda, Casanare',
+          },
           cards: {
             card1: {
               id: "proyect1",
@@ -1294,55 +1292,131 @@ export const data = [
         cards: {
         card1: {
           id: "card_logo_1",
-            img: "Logos_Clientes/Logo_Celsia-100.jpg",
+            img: "Logos_Clientes/Logo_1.jpg",
             },
         card2: {
           id: "card_logo_2",
-            img: "Logos_Clientes/Logo_Ecopetrol-100.jpg",
+          img: "Logos_Clientes/Logo_2.jpg",
             },
         card3: {
           id: "card_logo_3",
-            img: "Logos_Clientes/Logo_Enel-100.jpg",
+            img: "Logos_Clientes/Logo_3.jpg",
             },
         card4: {
           id: "card_logo_4",
-            img: "Logos_Clientes/Logo_Falabella-100.jpg",
+            img: "Logos_Clientes/Logo_4.jpg",
             },
         card5: {
           id: "card_logo_5",
-            img: "Logos_Clientes/Logo_Legrand-100.jpg",
+            img: "Logos_Clientes/Logo_5.jpg",
             },
         card6: {
           id: "card_logo_6",
-            img: "Logos_Clientes/Logo_LG-100.jpg",
+          img: "Logos_Clientes/Logo_6.jpg",
             },
         card7: {
           id: "card_logo_7",
-            img: "Logos_Clientes/Logo_Primax-100.jpg",
+            img: "Logos_Clientes/Logo_7.jpg",
             },
         card8: {
           id: "card_logo_8",
-            img: "Logos_Clientes/Logo_Samsung-100.jpg",
+            img: "Logos_Clientes/Logo_8.jpg",
             },
         card10: {
           id: "card_logo_10",
-            img: "Logos_Clientes/Logo_Siemens-100.jpg",
+            img: "Logos_Clientes/Logo_9.jpg",
             },
         card11: {
           id: "card_logo_11",
-            img: "Logos_Clientes/Logo_Sierra-100.jpg",
+            img: "Logos_Clientes/Logo_10.jpg",
             },
         card12: {
           id: "card_logo_12",
-            img: "Logos_Clientes/Logo_Homecenter-100.jpg",
+            img: "Logos_Clientes/Logo_11.jpg",
             },
         card13: {
           id: "card_logo_13",
-            img: "Logos_Clientes/Logo_TGI-100.jpg",
+            img: "Logos_Clientes/Logo_12.jpg",
             },
         card14: {
           id: "card_logo_14",
-            img: "Logos_Clientes/Logo_TrinaSolar-100.jpg",
+            img: "Logos_Clientes/Logo_13.jpg",
+            },
+        card15: {
+          id: "card_logo_15",
+            img: "Logos_Clientes/Logo_14.jpg",
+            },
+        card16: {
+          id: "card_logo_16",
+            img: "Logos_Clientes/Logo_15.jpg",
+            },
+        card17: {
+          id: "card_logo_17",
+            img: "Logos_Clientes/Logo_16.jpg",
+            },
+        card18: {
+          id: "card_logo_18",
+            img: "Logos_Clientes/Logo_17.jpg",
+            },
+        card19: {
+          id: "card_logo_19",
+            img: "Logos_Clientes/Logo_18.jpg",
+            },
+        card20: {
+          id: "card_logo_20",
+            img: "Logos_Clientes/Logo_19.jpg",
+            },
+        card21: {
+          id: "card_logo_21",
+            img: "Logos_Clientes/Logo_20.jpg",
+            },
+        card22: {
+          id: "card_logo_22",
+            img: "Logos_Clientes/Logo_21.jpg",
+            },
+        card23: {
+          id: "card_logo_23",
+            img: "Logos_Clientes/Logo_22.jpg",
+            },
+        card24: {
+          id: "card_logo_24",
+            img: "Logos_Clientes/Logo_23.jpg",
+            },
+        card25: {
+          id: "card_logo_25",
+            img: "Logos_Clientes/Logo_24.jpg",
+            },
+        card26: {
+          id: "card_logo_26",
+            img: "Logos_Clientes/Logo_25.jpg",
+            },
+        card27: {
+          id: "card_logo_27",
+            img: "Logos_Clientes/Logo_27.jpg",
+            },
+        card28: {
+          id: "card_logo_28",
+            img: "Logos_Clientes/Logo_28.jpg",
+            },
+        card29: {
+          id: "card_logo_29",
+            img: "Logos_Clientes/Logo_29.jpg",
+            },
+        card30: {
+          id: "card_logo_30",
+            img: "Logos_Clientes/Logo_30.jpg",
+            },
+        card31: {
+          id: "card_logo_31",
+            img: "Logos_Clientes/Logo_31.jpg",
+            },
+        card32: {
+          id: "card_logo_32",
+            img: "Logos_Clientes/Logo_32.jpg",
+            },
+        card33: {
+          id: "card_logo_33",
+            img: "Logos_Clientes/Logo_33.jpg",
             },
       },
     },

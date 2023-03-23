@@ -5,7 +5,6 @@ import VisibilitySensor from 'react-visibility-sensor';
 import { data } from '../data/data';
 import ImgSoporte from '../images/soporte.png'
 import { BtnEnfoque1, BtnEnfoque2, ContEnfoque, ContEnfoque3, ContTextEnfoque, ImgCard } from '../styles/SecEnfoque';
-import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 
 
 const SecEnfoque = () => {
