@@ -1,23 +1,34 @@
 import React, { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import { data } from '../data/data';
 import styled from "styled-components";
-import { BtnFormCotizacion, CheckboxInputCotizacion, CheckboxLabelCotizacion, FormCotizacion } from '../styles/Cotizacion';
-
+import { BtnFormContact, CheckboxInput, CheckboxLabel, FormContact } from '../styles/Contact';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// email send
 
 
 
 const CotizacionForm = (props) => {
 
+    // const 
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    const SERVICE_URL = `${process.env.REACT_APP_SERVICE_URL}`;
+    const DESTINATION_MAIL = `${process.env.REACT_APP_DESTINATION_MAIL}`;
+    const SEND_MAIL = `${process.env.REACT_APP_SEND_MAIL}`;
+
     // get data
     const [datos] = data;
-    const { contacto: { contactanos: {placeholder_solic,checkbox,solicitud } } } = datos;
+    const { cotizacion: { form: { categoria } }, contacto: { contactanos: { checkbox } } } = datos;
+    const categorias = Object.values(categoria);
 
     // ...dinamic class name
     const [classAlert0, setClassAlert0] = useState('form_input')
     const [classAlert1, setClassAlert1] = useState('form_input')
     const [classAlert2, setClassAlert2] = useState('form_input')
     const [classAlert3, setClassAlert3] = useState('form_input')
+    const [classAlert4, setClassAlert4] = useState('form_input')
+    const [classAlert5, setClassAlert5] = useState('form_input')
 
     // ...avoid copy & paste action
     const handleCutCopyPaste = (event) => {
@@ -29,16 +40,23 @@ const CotizacionForm = (props) => {
 
     // errors in input
     const [isErrorName, setErrorName] = useState(false)
-    const [isErrorCedula, setErrorCedula] = useState(false)
+    const [isErrorLastName, setErrorLastName] = useState(false)
+    const [isErrorRazonSocial, setErrorRazonSocial] = useState(false)
+    const [isErrorNit, setErrorNit] = useState(false)
     const [isErrorPhone, setErrorPhone] = useState(false)
     const [isErrorMail, setErrorMail] = useState(false)
-    // console.log(isErrorName)
 
     const LabelName = styled.label`
         color: ${isErrorName === true ? 'red' : 'black'};
     `;
-    const LabelCedula = styled.label`
-        color: ${isErrorCedula === true ? 'red' : 'black'};
+    const LabelLastName = styled.label`
+        color: ${isErrorLastName === true ? 'red' : 'black'};
+    `;
+    const LabelRazonSocial = styled.label`
+        color: ${isErrorRazonSocial === true ? 'red' : 'black'};
+    `;
+    const LabelNit = styled.label`
+        color: ${isErrorNit === true ? 'red' : 'black'};
     `;
     const LabelPhone = styled.label`
     color: ${isErrorPhone === true ? 'red' : 'black'};
@@ -52,12 +70,41 @@ const CotizacionForm = (props) => {
         setClassAlert1('form_input')
         setClassAlert2('form_input')
         setClassAlert3('form_input')
+        setClassAlert4('form_input')
+        setClassAlert5('form_input')
         setErrorName(false)
-        setErrorCedula(false)
+        setErrorLastName(false)
+        setErrorRazonSocial(false)
+        setErrorNit(false)
         setErrorPhone(false)
         setErrorMail(false)
     };
     //.......................................
+
+    //......Select and Sub Select..............
+    const [optionSelected, setOptionSelected] = useState("");
+    const [optionsList, setOptionsList] = useState([]);
+    const options = Object.values(optionsList)
+
+    const handleOptionChange = (event) => {
+        const selectedOption = event.target.value;
+        setOptionSelected(selectedOption);
+        // En este codigo, se filtran las opciones dinámicamente
+        // según la opción seleccionada. 
+        if (selectedOption === "Servicios Industriales") {
+            const objetoEncontrado = categorias.find((objeto) => objeto.name === "Servicios Industriales");
+            setOptionsList(objetoEncontrado.tipo);
+        } else if (selectedOption === "Certificación de Producto") {
+            const objetoEncontrado = categorias.find((objeto) => objeto.name === "Certificación de Producto");
+            setOptionsList(objetoEncontrado.tipo);
+        } else if (selectedOption === "Sistemas de Gestión") {
+            const objetoEncontrado = categorias.find((objeto) => objeto.name === "Sistemas de Gestión");
+            setOptionsList(objetoEncontrado.tipo);
+        } else {
+            setOptionsList([]);
+        }
+    };
+    //......Select and Sub Select..............
 
     const sendEmail = (event) => {
         event.preventDefault();
@@ -65,83 +112,153 @@ const CotizacionForm = (props) => {
         const formData = new FormData(formRef.current);
         const dataForm = Object.fromEntries(formData.entries());
 
-        // regex input name
+
+        //regex input NIT
+        const nitRegex = /^\d{8}-\d$/;
+        const isValidNit = nitRegex.test(dataForm.Nit);
+
+        // regex input name and last name
         const nameRegex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/;
-        const isValidName = nameRegex.test(dataForm.name);
+        const isValidName = nameRegex.test(dataForm.Nombres);
+        const isValidLastName = nameRegex.test(dataForm.Apellidos);
 
         // ...regex input email
         const emailRegex = /^(([^<>() [\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const isValidEmail = emailRegex.test(dataForm.email);
+        const isValidEmail = emailRegex.test(dataForm.E_mail);
 
         // ...regex input numb
         const numbRegex = /^[0-9]+$/;
-        const isValidnumb = numbRegex.test(dataForm.cedula)
-        const isValidnumb2 = numbRegex.test(dataForm.phone)
+        const isValidnumb2 = numbRegex.test(dataForm.Telefono)
 
-        if ( //Nombre completo............
-            dataForm.name.trim() === "" ||
-            dataForm.name === null ||
-            dataForm.name.length === 0 ||
+        if ( //Name.....................
+            dataForm.Nombres.trim() === "" ||
+            dataForm.Nombres === null ||
+            dataForm.Nombres.length === 0 ||
             isValidName !== true
         ) {
             setClassAlert0('class_1');
             setErrorName(true)
-            console.log('error......')
+            console.log('error name......')
 
-        } else if (// cedula..............
-            dataForm.cedula.trim() === "" ||
-            dataForm.cedula === null ||
-            dataForm.cedula.length === 0 ||
-            isValidnumb !== true
+
+        } else if (// LastName..............
+            dataForm.Apellidos.trim() === "" ||
+            dataForm.Apellidos === null ||
+            dataForm.Apellidos.length === 0 ||
+            isValidLastName !== true
+        ) {
+            setClassAlert4('class_1');
+            setErrorLastName(true)
+            console.log('error last name......')
+
+        } else if (// Razon social..............
+            dataForm.Razon_Social.trim() === "" ||
+            dataForm.Razon_Social === null ||
+            dataForm.Razon_Social.length === 0
+        ) {
+            setClassAlert5('class_1');
+            setErrorRazonSocial(true)
+            console.log('error Razon Social......')
+
+        } else if (// Nit..............
+            dataForm.Nit.trim() === "" ||
+            dataForm.Nit === null ||
+            dataForm.Nit.length === 0 ||
+            isValidNit !== true
         ) {
             setClassAlert1('class_1');
-            setErrorCedula(true)
+            setErrorNit(true)
+            console.log('error nit......')
 
         } else if (// telefono..............
-            dataForm.phone.trim() === "" ||
-            dataForm.phone === null ||
-            dataForm.phone.length === 0 ||
+            dataForm.Telefono.trim() === "" ||
+            dataForm.Telefono === null ||
+            dataForm.Telefono.length === 0 ||
             isValidnumb2 !== true
         ) {
             setErrorPhone(true)
             setClassAlert2('class_1');
+            console.log('error telefono......')
 
         } else if (// e mail..............
-            dataForm.email.trim() === "" ||
-            dataForm.email === null ||
-            dataForm.email.length === 0 ||
+            dataForm.E_mail.trim() === "" ||
+            dataForm.E_mail === null ||
+            dataForm.E_mail.length === 0 ||
             isValidEmail !== true
         ) {
             setErrorMail(true)
             setClassAlert3('class_1');
+            console.log('error mail......')
 
         } else {
             // console.log(event.target.value)
-            // console.log(dataForm)
-            emailjs.sendForm(
-                'service_n2xb48w',
-                'template_2oqdkvi',
-                formRef.current,
-                'fH06FLKeCzoxBZgFA'
-            )
-                .then((result) => {
-                    console.log(result.text);
-                    alert('Mensaje enviado con exito...');
-                    formRef.current.reset();// clean form
 
+            const url = SERVICE_URL;
+            const Nombre = 'COTIZACION';
 
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'api-key': API_KEY
                 },
-                    (error) => {
-                        alert('Intenta mas tarde...');
-                        formRef.current.reset();// clean form
-                    });
+                body: JSON.stringify({
+                    sender: { name: Nombre, email: SEND_MAIL },
+                    to: [{ email: DESTINATION_MAIL }],
+                    subject: 'Cotizacion',
+                    htmlContent:
+                        `
+                        Nombre : ${dataForm.Nombres} ${dataForm.Apellidos}
+                        <br><br>
+                        Razon Social : ${dataForm.Razon_Social}
+                        <br><br>
+                        Nit : ${dataForm.Nit}
+                        <br><br>
+                        Telefono : ${dataForm.Telefono}
+                        <br><br>
+                        E-Mail : ${dataForm.E_mail}
+                        <br><br>
+                        Servicio : ${dataForm.seleccion}
+                    `
+                })
+            })
+                .then(response =>
+                    response.json(),
+                    toast.success('Cotizacion Enviada con Exito!', {// alert message
+                        position: "top-center",
+                        autoClose: 500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    }
+                    )
+                        .then(data =>
+                            console.log(data),
+                            formRef.current.reset(),// clean form
+                        )
+                )
+                .catch(error =>
+                    console.error(error),
+                    formRef.current.reset(),// clean form
+                    toast.error('No se pudo Enviar la Cotizacion, Intenta mas tarde!', {// alert message
+                        position: "top-center",
+                        autoClose: 500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    })
+                );
         }
-
     };
 
-
     return (
-        <FormCotizacion>
+        <FormContact>
             <div className='cont_form_mail'>
                 <form ref={formRef} onSubmit={sendEmail}>
 
@@ -157,24 +274,24 @@ const CotizacionForm = (props) => {
                                 className={classAlert0}
                                 type="text"
                                 placeholder='Nombre'
-                                name="name"
-                                id="name"
+                                name="Nombres"
+                                id="Nombres"
                                 required
                             />
                         </div>
                         <div>
-                            <LabelName className='form_label'>{isErrorName === true ? 'Apellidos No Validos' : 'Apellidos'}<span>*</span></LabelName>
+                            <LabelLastName className='form_label'>{isErrorLastName === true ? 'Apellidos No Validos' : 'Apellidos'}<span>*</span></LabelLastName>
                             <input
                                 onCut={handleCutCopyPaste}
                                 onCopy={handleCutCopyPaste}
                                 onPaste={handleCutCopyPaste}
                                 autocomplete="off"
                                 // onChange={handleChange}
-                                className={classAlert0}
+                                className={classAlert4}
                                 type="text"
                                 placeholder='Apellidos'
-                                name="lastName"
-                                id="lastName"
+                                name="Apellidos"
+                                id="Apellidos"
                                 required
                             />
                         </div>
@@ -182,26 +299,26 @@ const CotizacionForm = (props) => {
 
                     <div className='firstBlock'>
                         <div>
-                            <LabelCedula className='form_label'>{isErrorCedula === true ? 'Numero No Valido' : 'Razón social'}<span>*</span></LabelCedula>
+                            <LabelRazonSocial className='form_label'>{isErrorRazonSocial === true ? 'Numero No Valido' : 'Razón social'}<span>*</span></LabelRazonSocial >
                             <input
                                 // onChange={handleChange}
-                                className={classAlert1}
-                                type="number"
-                                placeholder='00000000000'
-                                name="number_razon"
-                                id="number_razon"
+                                className={classAlert5}
+                                type="text"
+                                placeholder='Nombre empresa'
+                                name="Razon_Social"
+                                id="Razon_Social"
                                 required
                             />
                         </div>
                         <div>
-                            <LabelCedula className='form_label'>{isErrorCedula === true ? 'Numero No Valido' : 'Nit:'}<span>*</span></LabelCedula>
+                            <LabelNit className='form_label'>{isErrorNit === true ? 'Numero No Valido' : 'Nit:'}<span>*</span></LabelNit>
                             <input
                                 // onChange={handleChange}
                                 className={classAlert1}
-                                type="number"
+                                type="text"
                                 placeholder='00000000000'
-                                name="number_nit"
-                                id="number_nit"
+                                name="Nit"
+                                id="Nit"
                                 required
                             />
                         </div>
@@ -216,8 +333,8 @@ const CotizacionForm = (props) => {
                                 className={classAlert2}
                                 type="tel"
                                 placeholder='00000000000'
-                                name="phone"
-                                id="phone"
+                                name="Telefono"
+                                id="Telefono"
                                 required
                             />
                         </div>
@@ -232,8 +349,8 @@ const CotizacionForm = (props) => {
                                 className={classAlert3}
                                 type="email"
                                 placeholder='usuario@correo.com'
-                                name="email"
-                                id="email"
+                                name="E_mail"
+                                id="E_mail"
                                 required
                             />
                         </div>
@@ -241,49 +358,52 @@ const CotizacionForm = (props) => {
 
                     <div className='secondForm'>
                         <label className='form_label'>Categoría de Servicio<span>*</span></label>
-                        <select name="seleccion" required>
-                            <option value="" hidden>{placeholder_solic}</option>
-                            <option value={solicitud[0]}>{solicitud[0]}</option>
-                            <option value={solicitud[1]}>{solicitud[1]}</option>
-                            <option value={solicitud[2]}>{solicitud[2]}</option>
-                            <option value={solicitud[3]}>{solicitud[3]}</option>
-                            <option value={solicitud[4]}>{solicitud[4]}</option>
+                        <select value={optionSelected} onChange={handleOptionChange} name="seleccion" required>
+                            <option value="" hidden>Selecciona el servicio a cotizar</option>
+                            {
+                                categorias.map((item) =>
+                                    <option key={item.id} value={item.name}>{item.name}</option>
+                                )
+                            }
                         </select>
 
                         <label className='form_label'>Tipo de Servicio<span>*</span></label>
-                        <select className='form_label2' name="seleccion" required>
-                            <option value="" hidden>{placeholder_solic}</option>
-                            <option value={solicitud[0]}>{solicitud[0]}</option>
-                            <option value={solicitud[1]}>{solicitud[1]}</option>
-                            <option value={solicitud[2]}>{solicitud[2]}</option>
-                            <option value={solicitud[3]}>{solicitud[3]}</option>
-                            <option value={solicitud[4]}>{solicitud[4]}</option>
+                        <select name="seleccion" required>
+                            <option value="" hidden>Selecciona el tipo de servicio a cotizar</option>
+                            {
+                                options.map((item) =>
+                                    <option key={item} value={`${optionSelected} / ${item}`}>{item}</option>
+                                )
+                            }
                         </select>
 
 
-                        <CheckboxLabelCotizacion>
-                            <CheckboxInputCotizacion
+                        <CheckboxLabel>
+                            <CheckboxInput
                                 required
                                 type="checkbox"
                                 id="cbox1"
                                 value="first_checkbox" />
                             <span>{checkbox}</span>
-                        </CheckboxLabelCotizacion>
+                        </CheckboxLabel>
 
-                        <BtnFormCotizacion>
+                        <input type="hidden" id="subject" name="_subject" value="Cotizacion" />
+                        <input type="hidden" name="_template" value="box"></input>
+                        <BtnFormContact>
                             <button
                                 type="submit"
                                 value="Enviar"
                                 onFocus={handleFocus}
                             >Enviar
                             </button>
-                        </BtnFormCotizacion>
+                        </BtnFormContact>
+                        <ToastContainer />
                     </div>
 
                 </form>
             </div>
 
-        </FormCotizacion>
+        </FormContact>
     );
 }
 export default CotizacionForm;
