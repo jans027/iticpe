@@ -195,6 +195,9 @@ const CotizacionForm = (props) => {
 
             const url = SERVICE_URL;
             const Nombre = 'COTIZACION';
+            //we get exact time to generate a different conversation email each time
+            const subject = new Date();
+            const formatDate = subject.toLocaleTimeString();
 
             fetch(url, {
                 method: 'POST',
@@ -205,7 +208,7 @@ const CotizacionForm = (props) => {
                 body: JSON.stringify({
                     sender: { name: Nombre, email: SEND_MAIL },
                     to: [{ email: DESTINATION_MAIL }],
-                    subject: 'Cotizacion',
+                    subject: formatDate,
                     htmlContent:
                         `
                         Nombre : ${dataForm.Nombres} ${dataForm.Apellidos}
@@ -243,7 +246,7 @@ const CotizacionForm = (props) => {
                 .catch(error =>
                     console.error(error),
                     formRef.current.reset(),// clean form
-                    toast.error('No se pudo Enviar la Cotizacion, Intenta mas tarde!', {// alert message
+                    toast.error('No se pudo Enviar la Cotizacion, Intentalo mas tarde!', {// alert message
                         position: "top-center",
                         autoClose: 500,
                         hideProgressBar: false,

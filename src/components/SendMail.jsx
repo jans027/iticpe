@@ -137,7 +137,7 @@ const SendMail = (props) => {
             })
                 .then(response =>
                     response.json(),
-                    toast.success('Cotizacion Enviada con Exito!', {// alert message
+                    toast.success('Consulta Enviada con Exito!', {// alert message
                         position: "top-center",
                         autoClose: 500,
                         hideProgressBar: false,
@@ -156,7 +156,7 @@ const SendMail = (props) => {
                 .catch(error =>
                     console.error(error),
                     formRef.current.reset(),// clean form
-                    toast.error('No se pudo Enviar la Cotizacion, Intenta mas tarde!', {// alert message
+                    toast.error('No se pudo Enviar tu consulta, Intentalo mas tarde!', {// alert message
                         position: "top-center",
                         autoClose: 500,
                         hideProgressBar: false,

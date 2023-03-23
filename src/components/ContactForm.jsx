@@ -3,11 +3,19 @@ import emailjs from '@emailjs/browser';
 import { data } from '../data/data';
 import styled from "styled-components";
 import { BtnFormContact, CheckboxInput, CheckboxLabel, FormContact, TextArea } from '../styles/Contact';
-
+// toastify alert
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const ContactForm = (props) => {
+
+    // const 
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    const SERVICE_URL = `${process.env.REACT_APP_SERVICE_URL}`;
+    const DESTINATION_MAIL = `${process.env.REACT_APP_DESTINATION_MAIL}`;
+    const SEND_MAIL = `${process.env.REACT_APP_SEND_MAIL}`;
 
     // get data
     const [datos] = data;
@@ -124,25 +132,72 @@ const ContactForm = (props) => {
             setClassAlert3('class_1');
 
         } else {
-            // console.log(event.target.value)
-            // console.log(dataForm)
-            emailjs.sendForm(
-                'service_n2xb48w',
-                'template_2oqdkvi',
-                formRef.current,
-                'fH06FLKeCzoxBZgFA'
-            )
-                .then((result) => {
-                    console.log(result.text);
-                    alert('Mensaje enviado con exito...');
-                    formRef.current.reset();// clean form
+            console.log(dataForm)
 
+            const url = SERVICE_URL;
+            const Nombre = 'CONTACTO';
+            //we get exact time to generate a different conversation email each time
+            const subject = new Date();
+            const formatDate = subject.toLocaleTimeString();
 
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'api-key': API_KEY
                 },
-                    (error) => {
-                        alert('Intenta mas tarde...');
-                        formRef.current.reset();// clean form
-                    });
+                body: JSON.stringify({
+                    sender: { name: Nombre, email: SEND_MAIL },
+                    to: [{ email: DESTINATION_MAIL }],
+                    subject: formatDate,
+                    htmlContent:
+                        `
+                        Nombre : ${dataForm.name}
+                        <br><br>
+                        Numero de Cedula : ${dataForm.cedula}
+                        <br><br>
+                        Telefono : ${dataForm.phone}
+                        <br><br>
+                        E-Mail : ${dataForm.email}
+                        <br><br>
+                        Solicitud : ${dataForm.seleccion}
+                        <br><br>
+                        Comentario : ${dataForm.comentario}
+                    `
+                })
+            })
+                .then(response =>
+                    response.json(),
+                    toast.success('En breve nos pondremos en contacto contigo!', {// alert message
+                        position: "top-center",
+                        autoClose: 500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    }
+                    )
+                        .then(data =>
+                            console.log(data),
+                            formRef.current.reset(),// clean form
+                        )
+                )
+                .catch(error =>
+                    console.error(error),
+                    formRef.current.reset(),// clean form
+                    toast.error('No se pudo Enviar tu solicitud, Intentalo mas tarde!', {// alert message
+                        position: "top-center",
+                        autoClose: 500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    })
+                );
         }
 
     };
@@ -253,7 +308,7 @@ const ContactForm = (props) => {
                             </button>
                         </BtnFormContact>
                     </div>
-
+                    <ToastContainer />
                 </form>
             </div>
 
