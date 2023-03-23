@@ -19,10 +19,6 @@ const ContactForm = (props) => {
     // get data
     const [datos] = data;
     const { contacto: { contactanos: {
-        labelName,
-        labelDocument,
-        labelPhone,
-        labelEmail,
         labelSolic,
         placeholder_solic,
         checkbox,

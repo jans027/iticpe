@@ -122,7 +122,7 @@ export const FormContact = styled.div `
       }
       .form_input,
       select{
-        /* margin-bottom: 1em; */
+        margin-bottom: 1em;
         height: 2.8em;
         border-radius: 1em;
         border: 1px solid var(--color3);

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { data } from '../data/data';
-import { ContSliderAcr, SubTitleSection, TitleSection } from '../styles/SecAcreditaciones';
+import { SubTitleSection, TitleSection } from '../styles/SecAcreditaciones';
 import { ConSectionServicios, ContMapa, ContTexto1, ContTexto2 } from '../styles/SectionServicios';
 import SliderExperiencias from './SliderExperiencia';
-import { useInView } from 'react-intersection-observer';
 
 
 
