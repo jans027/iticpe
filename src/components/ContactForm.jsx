@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser';
 import { data } from '../data/data';
 import styled from "styled-components";
 import { BtnFormContact, CheckboxInput, CheckboxLabel, FormContact, TextArea } from '../styles/Contact';

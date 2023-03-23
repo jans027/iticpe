@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser';
 import { data } from '../data/data';
 import { BtnModal } from '../styles/ModalForm';
 import styled from "styled-components";
