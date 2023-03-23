@@ -3,10 +3,19 @@ import emailjs from '@emailjs/browser';
 import { data } from '../data/data';
 import { BtnModal } from '../styles/ModalForm';
 import styled from "styled-components";
+// toastify alert
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const SendMail = (props) => {
+
+    // const secret keys
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    const SERVICE_URL = `${process.env.REACT_APP_SERVICE_URL}`;
+    const DESTINATION_MAIL = `${process.env.REACT_APP_DESTINATION_MAIL}`;
+    const SEND_MAIL = `${process.env.REACT_APP_SEND_MAIL}`;
 
     //...import data
     const [datos] = data
@@ -100,27 +109,66 @@ const SendMail = (props) => {
 
         } else {
             // console.log(dataForm)
-            // console.log(event.target.value)
-            emailjs.sendForm(
-                'service_niys5va',
-                'template_fqd3fne',
-                formRef.current,
-                'WJtijrAfr6hLGRh6P'
-            )
-                .then((result) => {
-                    console.log(result.text);
-                    alert('Mensaje enviado con exito...');
-                    handleClick(props.cerrarModal())
+            const url = SERVICE_URL;
+            const Nombre = 'Consulta Certificado';
+            //we get exact time to generate a different conversation email each time
+            const subject = new Date();
+            const formatDate = subject.toLocaleTimeString();
 
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'api-key': API_KEY
                 },
-                    (error) => {
-                        alert('Intenta mas tarde...');
-                        handleClick(props.cerrarModal())
-                    });
+                body: JSON.stringify({
+                    sender: { name: Nombre, email: SEND_MAIL },
+                    to: [{ email: DESTINATION_MAIL }],
+                    subject: formatDate,
+                    htmlContent:
+                        `
+                        Categoria del Certificado : ${dataForm.seleccion}
+                        <br><br>
+                        E-Mail : ${dataForm.email}
+                        <br><br>
+                        Numero del Certificado : ${dataForm.certificate}
+                    `
+                })
+            })
+                .then(response =>
+                    response.json(),
+                    toast.success('Cotizacion Enviada con Exito!', {// alert message
+                        position: "top-center",
+                        autoClose: 500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    }
+                    )
+                        .then(data =>
+                            console.log(data),
+                            formRef.current.reset(),// clean form
+                        )
+                )
+                .catch(error =>
+                    console.error(error),
+                    formRef.current.reset(),// clean form
+                    toast.error('No se pudo Enviar la Cotizacion, Intenta mas tarde!', {// alert message
+                        position: "top-center",
+                        autoClose: 500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    })
+                );
         }
-
     };
-
 
     return (
         <div className='cont_form_mail'>
@@ -176,6 +224,7 @@ const SendMail = (props) => {
                     <BtnModal type='reset' onClick={handleClick}>Cancelar</BtnModal>
                     <BtnModal type="submit" value="Enviar" onFocus={handleFocus}>Enviar</BtnModal>
                 </div>
+                <ToastContainer />
             </form>
         </div>
     );

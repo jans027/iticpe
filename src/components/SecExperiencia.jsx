@@ -56,14 +56,12 @@ const SecExperiencia = (props) => {
                 <ContMapa>
                     <ContTexto1>
                         <p className='text_title'>{text1}</p>
-                        <p className='countries'>{text2}</p>
-                        <p>{text3}</p>
                     </ContTexto1>
                     <img isVisible={isVisible} className='image' src={require(`../images/${banner1}`)} alt={banner1} />
-                    {/* <ContTexto2>
-                        <p className='text_title'>{text4}</p>
-                        <p className='countries'>{text5}</p>
-                    </ContTexto2> */}
+                    <ContTexto2>
+                        <p className='countries'>{text2}</p>
+                        <p>{text3}</p>
+                    </ContTexto2>
                 </ContMapa>
                 <SubTitleSection>{subTitle}</SubTitleSection>
                 <SliderExperiencias />
