@@ -19,6 +19,7 @@ export const StyledNav = styled.nav`
         /* height: 2.8vw; */
         
         div{
+            /* border: 1px solid red;//........................... */
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -86,7 +87,7 @@ export const StyledNav = styled.nav`
             /* border: 1px solid red;//........................ */
             display: none;
             padding: 0!important;
-            @media (max-width:1101px) {
+            @media (max-width:1170px) {
                 display: block;
             }
         }
@@ -111,22 +112,23 @@ export const StyledNav = styled.nav`
             }
         }
     }
-`;
+`
 export const MenuPcLaptop = styled.span`
     /* border: 1px solid blue;//......................... */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    @media (max-width:1101px) {
+    @media (max-width:1170px) {
         display: none;
     }
 `
-
 export const BtnBase = styled(Button)`
         &&{
+            /* border: 1px solid red;//................. */
             color: var(--color4);
             font-weight:600;
             border-radius: 1.6em;
+            padding: .7em;
             img{
                 margin: 0 1em 0 0;
             }
@@ -145,7 +147,6 @@ export const BtnBase = styled(Button)`
             
         }
 `
-
 export const MenuDrop = styled(Menu)`
     &&{
         div{
@@ -165,7 +166,6 @@ export const MenuDrop = styled(Menu)`
         }
     }
 `
-
 export const LogoNav = styled(Link)`
         transition:10ms;
         width:clamp(150px, 15%, 215px);
@@ -175,4 +175,61 @@ export const LogoNav = styled(Link)`
     img{
         height: 100%;
         }
+`
+// simple dropdown menu whit hover effect
+export const DropdownContainer = styled.div`
+    /* border: 1px solid red;//............... */
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    border-radius: 1.6em;
+    &:hover{
+        background-color: var(--color10);
+    }
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+`
+export const DropdownButton = styled.button`
+    /* border: 1px solid red;//............... */
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    color: var(--color4);
+    padding: .8em;
+    font-weight:600;
+    display: flex;
+    align-items: center;
+    font-size: clamp(11px, 1vmax, 22px);
+    border: none;
+    cursor: pointer;
+`
+export const DropdownContent = styled.div`
+    /* border: 1px solid red;//............... */
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--color3);
+    min-width: 290px;
+    border-bottom: 2px solid transparent;
+    div{
+        /* border: 1px solid red;//............... */
+        border-bottom: 2px solid transparent;
+        padding: 10px;
+        
+        &:hover{
+                border-bottom: 2px solid var(--color4);
+                background-color:rgba(0, 0, 0, 0.09);
+            }
+        a{
+            width: 100%;
+            text-decoration: none;
+            font-size: 1em;
+            color:var(--color4);
+        }
+    }
+`
+export const ImgCropdown = styled.img`
+    margin-right: .5em;
 `

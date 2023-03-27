@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { data } from "../data/data";
-import { BtnBase, LogoNav, MenuDrop, MenuPcLaptop, StyledNav } from "../styles/NavBar";
+import { BtnBase, DropdownButton, DropdownContainer, DropdownContent, ImgCropdown, LogoNav, MenuDrop, MenuPcLaptop, StyledNav } from "../styles/NavBar";
 // Menu
 import MenuItem from '@mui/material/MenuItem';
 // icons
@@ -104,7 +104,22 @@ const NavBar = () => {
                         <Link to={inicio.url}>{inicio.name}</Link>
                     </BtnBase>
 
-                    <ul>
+                    <DropdownContainer key={datos.certificaciones}>
+                        <DropdownButton>{empresa.name}<ArrowDropDownSharpIcon /></DropdownButton>
+                        <DropdownContent className='dropdown-content'>
+                            {
+                                empresasSub.map((item) =>
+                                    <div onClick={(event) => handleClick2(event)} >
+                                        <Link id={item.name} key={item.id} name="certificaciones" to={item.url}>
+                                            {item.name}
+                                        </Link><br />
+                                    </div>
+                                )
+                            }
+                        </DropdownContent>
+                    </DropdownContainer>
+
+                    {/* <ul>
                         <BtnBase
                             // id="basic-button"
                             aria-controls={open2 ? 'basic-menu' : undefined}
@@ -132,9 +147,24 @@ const NavBar = () => {
                                 )
                             }
                         </MenuDrop>
-                    </ul>
+                    </ul> */}
 
-                    <ul>
+                    <DropdownContainer key={datos.certificaciones}>
+                        <DropdownButton>{servicios.name}<ArrowDropDownSharpIcon /></DropdownButton>
+                        <DropdownContent className='dropdown-content'>
+                            {
+                                serviciosSub.map((item) =>
+                                    <div onClick={(event) => handleClick1(event)} >
+                                        <Link id={item.name} key={item.id} name="certificaciones" to={item.url}>
+                                            {item.name}
+                                        </Link><br />
+                                    </div>
+                                )
+                            }
+                        </DropdownContent>
+                    </DropdownContainer>
+
+                    {/* <ul>
                         <BtnBase
                             // id="basic-button"
                             aria-controls={open1 ? 'basic-menu' : undefined}
@@ -162,7 +192,7 @@ const NavBar = () => {
                                 )
                             }
                         </MenuDrop>
-                    </ul>
+                    </ul> */}
 
                     <BtnBase
                         id="inicio"
@@ -186,7 +216,23 @@ const NavBar = () => {
                         <Link to={contacto.url}>{contacto.name}</Link>
                     </BtnBase>
 
-                    <ul>
+                    <DropdownContainer key={datos.certificaciones}>
+                        <DropdownButton><ImgCropdown src={ImgPer} alt={ImgPer} />COL<ArrowDropDownSharpIcon /></DropdownButton>
+                        <DropdownContent className='dropdown-content'>
+                            {
+                                countriesSub.map((item) =>
+                                    <div onClick={(event) => handleClick1(event)} >
+                                        <Link id={item.name} key={item.id} name="certificaciones" to={item.url}>
+                                            <ImgCropdown src={require(`../images/${item.img}`)} alt={item.img} />
+                                            {item.name}
+                                        </Link><br />
+                                    </div>
+                                )
+                            }
+                        </DropdownContent>
+                    </DropdownContainer>
+
+                    {/* <ul>
                         <BtnBase
                             // id="basic-button"
                             aria-controls={open3 ? 'basic-menu' : undefined}
@@ -215,7 +261,7 @@ const NavBar = () => {
                                 )
                             }
                         </MenuDrop>
-                    </ul>
+                    </ul> */}
                 </MenuPcLaptop>
 
                 <MenuMobile />
