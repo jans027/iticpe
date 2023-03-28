@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const CardAcred = styled.div`
     /* border: 1px solid red;//.................... */
     margin: 1em 0;
-    width: 17vw!important;
+    width: 21vw!important;
     min-width: 200px;
     height: auto;
     border-radius: 30px;
@@ -18,6 +18,8 @@ export const CardAcred = styled.div`
     background-color: var(--color5);
     span{
         p{
+        width: 95%;
+        margin: auto;
         font-size: 1.1vw;
         line-height: 1.3em;
         /* border: 1px solid red;//............... */
