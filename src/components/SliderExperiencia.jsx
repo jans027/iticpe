@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { data } from '../data/data';
-import { ContSliderAcr } from '../styles/SecAcreditaciones';
-import { CardExperiencia2, ConSliderExp2, ContCardExperiencia2 } from '../styles/SliderExperiencia';
+import { SubTitleSection } from '../styles/SecAcreditaciones';
+import { CardExperiencia2, ConSliderExp2, ContCardExperiencia2, ContSection } from '../styles/SliderExperiencia';
 
 
 const SliderExperiencias = () => {
 
     // get data
     const [datos] = data;
-    const { empresa: { dropDownMenu: { proyectos: { url, cards } } } } = datos;
+    const { empresa: { dropDownMenu: { proyectos: { subTitle, url, cards } } } } = datos;
     const card = Object.values(cards);
 
     // silder......
@@ -43,8 +43,10 @@ const SliderExperiencias = () => {
 
     return (
         <>
-            <ContSliderAcr>
+            <ContSection>
+                <SubTitleSection>{subTitle}</SubTitleSection>
                 <ConSliderExp2 {...settings}>
+
                     {
                         card.map((item) =>
                             <div key={item.id} className='sub_cont_card2'>
@@ -70,7 +72,7 @@ const SliderExperiencias = () => {
                     }
 
                 </ConSliderExp2>
-            </ContSliderAcr>
+            </ContSection>
         </>
     )
 }

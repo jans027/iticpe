@@ -2,12 +2,8 @@ import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 const spin = keyframes`
-    from {transform: translate(0);}
-    to {transform: translate(12.4%);}
-`
-const spin2 = keyframes`
-    from {transform: translate(-10%);}
-    to {transform: translate(1%);}
+    from {transform: translate(-20%);}
+    to {transform: translate(0);}
 `
 export const ConSectionServicios = styled.div` 
     /* border: 1px solid red;//....................... */
@@ -18,22 +14,22 @@ export const ConSectionServicios = styled.div`
     padding: 2rem 0;
 `
 export const ContCardsServi = styled.div`
-    /* border: 1px solid red;//....................... */
     width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 30px 0;
+    /* border: 1px solid red;//....................... */
 `
 export const CardServicios = styled.div`
-    /* border: 1px solid red;//.................. */
-    width: 33%;
+    width: 25%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     align-items: center;
     transition: 30ms;
+    /* border: 1px solid red;//.................. */
     @media(max-width:800px){
         width: 50%;
     }
@@ -79,7 +75,7 @@ export const EnlaceImg = styled(Link)`
     }
     
 `
-export const ContTextCard =styled.div`
+export const ContTextCard = styled.div`
     width: 75%;
     margin: auto; 
     padding-bottom: 2em;
@@ -127,51 +123,43 @@ export const EnlaceBtnS = styled(Link)`
 `
 export const ContMapa = styled.div`
     /* border: 1px solid red;//..................... */
-    display: flex;
+    width: 90%;
+    margin: auto;
     @media (max-width:1000px) {
-        flex-direction: column;
         margin-bottom: 1em;
     }
     img{
         /* border: 1px solid red;//..................... */
         width: 80%;
-        /* margin: 0 auto; */
         transition: opacity 0.5s;
         &.animate {
             animation: ${spin} 1s alternate forwards;
         }
         @media (max-width:1000px) {
             width: 100%;
-            &.animate {
-                animation: ${spin2} 1s alternate forwards;
-            }
         }
     }
 `
 export const ContTexto1 = styled.div`
     /* border: 1px solid red;//..................... */
     width: 50%;
-    left: 25%;
-    z-index: 2;
-    /* margin-top: 10px; */
-    position:absolute;
+    margin:0 auto;
+    padding: 1.8em 0;
     .text_title{
         margin-bottom:1em ;
         font-size: clamp(20px, 1.5vw, 42px);
         font-weight:900;
     }
     @media (max-width:1000px) {
-            position:unset;
             width: 90%;
-            margin:0 auto;
+
     }
 `
 export const ContTexto2 = styled.div`
     /* border: 1px solid red;//..................... */
     width: 60%;
-    left: 20%;
-    margin-top: 36vw;
-    position:absolute;
+    margin:auto;
+    padding: 1.8em 0;
     .countries{
         font-size: clamp(18px, 1.5vw, 36px);
         font-weight:600;
@@ -180,8 +168,6 @@ export const ContTexto2 = styled.div`
         font-size: clamp(16px, 1.3vw, 26px);
     }
     @media (max-width:1000px) {
-            position:unset;
             width: 90%;
-            margin:auto;
     }
 `

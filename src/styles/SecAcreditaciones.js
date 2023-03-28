@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const CardAcred = styled.div`
     /* border: 1px solid red;//.................... */
     margin: 1em 0;
-    width: 21vw!important;
-    min-width: 245px;
+    width: 17vw!important;
+    min-width: 200px;
     height: auto;
     border-radius: 30px;
     padding-top: 1.3rem;
@@ -18,9 +18,9 @@ export const CardAcred = styled.div`
     background-color: var(--color5);
     span{
         p{
-        /* border: 1px solid red;//...............    */
         font-size: 1.1vw;
         line-height: 1.3em;
+        /* border: 1px solid red;//............... */
         @media(max-width:950px){
             font-size: 14px;
             }
@@ -72,13 +72,13 @@ export const TitleSection = styled.h1`
             width: 90%;
             margin: auto;
         }
-` 
+`
 export const SubTitleSection = styled.p`
     /* border: 1px solid red;//........................ */
     width: 90%;
     margin: auto;
     font-size: clamp(16px, 1.6vw, 30px);
-    padding: 1rem 0 3rem 0;
+    padding: 3rem 0 3rem 0;
     font-weight: 300;
     span{
         font-size: clamp(16px, 1.6vw, 32px);

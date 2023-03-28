@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { data } from '../data/data';
 import { SubTitleSection, TitleSection } from '../styles/SecAcreditaciones';
 import { ConSectionServicios, ContMapa, ContTexto1, ContTexto2 } from '../styles/SectionServicios';
+import { ConSectionExperiencia } from '../styles/SliderExperiencia';
 import SliderExperiencias from './SliderExperiencia';
 
 
@@ -10,7 +11,7 @@ const SecExperiencia = (props) => {
 
     // get data
     const [datos] = data;
-    const { empresa: { dropDownMenu: { proyectos: { nameSecction, subTitle, banner1,
+    const { empresa: { dropDownMenu: { proyectos: { nameSecction, banner1,
             textMap: { text1, text2, text3, text4, text5 } } } } } = datos;
     // console.log(nameSecction, subTitle)
 
@@ -50,7 +51,7 @@ const SecExperiencia = (props) => {
 
     return (
         <>
-            <ConSectionServicios>
+            <ConSectionExperiencia>
                 <TitleSection>{nameSecction}</TitleSection>
                 <ContMapa>
                     <ContTexto1>
@@ -62,9 +63,8 @@ const SecExperiencia = (props) => {
                         <p className='text2'>{text3}</p>
                     </ContTexto2>
                 </ContMapa>
-                <SubTitleSection>{subTitle}</SubTitleSection>
                 <SliderExperiencias />
-            </ConSectionServicios>
+            </ConSectionExperiencia>
 
         </>
     )

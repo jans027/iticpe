@@ -1,9 +1,24 @@
 import Slider from "react-slick";
 import styled from "styled-components";
 
+export const ConSectionExperiencia = styled.div` 
+    /* border: 1px solid red;//....................... */
+    background-color: var(--color2);
+    text-align: center;
+    /* margin: 2rem 0; */
+    height: max-content;
+    padding: 2rem 0 0 0;
+`
+export const ContSection = styled.section`
+    /* border: 1px solid red;//........................ */
+    width: 100%;
+    background-color: var(--color3);
+`
 export const ConSliderExp2 = styled(Slider)`
     /* border: 1px solid red;//...................... */
     height: auto;
+    width: 90%;
+    margin: auto;
     .global-card-slider{
         width: clamp(275px, 25vw, 25vw)!important;
     }
@@ -46,7 +61,7 @@ export const ContCardExperiencia2 = styled.div`
     padding-top: 1.3rem;
 
 `
-export  const CardExperiencia2 = styled.div`
+export const CardExperiencia2 = styled.div`
     /* border: 1px solid red;//...................... */
     border-radius: 30px;
     width: 100%!important;
@@ -87,6 +102,12 @@ export  const CardExperiencia2 = styled.div`
         }
     }
 `
+export const Separador = styled.hr`
+    border: 1px solid var(--color1);
+    width: 90%;
+    margin: auto;
+`
+
 
 
 
