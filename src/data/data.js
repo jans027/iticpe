@@ -54,7 +54,7 @@ export const data = [
           url: "/empresa/nosotros",
           img: "Nosotros/img-empresa.png",
           paragraph1:
-            "Somos una empresa con Orientación social, buscamos profesionales comprometidos con nuestros valores empresariales en búsqueda de EXCELENCIA OPERACIONAL E INTEGRIDAD en nuestros servicios.",
+            "Una empresa con Orientación social y ambiental, contamos con profesionales calificados en técnicas internacionales, comprometidos con nuestros valores empresariales en búsqueda de LA EXCELENCIA OPERACIONAL E INTEGRIDAD en nuestros servicios.",
           paragraph2:
             "Hace 13 años, nació nuestra empresa como filial de un grupo alemán. En el 2023, nos convertimos en una empresa nacional con presencia en varios países de Suramérica y Centroamérica. ",
           paragraph3:
@@ -87,7 +87,7 @@ export const data = [
               img: "Nosotros/Acerca-4.png",
               title: "EXPERIENCIA TÉCNICA",
               paragraph:
-                "Nacimos hace 12 años como empresa filial de un grupo Alemán, en el 2023 como empresa nacional contamos con un equipo altamente calificado y experimentado, con presencia en varios países de Latinoamérica.",
+                "Nacimos hace 13 años como empresa filial de un grupo Alemán, en el 2023 como empresa nacional contamos con un equipo altamente calificado y experimentado, con presencia en varios países de Latinoamérica.",
             },
           },
         },
@@ -564,7 +564,7 @@ export const data = [
           helmet: 'Servicios industriales',
           btn1: 'MÁS SERVICIOS',
           subTitle2:
-            "Acompañamos a nuestros clientes en el aseguramiento del éxito de sus proyectos, a través de un equipo altamente capacitado y experimentado. Contamos con experiencia en proyectos de gran envergadura a nivel nacional e internacional, esto nos permite ofrecer confianza, agilidad, integridad y seguridad en servicios de Inspección, supervisión, interventoría, certificación, y ensayos, basamos nuestros conceptos en estándares técnicos nacionales e internacionales.",
+            "Ofrecemos confianza, agilidad, integridad y seguridad en sus servicios, contando con el componente técnico más preparado en el mercado. Además, basamos nuestros conceptos en standares tecnicos internacionales.",
           banner1: "",
           nameBtn: "MÁS SERVICIOS",
           cardImg: "INDUSTRIALES.png",
@@ -623,7 +623,7 @@ export const data = [
               acreditacion:'inspeccion',
               normaNumero: true,
               paragraph1:
-                "Ofrecemos servicios de inspección de alta calidad para garantizar que los proyectos de nuestros clientes cumplen con los estándares de calidad y seguridad requeridos.\n",
+                "Ofrecemos servicios de inspección de alta calidad para garantizar que los proyectos de nuestros clientes cumplan con los estándares de calidad y seguridad requeridos.\n",
               btn1: "REGRESAR",
             },
             card4: {
@@ -637,7 +637,7 @@ export const data = [
               acreditacion:'inspeccion',
               normaNumero: false,
               paragraph1:
-                "Ofrecemos servicios de seguimiento técnico, legal, ambiental y financiero a contratos firmados entre partes para la construcción de obras eléctricas, mecánicas y civiles.\n \nContamos con un equipo especializado para identificar oportunamente posibles desviaciones contractuales, evitando sobrecostos y entregas extemporáneas de los proyectos\n",
+                "Ofrecemos servicios de seguimiento técnico, legal, ambiental y financiero a contratos firmados entre partes para la construcción de obras eléctricas, mecánicas y civiles.\n \nContamos con un equipo especializado para identificar oportunamente posibles desviaciones contractuales, evitando sobrecostos y entregas extemporáneas de los proyectos\n\nSupervisión Off-shore - On shore\nSupervisión de obras de construcción\nIngeniería eléctrica & Tecnología de construcción\n·Inspecciones industriales & ensayo de materiais\n·Interventoria, Gerenciamiento de Proyectos\n·Energía y medio ambiente\n·Cybersecurity & Functional Safety",
               btn1: "REGRESAR",
             },
             card5: {
@@ -707,7 +707,7 @@ export const data = [
               acreditacion:'inspeccion',
               normaNumero: false,
               paragraph1:
-                'Contamos con servicios de ensayos no destructivos para evaluar la integridad estructural de los edificios y estructuras, garantizando la seguridad y la calidad del proyecto.\n \n– Inspección Visual VT Directa – Remota.\n– Líquidos Penetrantes PT.\n– Partículas Magnéticas MT.\n– Medición de espesores UT.\n– Mapeo de Corrosión Scan C- PAUT.\n– Defectología UT Convencional – PAUT.\n– Fuga de flujo magnético MFL.\n– Perfil de Durezas.\n– Termografía infrarroja.\n– Metalografías IN SITU.\n– Identificación positiva de materiales PMI.\n– Inspección de recubrimientos.\n',
+                'Ofrecemos servicios de inspección de alta calidad para garantizar que los proyectos de nuestros clientes cumplan con los estándares de calidad y seguridad requeridos.\n \n– Inspección Visual VT Directa – Remota.\n– Líquidos Penetrantes PT.\n– Partículas Magnéticas MT.\n– Medición de espesores UT.\n– Mapeo de Corrosión Scan C- PAUT.\n– Defectología UT Convencional – PAUT.\n– Fuga de flujo magnético MFL.\n– Perfil de Durezas.\n– Termografía infrarroja.\n– Metalografías IN SITU.\n– Identificación positiva de materiales PMI.\n– Inspección de recubrimientos.\n',
               btn1: "REGRESAR",
             },
             card10: {
@@ -721,7 +721,7 @@ export const data = [
               acreditacion:'inspeccion',
               normaNumero: false,
               paragraph1:
-                'A través del Expediting, se busca garantizar el cumplimiento de las condiciones estipuladas en los contratos. \n\nAsegurando la disponibilidad del producto cuando sea necesario mediante el monitoreo de los cronogramas y tomando acciones correctivas si es necesario para cumplir con las expectativas de las adquisiciones.\n',
+                'A través del Expediting, se busca garantizar el cumplimiento de las condiciones estipuladas asegurando sus plazos de entrega\n\nAsegurando la disponibilidad del producto cuando sea necesario mediante el monitoreo de los cronogramas y tomando acciones correctivas ayudará a  cumplir con las expectativas de las adquisiciones desde sus plazos de entregas hasta las especificaciones necesarias que requiere para sus productos.\nNos encargaremos de ayudarlo con sus objetivos con nuestra experiencia y cooperación de nuestros inspectores presentes en más de 65 países con el soporte de nuestros aliados estratégicos.\n\nExpediting: Asegúrese de que sus equipos, materiales y suministros cumplan con lo especificado, funcionen correctamente y estén listos en el tiempo pactado.\n\nInspecciónes de Fabricación y Verificación : Las inspecciones realizadas durante esta etapa, asegura que el equipo adquirido cumpla las normativas y estándares de calidad, así le brindará mayor confianza a sus compras en el exterior.\n\nPruebas de Aceptación en Fábrica FAT: Mediante las pruebas FAT se realiza la verificación de los requisitos técnicos y funcionamiento de cada uno de los componentes en el momento de la producción de los mismos y antes de salir de fabrica.\n\nInspección de Proveedores: A lo largo de su cadena de suministro, lo ayudamos en todo momento con la inspección de los procesos y cumplimientos normativos de sus proveedores, garantizando la calidad de sus suministros y brindando mayor confianza a cada cliente desde la inspección en origen, supervisión de pruebas FAT y embarque.\n\nInspecciones Pre Embarque, Carga y Descarga: Acompañamos desde el proceso de verificación, aseguramiento y embalaje de la mercancia final previo a su carga y traslado a puerto. La inspección de la carga consiste en velar por la integridad con una inspección detallada de los equipos o materiales previo a su envío, de igual forma en la recepción de la mercadería en el país de destino.',
               btn1: "REGRESAR",
             },
           },
@@ -997,7 +997,7 @@ export const data = [
               helmet: 'Evaluación de proveedores',
               acreditacion: 'gestion',
               normaNumero: false,
-              paragraph1: 'Las Auditorías de realizadas por ITICCOL permiten identificar oportunidades y riesgos potenciales en la cadena de suministro, optimizar el desempeño de los proveedores, también permiten prevenir afectaciones al Sistema de Gestión por fallas en la gestión de proveedores.\n\n–  Identificación del status actual de sus proveedores existentes y potenciales e identificar proveedores críticos.\n\n–  Crear relaciones sustentables y de largo plazo con sus proveedores.\n',
+              paragraph1: 'Las Auditorías de realizadas por ITICCOL permiten identificar oportunidades y riesgos potenciales en la cadena de suministro, optimizar el desempeño de los proveedores, también permiten prevenir afectaciones al Sistema de Gestión por fallas en la gestión de proveedores.\n\n–  Identificación del status actual de sus proveedores existentes y potenciales e identificar proveedores críticos.\n\n–  Crear relaciones sustentables y de largo plazo con sus proveedores.\n\n- Aumento de compromiso y desempeño de sus proveedores\n\n- Prevenir riesgos de imagen y reputación que pueden derivarse por el desempeño ineficaz de sus proveedores.\n\n- Reducir costos de calidad y operación por óptimo desempeño de proveedores.',
               btn1: "REGRESAR",
             },
           },
