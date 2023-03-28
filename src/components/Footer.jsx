@@ -13,10 +13,10 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 //styles
 import { AccordionFooter, AddressFooter, BlockNav, BtnFooter, ConAccordion, ConEmprFooter, ConServFooter, ConsultasFooter, ContFooter, ContUlPoliticas, Copy, EnlaceDesplegable, LinkConsulta1, LinkConsultaMovile, LogoFooter, Redes, TitleAccor } from '../styles/Footer';
 //Documents
-import datos_personales from '../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf'; 
-import politica_calidad from '../documents/Politica-de-calidad.pdf'; 
-import politica_seguridad from '../documents/Politica-de-gestion-integral-salud-seguridad-y-ambiente-HSE.pdf'; 
-import politica_confidencialidad from '../documents/ITIC-C-NA-DI-003-POLITICA-DE-IMPARCIALIDAD-INDEPENDENCIA-Y-CONFIDENCIALIDAD-V7.pdf'; 
+import declaracion_independencia from '../documents/ITIC-DG-NA-DI-003-DECLARACION-DE-INDEPENDENCIA-IMPARCIALIDAD-E-INTEGRIDAD-(R05).pdf'; 
+import conducta_corporativo from '../documents/CCC-01-CÓDIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf'; 
+import política_HSEQ from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-QHSE-ITICPE-(R08).pdf'; 
+import condiciones_generales from '../documents/ITIC-DG-NA-DI-002-CONDICIONES-GENERALES-DEL-NEGOCIO-(R07).pdf'; 
 
 
 
@@ -105,23 +105,23 @@ const Footer = () => {
                     <ContUlPoliticas>
                         <h3>{politicas.name}</h3>
                         <li>
-                            <a target="_blank"  href={datos_personales} rel="noreferrer">
-                                Política de protección <br /> de datos personales
+                            <a target="_blank" href={declaracion_independencia} rel="noreferrer">
+                                Declaracion De Independencia <br /> Imparcialidad E Integridad
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href={politica_calidad} rel="noreferrer">
-                                Política de la calidad <br /> (servicios industriales)
+                            <a target="_blank" href={conducta_corporativo} rel="noreferrer">
+                                Codigo De Conducta <br /> Corporativo 
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href={politica_seguridad} rel="noreferrer">
-                                Política de gestión integral salud, <br /> seguridad y ambiente (HSE)
+                            <a target="_blank" href={política_HSEQ} rel="noreferrer">
+                                Política HSEQ
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href={politica_confidencialidad} rel="noreferrer">
-                                ITIC-C-NA-DI-003 política de imparcialidad <br /> independencia y confidencialidad 
+                            <a target="_blank" href={condiciones_generales} rel="noreferrer">
+                                Condiciones Generales 
                             </a>
                         </li>
                         <br />
@@ -200,23 +200,23 @@ const Footer = () => {
                                 <EnlaceDesplegable>
                                     <ul>
                                         <li>
-                                            <a target="_blank" href={datos_personales} rel="noreferrer">
-                                                Política de protección <br />de datos personales
+                                            <a target="_blank" href={declaracion_independencia} rel="noreferrer">
+                                                Declaracion De Independencia <br /> Imparcialidad E Integridad
                                             </a>
                                         </li>
                                         <li>
-                                            <a target="_blank" href={politica_calidad} rel="noreferrer">
-                                                Política de la calidad <br />(servicios industriales)
+                                            <a target="_blank" href={conducta_corporativo} rel="noreferrer">
+                                                Codigo De Conducta <br /> Corporativo
                                             </a>
                                         </li>
                                         <li>
-                                            <a target="_blank" href={politica_seguridad} rel="noreferrer">
-                                                Política de gestión integral salud, <br />seguridad y ambiente (HSE)
+                                            <a target="_blank" href={política_HSEQ} rel="noreferrer">
+                                                Política HSEQ
                                             </a>
                                         </li>
                                         <li>
-                                            <a target="_blank" href={politica_confidencialidad} rel="noreferrer">
-                                                ITIC-C-NA-DI-003 política de imparcialidad <br /> independencia y confidencialidad
+                                            <a target="_blank" href={condiciones_generales} rel="noreferrer">
+                                                Condiciones Generales
                                             </a>
                                         </li>
                                         <li>

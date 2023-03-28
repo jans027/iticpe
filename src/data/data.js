@@ -482,66 +482,39 @@ export const data = [
           banner1: "",
           cards: {
             card0: {
-              id: "1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf",
+              id: "politicas-card0",
               img: "",
-              text: "POLITICA DE  \nPROTECCION DE  \nDATOS \nPERSONALES ",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
+              text: "CÓDIGO DE \nCONDUCTA CORPORATIVO",
             },
             card1: {
               id: "politicas-card1",
               img: "",
-              text: "POLÍTICA DE IMPARCIALIDAD, \nINDEPENDENCIA Y \nCONFIDENCIALIDAD",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
-
+              text: "CONDICIONES GENERALES \nDEL NEGOCIO",
             },
             card2: {
               id: "politicas-card2",
               img: "",
-              text: "POLÍTICA DE IMPARCIALIDAD, \nINDEPENDENCIA Y \nCONFIDENCIALIDAD",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
-
+              text: "DECLARACION DE INDEPENDENCIA \nIMPARCIALIDAD E INTEGRIDAD",
             },
             card3: {
               id: "politicas-card3",
               img: "",
-              text: "POLÍTICA DE IMPARCIALIDAD, \nINDEPENDENCIA Y \nCONFIDENCIALIDAD",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
-
+              text: "POLITICA DE SUSPENSIÓN \nDE TAREAS",
             },
             card4: {
               id: "politicas-card4",
               img: "",
-              text: "POLÍTICA DE IMPARCIALIDAD, \nINDEPENDENCIA Y \nCONFIDENCIALIDAD",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
-
+              text: "POLITICA INTEGRAL \nQHSE ITICPE",
             },
             card5: {
               id: "politicas-card5",
               img: "",
-              text: "POLÍTICA DE IMPARCIALIDAD, \nINDEPENDENCIA Y \nCONFIDENCIALIDAD",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
-
+              text: "MANEJO DE EQUIPOS \nDE COMPUTO Y AYUDAS \nINFORMÁTICAS",
             },
             card6: {
               id: "politicas-card6",
               img: "",
-              text: "POLÍTICA DE IMPARCIALIDAD, \nINDEPENDENCIA Y \nCONFIDENCIALIDAD",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
-
-            },
-            card7: {
-              id: "politicas-card7",
-              img: "",
-              text: "POLÍTICA DE IMPARCIALIDAD, \nINDEPENDENCIA Y \nCONFIDENCIALIDAD",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
-
-            },
-            card8: {
-              id: "politicas-card8",
-              img: "",
-              text: "POLÍTICA DE IMPARCIALIDAD, \nINDEPENDENCIA Y \nCONFIDENCIALIDAD",
-              file: require('../documents/1.-POLITICA-DE-PROTECCION-DE-DATOS-PERSONALES.pdf').default,
-
+              text: "INTERNATIONAL TESTING \nINSPECTION & CERTIFICATION \nPERU S.A.C.",
             },
           },
         },
