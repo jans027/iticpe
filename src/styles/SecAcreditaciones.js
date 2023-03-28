@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const CardAcred = styled.div`
     /* border: 1px solid red;//.................... */
     margin: 1em 0;
-    width: 20vw!important;
-    min-width: 200px;
+    width: 21vw!important;
+    min-width: 245px;
     height: auto;
     border-radius: 30px;
     padding-top: 1.3rem;

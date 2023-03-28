@@ -6,8 +6,8 @@ export const data = [
       url: "/home",
       logoNav: "Logo-iticpe.svg",
       email: "contacto@iticpe.com",
-      phone: "+51 000 0000000",
-      whatsappUrl: "https://api.whatsapp.com/send?phone=573143553180",
+      phone: "+51 1 440-1983",
+      whatsappUrl: "https://api.whatsapp.com/send?phone=51979485044",
       whatsappImg: "boton.png",
       addressItic: "Of. Calle 108 #45-27 \nEd. ITICCOL - Bogotá Colombia",
       address: "Of. Calle 108 #45-27",
@@ -56,9 +56,9 @@ export const data = [
           paragraph1:
             "Somos una empresa con Orientación social, buscamos profesionales comprometidos con nuestros valores empresariales en búsqueda de EXCELENCIA OPERACIONAL E INTEGRIDAD en nuestros servicios.",
           paragraph2:
-            "Nacimos hace 13 años como empresa de filial de un grupo alemán y el 2023 como empresa nacional con presencia en varios países de Suramérica y Centroamérica.",
+            "Hace 13 años, nació nuestra empresa como filial de un grupo alemán. En el 2023, nos convertimos en una empresa nacional con presencia en varios países de Suramérica y Centroamérica. ",
           paragraph3:
-            "Nuestra experiencia en proyectos de gran envergadura a nivel nacional e internacional nos permite ofrecer confianza, agilidad, integridad y seguridad en servicios de Inspección, certificación y Ensayos, basamos nuestros conceptos en estándares técnicos nacionales e internacionales, contamos con profesionales con calificaciones técnicas internacionales, ofrecemos el desarrollo de soluciones digitales a la medida de nuestros clientes agilizando la toma acertada de decisiones y ahorro de recursos .",
+            "Desde entonces, hemos estado comprometidos con brindar soluciones de calidad a nuestros clientes en la región y nos enorgullece ser reconocidos como líderes en nuestro campo. Con una visión centrada en el crecimiento y la innovación, seguimos expandiendo nuestra presencia y mejorando nuestros servicios para satisfacer las necesidades en constante evolución de nuestros clientes.",
           titleSeccion: "¿POR QUÉ NOSOTROS?",
           cards: {
             card0: {
@@ -154,7 +154,7 @@ export const data = [
           documentOnac: {
             title: "ACREDITACIONES",
             subTitle:
-              "Nuestros reconocimientos son el resultado del compromiso con la excelencia y los altos estándares técnicos que nos impulsan a ofrecer lo mejor. En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:",
+              "Nuestros reconocimientos son el resultado del compromiso con la excelencia y los altos estándares técnicos que nos impulsan a ofrecer lo mejor",
             cards: {
               document1: {
                 id: "cardInspec",
@@ -164,7 +164,7 @@ export const data = [
                 acreditacion: 'inspeccion',
                 text0: 'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
                 textP:
-                  "INTERNATIONAL TESTING INSPECTION &CERTIFICATION PERU S.A.C Organismo de inspección acreditado por el organismo de acreditación INACAL-DA con Registro No. OI-018",
+                  "INTERNATIONAL TESTING INSPECTION &CERTIFICATION PERU S.A.C Organismo de inspección acreditado por el organismo de acreditación \nINACAL-DA con \nRegistro No. OI-018",
               },
               document3: {
                 id: "cardProd",
@@ -172,9 +172,9 @@ export const data = [
                 img: "ONAC_PRODUCTO.png",
                 name: "PRODUCTOS",
                 acreditacion: 'productos',
-                text0:'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
+                text0:'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
                 textP:
-                  "En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación 15-CPR-002, bajo la norma ISO/IEC 17065:2012 para la certificación de producto",
+                  "En ITICCOL contamos con acreditación ONAC, vigente \na la fecha con código de acreditación 15-CPR-002, \nbajo la norma \nISO/IEC 17065:2012 para la certificación de producto",
               },
               document4: {
                 id: "cardGest",
@@ -182,9 +182,9 @@ export const data = [
                 img: "ONAC_GESTION.png",
                 name: "SISTEMAS DE \nGESTIÓN",
                 acreditacion: 'gestion',
-                text0: 'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
+                text0: 'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
                 textP:
-                  "En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación 12-CSG-001, bajo la norma ISO/IEC 17021-1:2015 para la certificación de sistemas de gestión",
+                  "En ITICCOL contamos con acreditación ONAC, vigente a la \nfecha con código de acreditación \n12-CSG-001, bajo la norma \nISO/IEC 17021-1:2015 para la certificación de sistemas \nde gestión",
               },
             },
           },
@@ -269,7 +269,7 @@ export const data = [
               id: "card_equip_8",
               img: "Equipo/Equipo-AndresQ.png",
               name: "Andres Quiroga",
-              cargo: "Gerente Comercial\n \n",
+              cargo: "Gerente Marketing\n \n",
               linkedInn: "https://www.linkedin.com/in/andresquirogag/",
               email: "andres.quiroga@iticco.com",
             },
@@ -321,6 +321,14 @@ export const data = [
               linkedInn: "https://www.linkedin.com/in/nicolas-ram%C3%ADrez-ruiz-bb6624201/",
               email: "nicolas.ramirez@iticco.com",
             },
+            card10: {
+              id: "card_equip_10",
+              img: "Equipo/Equipo-Nicolas.png",
+              name: "Monica Silva",
+              cargo: "Operation \nController\n",
+              linkedInn: "https://www.linkedin.com/in/monica-patricia-silva-hernandez-45920195/",
+              email: "",
+            },
           },
         },
         proyectos: {
@@ -337,9 +345,9 @@ export const data = [
             "Con orgullo presentamos nuestros proyectos y procesos más importantes, los cuales han dejado huella en nuestros clientes y han contribuido a nuestro crecimiento y reconocimiento en el mercado.",
           textMap: {
             id: 'text_map',
-            text1:'Países donde se han prestado servicios en sitio con personal de Colombia (Sólo Producto)',
+            text1:'Nuestros servicios han llegado a diferentes partes del mundo, ¡ y seguimos trabajando para llegar aún más lejos!',
             text2: 'EEUU, Alemania, Italia, Francia, España, México, Finlandia, Argentina, China, Salvador, India, Guatemala, Panamá, Costa Rica, Brasil, Ecuador',
-            text3: '*Hemos tenido Clientes de casi todo el mundo',
+            text3: '',
             text4:'Departametnos donde se han prestado servicios en Colombia (Producto+Inspección RETIE):',
             text5: 'Valle, Cundinamarca, Antioquia, Boyacá, Atlántico, Meta, Cesar, Santander, Guainía, Norte de Santander, Huila, Tolima, Putumayo, Caldas, Córdoba, Risaralda, Casanare',
           },
@@ -561,7 +569,7 @@ export const data = [
           nameBtn: "MÁS SERVICIOS",
           cardImg: "INDUSTRIALES.png",
           cardText:
-            "Contamos con experiencia en proyectos de gran envergadura tanto a nivel nacional como internacional",
+            "Servicios Industriales \nAsistencia Técnica \nEspecializada en Health, \nSafety and Environment ",
           cards: {
             card0: {
               id: "certificacion-sistemas-retie-retilap",
@@ -881,6 +889,20 @@ export const data = [
               normaNumero: false,
               paragraph1:
                 'TCA ENEL\n\nTechnical Conformity Assessment – Certificación de tercera parte de productos eléctricos de acuerdo con los estándares y lineamientos requeridos por ENEL para la aprobación de sus proveedores.\n',
+              btn1: "REGRESAR",
+            },
+            card9: {
+              id: "normas-tecnicas",
+              img: "certificacion-producto/cp-tca.png",
+              imgPc: "certificacion-producto/cp-tca-dk.png",
+              imgMobile: "certificacion-producto/cp-tca-mb.png",
+              text1: "NORMAS TECNICAS",
+              text2: "NORMAS TECNICAS",
+              helmet: 'Normas Tecnicas',
+              acreditacion: 'productos',
+              normaNumero: false,
+              paragraph1:
+                'NORMAS TECNICAS\n\nCertifamos sus productos de acuerdo a normas técnicas Nacionales e internacionales como: NTC, NTP, IEC, ASTM, IEEE, ISO, ASME, UL, entre otras.\n',
               btn1: "REGRESAR",
             },
           },

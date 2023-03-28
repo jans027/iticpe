@@ -170,7 +170,7 @@ export const ContTexto2 = styled.div`
     /* border: 1px solid red;//..................... */
     width: 60%;
     left: 20%;
-    margin-top: 32vw;
+    margin-top: 36vw;
     position:absolute;
     .countries{
         font-size: clamp(18px, 1.5vw, 36px);

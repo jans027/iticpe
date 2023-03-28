@@ -25,10 +25,6 @@ const Contact = () => {
     const card = Object.values(cards);
     // console.log(name)
 
-    // search word 
-    const boldtWord = "ITICPER";
-    const parts = subTitle.split(boldtWord);
-
     //.......................................................
     // extract values of dropDownMenu
     const items = Object.values(datos.empresa.dropDownMenu);
@@ -99,11 +95,7 @@ const Contact = () => {
 
                         <ConTitleAcred>
                             <TitleAcred>{title}</TitleAcred>
-                            <SubTitleSection>
-                                {parts[0]}
-                                <span style={{ fontWeight: 'bold' }}>{boldtWord}</span>
-                                {parts[1]}
-                            </SubTitleSection>
+                            <SubTitleSection>{subTitle}</SubTitleSection>
                         </ConTitleAcred>
                         <ContCardsAcred>
                             {

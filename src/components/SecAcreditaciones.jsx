@@ -14,10 +14,6 @@ const SecAcreditaciones = () => {
     const { empresa: { dropDownMenu: { acreditaciones: { documentOnac: { title, subTitle, cards } } } } } = datos;
     const card = Object.values(cards);
 
-    // search word 
-    const boldtWord = "ITICPE";
-    const parts = subTitle.split(boldtWord);
-
     // silder......
     const settings = {
         dots: true,
@@ -58,11 +54,7 @@ const SecAcreditaciones = () => {
         <>
             <ConSectionServicios>
                 <TitleSection>{title}</TitleSection>
-                <SubTitleSection>
-                    {parts[0]}
-                    <span style={{ fontWeight: 'bold' }}>{boldtWord}</span>
-                    {parts[1]}
-                </SubTitleSection>
+                <SubTitleSection>{subTitle}</SubTitleSection>
                 <ContSliderAcr>
                     <Slider {...settings}>
 
