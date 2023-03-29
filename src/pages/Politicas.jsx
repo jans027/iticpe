@@ -19,6 +19,7 @@ import politica_suspension from '../documents/ITIC-DG-NA-DI-004-POLITICA-DE-SUSP
 import politica_integral from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-QHSE-ITICPE-(R08).pdf';
 import computo from '../documents/PSI-01-MANEJO-DE-EQUIPOS-DE-COMPUTO-Y-AYUDAS-INFORMÁTICAS-(R01).pdf';
 import testing_inspection from '../documents/RIT-APROBADO-018239-2023-INTERNATIONAL-TESTING-INSPECTION-&-CERTIFICATION-PERU-S.A.C..pdf';
+import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIONES-(R09).pdf';
 
 import { Helmet } from 'react-helmet'
 
@@ -109,7 +110,11 @@ const Politicas = () => {
               </CardPol>
               <CardPol target='_blank' to={testing_inspection} rel="noopener noreferrer">
                 <div className='text_img_poli'><FileOpenOutlinedIcon /></div>
-                <div><div className='text_card_poli'><p>International Testing Inspection & Certification Peru S.A.C.</p></div></div>
+                <div><div className='text_card_poli'><p>Reglamento Interno de Trabajo</p></div></div>
+              </CardPol>
+              <CardPol target='_blank' to={quejas_apelaciones} rel="noopener noreferrer">
+                <div className='text_img_poli'><FileOpenOutlinedIcon /></div>
+                <div><div className='text_card_poli'><p>Quejas y Apelaciones</p></div></div>
               </CardPol>
 
 

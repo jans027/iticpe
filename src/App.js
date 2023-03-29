@@ -91,8 +91,8 @@ function App() {
         {getCookie === true ? '' : showButton && <Cookie />} 
 
         <Routes>
-          <Route path="*" element={<Navigate to="/Home" />} />
-          <Route exact path="/home" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/cotizacion" element={<Cotizacion />} />
           <Route path="/Politicas de Navegacion" element={<PoliticasNavegacion />} />
