@@ -5,7 +5,8 @@ import { BtnFormContact, CheckboxInput, CheckboxLabel, FormContact, TextArea } f
 // toastify alert
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+// consecutive number
+import { v4 as uuidv4 } from 'uuid';
 
 
 const ContactForm = (props) => {
@@ -131,9 +132,8 @@ const ContactForm = (props) => {
 
             const url = SERVICE_URL;
             const Nombre = 'CONTACTO';
-            //we get exact time to generate a different conversation email each time
-            const subject = new Date();
-            const formatDate = subject.toLocaleTimeString();
+            //we get consecutive number to generate a different conversation email each time
+            const messageId = uuidv4().slice(0, 8);
 
             fetch(url, {
                 method: 'POST',
@@ -144,7 +144,7 @@ const ContactForm = (props) => {
                 body: JSON.stringify({
                     sender: { name: Nombre, email: SEND_MAIL },
                     to: [{ email: DESTINATION_MAIL }],
-                    subject: formatDate,
+                    subject: messageId,
                     htmlContent:
                         `
                         Nombre : ${dataForm.name}
