@@ -84,7 +84,7 @@ const LibroReclamaciones = (props) => {
     };
     //.......................................
 
-    //......Select and Sub Select..............
+    //......Select ..............
     const [optionSelected, setOptionSelected] = useState("");
 
     const handleOptionChange = (event) => {
@@ -141,11 +141,12 @@ const LibroReclamaciones = (props) => {
 
         const formData = new FormData(formRef.current);
         const dataForm = Object.fromEntries(formData.entries());
+        console.log(dataForm)
 
 
-        //regex input NIT
-        const nitRegex = /^\d{8}-\d$/;
-        const isValidNit = nitRegex.test(dataForm.Nit);
+        //regex input DNI/CE
+        const nitRegex = /^([0-9]{8}|[0-9]{9}-[A-Z]{2}[0-9]{1})$/; // cambiar constantes
+        const isValidNit = nitRegex.test(dataForm.Nit);// cambiar constantes
 
         // regex input name and last name
         const nameRegex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/;
@@ -349,8 +350,8 @@ const LibroReclamaciones = (props) => {
                                 className={classAlert5}
                                 type="text"
                                 // placeholder='Nombre empresa'
-                                name="Razon_Social"
-                                id="Razon_Social"
+                                name="Domicilio"
+                                id="Domicilio"
                             />
                         </SingleInput>
                     </div>
@@ -390,12 +391,12 @@ const LibroReclamaciones = (props) => {
                         <SingleInput>
                             <LabelNit className='form_label'>{isErrorNit === true ? 'Numero No Valido' : 'DNI/CE:'}<span>*</span></LabelNit>
                             <input
-                                // onChange={handleChange}
                                 className={classAlert1}
                                 type="text"
                                 // placeholder='00000000000'
-                                name="Nit"
-                                id="Nit"
+                                name="DNI/CE"
+                                id="DNI_CE"
+                                pattern="^([0-9]{8}|[0-9]{9}-[A-Z]{2}[0-9]{1})$"
                             />
                         </SingleInput>
                     </div>
@@ -408,9 +409,8 @@ const LibroReclamaciones = (props) => {
                                 className={classAlert1}
                                 type="text"
                                 // placeholder='00000000000'
-                                name="Nit"
-                                id="Nit"
-                                required
+                                name="Padre o Madre"
+                                id="Padre_o_Madre"
                             />
                         </SingleInput>
                     </div>
@@ -422,17 +422,17 @@ const LibroReclamaciones = (props) => {
                         <ContCheck>
                             <p className='form_label'>Por favor, seleccione<span>*</span></p>
                             <label>
-                                <CheckboxInputLibro type="checkbox" checked={optionProducto} onChange={handleGroup1Option1} />
+                                <CheckboxInputLibro name='Bien Contratado' value="Producto" type="checkbox" checked={optionProducto} onChange={e => handleGroup1Option1(e.target.value)} />
                                 <p>Producto</p>
                             </label>
                             <label>
-                                <CheckboxInputLibro type="checkbox" checked={optionServicio} onChange={handleGroup1Option2} />
+                                <CheckboxInputLibro name='Bien Contratado' value="Servicio" type="checkbox" checked={optionServicio} onChange={e => handleGroup1Option2(e.target.value)} />
                                 <p>Servicio</p>
                             </label>
                         </ContCheck>
 
                         <label className='form_label'>Por favor, elija su tema de interés!<span>*</span></label>
-                        <select value={optionSelected} onChange={handleOptionChange} name="seleccion" required>
+                        <select onChange={handleOptionChange} name="seleccion" required>
                             <option value="" hidden>Por favor, seleccione</option>
                             {
                                 categorias.map((item) =>
@@ -454,11 +454,11 @@ const LibroReclamaciones = (props) => {
                         <ContCheck>
                             <p className='form_label'>Por favor, seleccione<span>*</span></p>
                             <label>
-                                <CheckboxInputLibro type="checkbox" checked={optionReclamo} onChange={handleGroup2Option1} />
+                                <CheckboxInputLibro name='Detalle De La Reclamación' value="Reclamo" type="checkbox" checked={optionReclamo} onChange={e => handleGroup2Option1(e.target.value)} />
                                 <p>Reclamo¹</p>
                             </label>
                             <label>
-                                <CheckboxInputLibro type="checkbox" checked={optionQueja} onChange={handleGroup2Option2} />
+                                <CheckboxInputLibro name='Detalle De La Reclamación' value="Queja" type="checkbox" checked={optionQueja} onChange={e => handleGroup2Option2(e.target.value)} />
                                 <p>Queja²</p>
                             </label>
                         </ContCheck>
@@ -487,11 +487,11 @@ const LibroReclamaciones = (props) => {
                         <ContCheck>
                             <p className='form_label'>Canal de contacto preferido <span>*</span></p>
                             <label>
-                                <CheckboxInputLibro type="checkbox" checked={optionEmail} onChange={handleGroup3Option1} />
+                                <CheckboxInputLibro name='Canal de Contacto' value="E-Mail" type="checkbox" checked={optionEmail} onChange={e => handleGroup3Option1(e.target.value)} />
                                 <p>E-Mail</p>
                             </label>
                             <label>
-                                <CheckboxInputLibro type="checkbox" checked={optionCarta} onChange={handleGroup3Option2} />
+                                <CheckboxInputLibro name='Canal de Contacto' value="Carta" type="checkbox" checked={optionCarta} onChange={e => handleGroup3Option2(e.target.value)} />
                                 <p>Carta</p>
                             </label>
                         </ContCheck>
