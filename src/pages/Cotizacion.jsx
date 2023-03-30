@@ -43,7 +43,7 @@ export default class Cotizacion extends Component {
 
     return (
       <>
-        <Helmet><title>{helmet} – ITIC Colombia</title></Helmet>
+        <Helmet><title>{helmet} – ITICPE</title></Helmet>
 
         <ContCotizacion>
           <ContImgCotizacion>

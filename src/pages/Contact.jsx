@@ -48,7 +48,7 @@ export default class SecContactanos extends Component {
 
         return (
             <>
-                <Helmet><title>{helmet} – ITIC Colombia</title></Helmet>
+                <Helmet><title>{helmet} – ITICPE</title></Helmet>
 
                 <ContContact>
                     <ContImgComtact>

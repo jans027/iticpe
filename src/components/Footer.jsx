@@ -44,8 +44,10 @@ const Footer = () => {
         consulta,
         cotizacion,
         contacto,
-        politicas
+        politicas,
+        LibroReclamaciones
     } = datos;
+    const {url} = LibroReclamaciones
     const serviciosSub = Object.values(servicios.dropDownMenu);
     const empresasSub = Object.values(empresa.dropDownMenu);
     // console.log(politicas)
@@ -124,6 +126,7 @@ const Footer = () => {
                                 Condiciones Generales 
                             </a>
                         </li>
+                        <Link to={url}>.</Link>
                         <br />
                         <br />
                         <BtnFooter to={politicas.url}><div>{politicas.btn}</div></BtnFooter>

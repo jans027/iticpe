@@ -32,6 +32,7 @@ import PoliticasNavegacion from "./pages/PoliticasNavegacion";
 import ButtonToTop from "./components/ButtonToTop";
 import Cookie from "./components/Cookie";
 import Cookies from "js-cookie";
+import LibroReclamaciones from "./pages/LibroReclamaciones";
 
 
 function App() {
@@ -119,6 +120,8 @@ function App() {
           <Route path="/servicios/producto/:id" element={<DetallesServicios producto={producto} />} />
           <Route path="/servicios/industrial/:id" element={<DetallesServicios industriales={industriales} />} />
           <Route path="/servicios/personas/:id" element={<DetallesServicios personas={personas} />} />
+
+          <Route path="/libro-de-reclamaciones" element={<LibroReclamaciones />} />
 
         </Routes>
         <Footer />

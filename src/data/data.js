@@ -1333,5 +1333,14 @@ export const data = [
         },
       }
     },
+    LibroReclamaciones: {
+      id: 'libro_reclamaciones',
+      name:'Libro De Reclamaciones',
+      helmet: 'Libro De Reclamaciones',
+      url: "/libro-de-reclamaciones",
+      img: 'libro_de_reclamaciones.jpg',
+      text1:'Conforme a lo establecido en el Código de Protección y Defensa del Consumidor este establecimiento cuenta con un Libro de Reclamaciones a tu disposición.',
+      text2:'',
+    },
   },
 ];

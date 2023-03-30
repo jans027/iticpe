@@ -48,7 +48,7 @@ const Personas = () => {
 
   return (
     <>
-      <Helmet><title>{helmet} – ITIC Colombia</title></Helmet>
+      <Helmet><title>{helmet} – ITICPE</title></Helmet>
 
       <BannerServicios />
       <ContPagesEmpresa>
