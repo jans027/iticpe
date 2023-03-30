@@ -1340,7 +1340,45 @@ export const data = [
       url: "/libro-de-reclamaciones",
       img: 'libro_de_reclamaciones.jpg',
       text1:'Conforme a lo establecido en el Código de Protección y Defensa del Consumidor este establecimiento cuenta con un Libro de Reclamaciones a tu disposición.',
-      text2:'',
+      text2: '',
+      categoria: {
+        option0: {
+          id: 'option_0',
+          name:'Tráfico, Vehículos y Ferrocarriles',
+        },
+        option1: {
+          id: 'option_1',
+          name:'Comodities y Bienes de Consumo',
+        },
+        option2: {
+          id: 'option_2',
+          name:'Industria e Infraestructura',
+        },
+        option3: {
+          id: 'option_3',
+          name:'Sistemas y Procesos',
+        },
+        option4: {
+          id: 'option_4',
+          name:'Capacitación y Calificación',
+        },
+        option5: {
+          id: 'option_5',
+          name:'Salud y seguridad en el trabajo',
+        },
+        option6: {
+          id: 'option_6',
+          name:'Transformación Digital',
+        },
+        option7: {
+          id: 'option_7',
+          name:'Seguridad Cibernética',
+        },
+        option8: {
+          id: 'option_8',
+          name:'Otros',
+        },
+      }
     },
   },
 ];

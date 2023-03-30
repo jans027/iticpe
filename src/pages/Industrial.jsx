@@ -23,7 +23,7 @@ const Industrial = () => {
 
   //Get data
   const [datos] = data;
-  const { servicios: { dropDownMenu: { industriales: {helmet, name, cardImg, subTitle2, cards } } } } = datos
+  const { servicios: { dropDownMenu: { industriales: { helmet, name, cardImg, subTitle2, cards } } } } = datos
 
 
   // extract values of cards
@@ -44,7 +44,7 @@ const Industrial = () => {
   // console.log(itemsUrl)
   //.......................................................
 
-  
+
 
   return (
     <>
@@ -119,16 +119,19 @@ const Industrial = () => {
             <MenuMobileNos>
               {
                 itemsUrlDown.map((item) =>
-                  <Link to={item.url} key={item.name}><div>
-                    <p>{item.name.split('\n').map((line, i) => {
-                      return (
-                        <React.Fragment key={i}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      )
-                    })}</p>
-                    <ArrowDropDownIcon /></div></Link>
+                  <Link to={item.url} key={item.name}>
+                    <div>
+                      <p>{item.name.split('\n').map((line, i) => {
+                        return (
+                          <React.Fragment key={i}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        )
+                      })}</p>
+                      <ArrowDropDownIcon />
+                    </div>
+                  </Link>
                 )
               }
             </MenuMobileNos>

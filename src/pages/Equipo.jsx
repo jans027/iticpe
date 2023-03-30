@@ -92,7 +92,7 @@ const Equipo = () => {
               <div className='ConCardsEm'>
                 {
                   cardCol.map((item) =>
-                    
+
                     <FirstConEmployes>
                       <CardEmployeeE key={item.id}>
                         <ContInfoEmpl>
@@ -111,7 +111,7 @@ const Equipo = () => {
                         </ContInfoEmpl>
                       </CardEmployeeE>
                     </FirstConEmployes>
-                    
+
                   )
                 }
               </div>
@@ -120,16 +120,19 @@ const Equipo = () => {
             <MenuMobileNos>
               {
                 itemsUrlDown.map((item) =>
-                  <Link to={item.url} key={item.name}><div>
-                    <p>{item.name.split('\n').map((line, i) => {
-                      return (
-                        <React.Fragment key={i}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      )
-                    })}</p>
-                    <ArrowDropDownIcon /></div></Link>
+                  <Link to={item.url} key={item.name}>
+                    <div>
+                      <p>{item.name.split('\n').map((line, i) => {
+                        return (
+                          <React.Fragment key={i}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        )
+                      })}</p>
+                      <ArrowDropDownIcon />
+                    </div>
+                  </Link>
                 )
               }
             </MenuMobileNos>

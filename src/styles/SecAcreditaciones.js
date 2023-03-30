@@ -66,14 +66,14 @@ export const CardAcred = styled.div`
     }
 `
 export const TitleSection = styled.h1`
-        font-size: clamp(28px, 3.8vw, 70px);
-        font-weight: 900;
-        padding:1rem 0 1rem 0;
-        @media(max-width:710px){
-            font-size: 8vw;
-            width: 90%;
-            margin: auto;
-        }
+    font-size: clamp(28px, 3.8vw, 70px);
+    font-weight: 900;
+    padding:1rem 0 1rem 0;
+    @media(max-width:710px){
+        font-size: 8vw;
+        width: 90%;
+        margin: auto;
+    }
 `
 export const SubTitleSection = styled.p`
     /* border: 1px solid red;//........................ */

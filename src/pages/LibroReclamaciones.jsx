@@ -6,8 +6,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // consecutive number
 import { v4 as uuidv4 } from 'uuid';
-import { BtnFormLibro, CheckboxInputLibro, CheckboxLabelLibro, FormLibro, ImgLibro } from '../styles/LibroReclamaciones';
+import { BtnFormLibro, CheckboxInputLibro, CheckboxLabelLibro, ContCheck, FormLibro, ImgLibro, PTitle, SingleInput, TextAreaLibro, TitleLibro, TitleSection, VariousInput } from '../styles/LibroReclamaciones';
 import { Helmet } from 'react-helmet';
+import { color } from '@mui/system';
 
 
 
@@ -21,7 +22,7 @@ const LibroReclamaciones = (props) => {
 
     // get data
     const [datos] = data;
-    const { LibroReclamaciones: { img, name, text1, helmet }, cotizacion: { form: { categoria } }, contacto: { contactanos: { checkbox } } } = datos;
+    const { LibroReclamaciones: { img, name, text1, helmet, categoria }, contacto: { contactanos: { checkbox } } } = datos;
     const categorias = Object.values(categoria);
 
     // ...dinamic class name
@@ -85,28 +86,55 @@ const LibroReclamaciones = (props) => {
 
     //......Select and Sub Select..............
     const [optionSelected, setOptionSelected] = useState("");
-    const [optionsList, setOptionsList] = useState([]);
-    const options = Object.values(optionsList)
 
     const handleOptionChange = (event) => {
-        const selectedOption = event.target.value;
-        setOptionSelected(selectedOption);
-        // En este codigo, se filtran las opciones dinámicamente
-        // según la opción seleccionada. 
-        if (selectedOption === "Servicios Industriales") {
-            const objetoEncontrado = categorias.find((objeto) => objeto.name === "Servicios Industriales");
-            setOptionsList(objetoEncontrado.tipo);
-        } else if (selectedOption === "Certificación de Producto") {
-            const objetoEncontrado = categorias.find((objeto) => objeto.name === "Certificación de Producto");
-            setOptionsList(objetoEncontrado.tipo);
-        } else if (selectedOption === "Sistemas de Gestión") {
-            const objetoEncontrado = categorias.find((objeto) => objeto.name === "Sistemas de Gestión");
-            setOptionsList(objetoEncontrado.tipo);
-        } else {
-            setOptionsList([]);
-        }
+        setOptionSelected(event.target.value);
+
     };
     //......Select and Sub Select..............
+
+    //......checkbox 1.........................
+    const [optionProducto, setOptionProducto] = useState(false);
+    const [optionServicio, setOptionServicio] = useState(false);
+
+    const handleGroup1Option1 = () => {
+        setOptionProducto(true);
+        setOptionServicio(false);
+    };
+
+    const handleGroup1Option2 = () => {
+        setOptionServicio(true);
+        setOptionProducto(false);
+    };
+    //.........................................
+    //......checkbox 2.........................
+    const [optionReclamo, setOptionReclamo] = useState(false);
+    const [optionQueja, setOptionQueja] = useState(false);
+
+    const handleGroup2Option1 = () => {
+        setOptionReclamo(true);
+        setOptionQueja(false);
+    };
+
+    const handleGroup2Option2 = () => {
+        setOptionQueja(true);
+        setOptionReclamo(false);
+    };
+    //.........................................
+    //......checkbox 2.........................
+    const [optionEmail, setOptionEmail] = useState(false);
+    const [optionCarta, setOptionCarta] = useState(false);
+
+    const handleGroup3Option1 = () => {
+        setOptionEmail(true);
+        setOptionCarta(false);
+    };
+
+    const handleGroup3Option2 = () => {
+        setOptionCarta(true);
+        setOptionEmail(false);
+    };
+    //.........................................
 
     const sendEmail = (event) => {
         event.preventDefault();
@@ -265,14 +293,21 @@ const LibroReclamaciones = (props) => {
         <FormLibro>
             <Helmet><title>{helmet} – ITICPE</title></Helmet>
 
-            <p>{name}</p>
+            <TitleLibro>{name}</TitleLibro>
             <ImgLibro><img src={require(`../images/${img}`)} alt="" /></ImgLibro>
-            <p>{text1}</p>
+
             <div className='cont_form_mail'>
                 <form ref={formRef} onSubmit={sendEmail}>
 
+                    <TitleSection>
+                        <p><span>*</span>Campo obligatorio</p>
+                        <br />
+                        <p>{text1}</p>
+                        <PTitle>1. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE</PTitle>
+                    </TitleSection>
+
                     <div className='firstBlock'>
-                        <div>
+                        <VariousInput>
                             <LabelName className='form_label'>{isErrorName === true ? 'Nombre No Valido' : 'Nombre'}<span>*</span></LabelName>
                             <input
                                 onCut={handleCutCopyPaste}
@@ -282,13 +317,13 @@ const LibroReclamaciones = (props) => {
                                 // onChange={handleChange}
                                 className={classAlert0}
                                 type="text"
-                                placeholder='Nombre'
+                                // placeholder='Nombre'
                                 name="Nombres"
                                 id="Nombres"
                                 required
                             />
-                        </div>
-                        <div>
+                        </VariousInput>
+                        <VariousInput>
                             <LabelLastName className='form_label'>{isErrorLastName === true ? 'Apellidos No Validos' : 'Apellidos'}<span>*</span></LabelLastName>
                             <input
                                 onCut={handleCutCopyPaste}
@@ -298,56 +333,30 @@ const LibroReclamaciones = (props) => {
                                 // onChange={handleChange}
                                 className={classAlert4}
                                 type="text"
-                                placeholder='Apellidos'
+                                // placeholder='Apellidos'
                                 name="Apellidos"
                                 id="Apellidos"
                                 required
                             />
-                        </div>
+                        </VariousInput>
                     </div>
 
                     <div className='firstBlock'>
-                        <div>
-                            <LabelRazonSocial className='form_label'>{isErrorRazonSocial === true ? 'Numero No Valido' : 'Razón social'}<span>*</span></LabelRazonSocial >
+                        <SingleInput>
+                            <LabelRazonSocial className='form_label'>{isErrorRazonSocial === true ? 'Numero No Valido' : 'Domicilio'}</LabelRazonSocial >
                             <input
                                 // onChange={handleChange}
                                 className={classAlert5}
                                 type="text"
-                                placeholder='Nombre empresa'
+                                // placeholder='Nombre empresa'
                                 name="Razon_Social"
                                 id="Razon_Social"
-                                required
                             />
-                        </div>
-                        <div>
-                            <LabelNit className='form_label'>{isErrorNit === true ? 'Numero No Valido' : 'Nit:'}<span>*</span></LabelNit>
-                            <input
-                                // onChange={handleChange}
-                                className={classAlert1}
-                                type="text"
-                                placeholder='00000000000'
-                                name="Nit"
-                                id="Nit"
-                                required
-                            />
-                        </div>
+                        </SingleInput>
                     </div>
 
-
                     <div className='firstBlock'>
-                        <div>
-                            <LabelPhone className='form_label'>{isErrorPhone === true ? 'Numero No Valido' : 'Teléfono o Celular'}<span>*</span></LabelPhone>
-                            <input
-                                // onChange={handleChange}
-                                className={classAlert2}
-                                type="tel"
-                                placeholder='00000000000'
-                                name="Telefono"
-                                id="Telefono"
-                                required
-                            />
-                        </div>
-                        <div>
+                        <VariousInput>
                             <LabelMail className='form_label'>{isErrorMail === true ? 'E-mail Invalido' : 'E-mail'}<span>*</span></LabelMail>
                             <input
                                 onCut={handleCutCopyPaste}
@@ -357,18 +366,74 @@ const LibroReclamaciones = (props) => {
                                 // onChange={handleChange}
                                 className={classAlert3}
                                 type="email"
-                                placeholder='usuario@correo.com'
+                                // placeholder='usuario@correo.com'
                                 name="E_mail"
                                 id="E_mail"
                                 required
                             />
-                        </div>
+                        </VariousInput>
+                        <VariousInput>
+                            <LabelPhone className='form_label'>{isErrorPhone === true ? 'Numero No Valido' : 'Teléfono'}<span>*</span></LabelPhone>
+                            <input
+                                // onChange={handleChange}
+                                className={classAlert2}
+                                type="tel"
+                                // placeholder='00000000000'
+                                name="Telefono"
+                                id="Telefono"
+                                required
+                            />
+                        </VariousInput>
                     </div>
 
+                    <div className='firstBlock'>
+                        <SingleInput>
+                            <LabelNit className='form_label'>{isErrorNit === true ? 'Numero No Valido' : 'DNI/CE:'}<span>*</span></LabelNit>
+                            <input
+                                // onChange={handleChange}
+                                className={classAlert1}
+                                type="text"
+                                // placeholder='00000000000'
+                                name="Nit"
+                                id="Nit"
+                            />
+                        </SingleInput>
+                    </div>
+
+                    <div className='firstBlock'>
+                        <SingleInput>
+                            <LabelNit className='form_label'>{isErrorNit === true ? 'Numero No Valido' : 'Padre o madre: [Para el caso de menores de edad]'}</LabelNit>
+                            <input
+                                // onChange={handleChange}
+                                className={classAlert1}
+                                type="text"
+                                // placeholder='00000000000'
+                                name="Nit"
+                                id="Nit"
+                                required
+                            />
+                        </SingleInput>
+                    </div>
+
+
                     <div className='secondForm'>
-                        <label className='form_label'>Categoría de Servicio<span>*</span></label>
+                        <PTitle>2. IDENTIFICACIÓN DEL BIEN CONTRATADO</PTitle>
+
+                        <ContCheck>
+                            <p className='form_label'>Por favor, seleccione<span>*</span></p>
+                            <label>
+                                <CheckboxInputLibro type="checkbox" checked={optionProducto} onChange={handleGroup1Option1} />
+                                <p>Producto</p>
+                            </label>
+                            <label>
+                                <CheckboxInputLibro type="checkbox" checked={optionServicio} onChange={handleGroup1Option2} />
+                                <p>Servicio</p>
+                            </label>
+                        </ContCheck>
+
+                        <label className='form_label'>Por favor, elija su tema de interés!<span>*</span></label>
                         <select value={optionSelected} onChange={handleOptionChange} name="seleccion" required>
-                            <option value="" hidden>Selecciona el servicio a cotizar</option>
+                            <option value="" hidden>Por favor, seleccione</option>
                             {
                                 categorias.map((item) =>
                                     <option key={item.id} value={item.name}>{item.name}</option>
@@ -376,16 +441,60 @@ const LibroReclamaciones = (props) => {
                             }
                         </select>
 
-                        <label className='form_label'>Tipo de Servicio<span>*</span></label>
-                        <select name="seleccion" required>
-                            <option value="" hidden>Selecciona el tipo de servicio a cotizar</option>
-                            {
-                                options.map((item) =>
-                                    <option key={item} value={`${optionSelected} / ${item}`}>{item}</option>
-                                )
-                            }
-                        </select>
+                        <label className='form_label'>Descripcion <span>*</span></label>
+                        <TextAreaLibro
+                            rows="5"
+                            // placeholder='Escribe aqui tu mensaje'
+                            required
+                            name="comentario">
+                        </TextAreaLibro>
 
+                        <PTitle>3. DETALLE DE LA RECLAMACIÓN</PTitle>
+
+                        <ContCheck>
+                            <p className='form_label'>Por favor, seleccione<span>*</span></p>
+                            <label>
+                                <CheckboxInputLibro type="checkbox" checked={optionReclamo} onChange={handleGroup2Option1} />
+                                <p>Reclamo¹</p>
+                            </label>
+                            <label>
+                                <CheckboxInputLibro type="checkbox" checked={optionQueja} onChange={handleGroup2Option2} />
+                                <p>Queja²</p>
+                            </label>
+                        </ContCheck>
+
+                        <label className='form_label'>Descripcion <span>*</span></label>
+                        <TextAreaLibro
+                            rows="5"
+                            // placeholder='Escribe aqui tu mensaje'
+                            required
+                            name="comentario">
+                        </TextAreaLibro>
+
+                        <p>¹Reclamo: Disconformidad relacionada a los productos o servicios.</p>
+                        <p>²Queja: Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público.</p>
+
+                        <PTitle>4. ACCIONES ADOPTADAS POR EL PROVEEDOR</PTitle>
+
+                        <label className='form_label'>Detalle (Este campo será llenado por el proveedor al momento de atender su queja o reclamo)</label>
+                        <TextAreaLibro
+                            rows="5"
+                            // placeholder='Escribe aqui tu mensaje'
+                            readOnly
+                            name="comentario">
+                        </TextAreaLibro>
+
+                        <ContCheck>
+                            <p className='form_label'>Canal de contacto preferido <span>*</span></p>
+                            <label>
+                                <CheckboxInputLibro type="checkbox" checked={optionEmail} onChange={handleGroup3Option1} />
+                                <p>E-Mail</p>
+                            </label>
+                            <label>
+                                <CheckboxInputLibro type="checkbox" checked={optionCarta} onChange={handleGroup3Option2} />
+                                <p>Carta</p>
+                            </label>
+                        </ContCheck>
 
                         <CheckboxLabelLibro>
                             <CheckboxInputLibro

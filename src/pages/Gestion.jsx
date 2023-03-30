@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
-import { Link  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ContacBar from '../components/ContacBar'
 import { data } from '../data/data'
 import { ContPagesEmpresa } from '../styles/NavEmpresa'
-import {  ConNosotros,  MenuMobileNos, MobileTitle } from '../styles/Nosotros'
+import { ConNosotros, MenuMobileNos, MobileTitle } from '../styles/Nosotros'
 // Icons
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import NavServicios from '../components/NavServicios'
 import BannerServicios from '../components/BannerServicios'
-import {  ContCard1, ContCard2, ContImg1, ContText1 } from '../styles/Gestion'
+import { ContCard1, ContCard2, ContImg1, ContText1 } from '../styles/Gestion'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { CardServicios, ContCardServicios, ContImage, ContLink } from '../styles/CardsServicios'
 import { Helmet } from 'react-helmet'
@@ -20,10 +20,10 @@ const Gestion = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  
+
   //Get data
   const [datos] = data;
-  const { servicios: { dropDownMenu: { gestion: {helmet, name, cardImg, subTitle2, cards } } } } = datos
+  const { servicios: { dropDownMenu: { gestion: { helmet, name, cardImg, subTitle2, cards } } } } = datos
 
   // extract values of cards
   const card = Object.values(cards);
@@ -41,7 +41,7 @@ const Gestion = () => {
   const itemsUrlDown = Object.values(itemsFind1)
   //.......................................................
 
-  
+
 
 
   return (
@@ -105,7 +105,7 @@ const Gestion = () => {
                             )
                           })}
                         </p>
-                      <AddCircleIcon />
+                        <AddCircleIcon />
                       </div>
                     </ContLink>
                   </CardServicios>
@@ -116,16 +116,19 @@ const Gestion = () => {
             <MenuMobileNos>
               {
                 itemsUrlDown.map((item) =>
-                  <Link to={item.url} key={item.name}><div>
-                    <p>{item.name.split('\n').map((line, i) => {
-                      return (
-                        <React.Fragment key={i}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      )
-                    })}</p>
-                    <ArrowDropDownIcon /></div></Link>
+                  <Link to={item.url} key={item.name}>
+                    <div>
+                      <p>{item.name.split('\n').map((line, i) => {
+                        return (
+                          <React.Fragment key={i}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        )
+                      })}</p>
+                      <ArrowDropDownIcon />
+                    </div>
+                  </Link>
                 )
               }
             </MenuMobileNos>

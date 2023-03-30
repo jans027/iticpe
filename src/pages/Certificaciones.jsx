@@ -139,16 +139,19 @@ const Certificaciones = () => {
             <MenuMobileNos>
               {
                 itemsUrlDown.map((item) =>
-                  <Link to={item.url} key={item.name}><div>
-                    <p>{item.name.split('\n').map((line, i) => {
-                      return (
-                        <React.Fragment key={i}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      )
-                    })}</p>
-                    <ArrowDropDownIcon /></div></Link>
+                  <Link to={item.url} key={item.name}>
+                    <div>
+                      <p>{item.name.split('\n').map((line, i) => {
+                        return (
+                          <React.Fragment key={i}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        )
+                      })}</p>
+                      <ArrowDropDownIcon />
+                    </div>
+                  </Link>
                 )
               }
             </MenuMobileNos>

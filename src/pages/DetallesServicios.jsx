@@ -79,13 +79,7 @@ const DetallesServicios = (props) => {
                     <ContNavigationPc>
                         {
                             rute.map((item) =>
-                                <Link
-                                    to={item.url}
-                                    key={item.key}
-                                    id={item.id}
-                                >
-
-
+                                <Link to={item.url} key={item.key} id={item.id} >
                                     <div style={{ backgroundColor: idProp === item.id ? '#9cff2d' : '#ffffff' }}>
                                         <p>
                                             {item.nameNav2.split('\n').map((line, i) => {

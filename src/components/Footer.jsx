@@ -107,24 +107,24 @@ const Footer = () => {
                     <ContUlPoliticas>
                         <h3>{politicas.name}</h3>
                         <li>
-                            <a target="_blank" href={declaracion_independencia} rel="noreferrer">
+                            <Link target="_blank" to={declaracion_independencia} rel="noreferrer">
                                 Declaracion De Independencia <br /> Imparcialidad E Integridad
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a target="_blank" href={conducta_corporativo} rel="noreferrer">
+                            <Link target="_blank" to={conducta_corporativo} rel="noreferrer">
                                 Codigo De Conducta <br /> Corporativo 
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a target="_blank" href={política_HSEQ} rel="noreferrer">
+                            <Link target="_blank" to={política_HSEQ} rel="noreferrer">
                                 Política HSEQ
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a target="_blank" href={condiciones_generales} rel="noreferrer">
+                            <Link target="_blank" to={condiciones_generales} rel="noreferrer">
                                 Condiciones Generales 
-                            </a>
+                            </Link>
                         </li>
                         <Link to={url}>.</Link>
                         <br />
@@ -203,24 +203,24 @@ const Footer = () => {
                                 <EnlaceDesplegable>
                                     <ul>
                                         <li>
-                                            <a target="_blank" href={declaracion_independencia} rel="noreferrer">
+                                            <Link target="_blank" to={declaracion_independencia} rel="noreferrer">
                                                 Declaracion De Independencia <br /> Imparcialidad E Integridad
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a target="_blank" href={conducta_corporativo} rel="noreferrer">
+                                            <Link target="_blank" to={conducta_corporativo} rel="noreferrer">
                                                 Codigo De Conducta <br /> Corporativo
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a target="_blank" href={política_HSEQ} rel="noreferrer">
+                                            <Link target="_blank" to={política_HSEQ} rel="noreferrer">
                                                 Política HSEQ
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a target="_blank" href={condiciones_generales} rel="noreferrer">
+                                            <Link target="_blank" to={condiciones_generales} rel="noreferrer">
                                                 Condiciones Generales
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
                                             <BtnFooter to={politicas.url}><div>{politicas.btn}</div></BtnFooter>
