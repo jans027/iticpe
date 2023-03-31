@@ -153,6 +153,15 @@ export const LogoFooter = styled.div`
     div{
         width:clamp(213px, 15%, 250px);
     }
+    @media (min-width:500px) and (max-width:1070px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media (max-width:500px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 export const AddressFooter = styled.span`
             /* border: 1px solid white;//................... */
@@ -340,6 +349,25 @@ export const BtnFooter = styled(Link)`
         &:active{
         background-color:var(--color8);
         }
+    }
+`
+export const BtnLibro = styled(Link)`
+    /* border: 1px solid red;//.................... */
+    margin-top: 1em;
+    overflow: hidden;
+    /* width: 100px;
+    height: 100px; */
+    .libroResponsive{
+        display: none;
+        @media (max-width:1070px) {
+            display: block;
+        }
+        @media (max-width:500px) {
+            margin-top: 1.5em;
+        }
+    }
+    img{
+        width: 200px;
     }
 `
 // Accordion..........................

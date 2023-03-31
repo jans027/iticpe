@@ -11,7 +11,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 //styles
-import { AccordionFooter, AddressFooter, BlockNav, BtnFooter, ConAccordion, ConEmprFooter, ConServFooter, ConsultasFooter, ContFooter, ContUlPoliticas, Copy, EnlaceDesplegable, LinkConsulta1, LinkConsultaMovile, LogoFooter, Redes, TitleAccor } from '../styles/Footer';
+import { AccordionFooter, AddressFooter, BlockNav, BtnFooter, BtnLibro, ConAccordion, ConEmprFooter, ConServFooter, ConsultasFooter, ContFooter, ContUlPoliticas, Copy, EnlaceDesplegable, LinkConsulta1, LinkConsultaMovile, LogoFooter, Redes, TitleAccor } from '../styles/Footer';
 //Documents
 import declaracion_independencia from '../documents/ITIC-DG-NA-DI-003-DECLARACION-DE-INDEPENDENCIA-IMPARCIALIDAD-E-INTEGRIDAD-(R05).pdf'; 
 import conducta_corporativo from '../documents/CCC-01-CÓDIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf'; 
@@ -47,7 +47,7 @@ const Footer = () => {
         politicas,
         LibroReclamaciones
     } = datos;
-    const {url} = LibroReclamaciones
+    const { url, tinyImg } = LibroReclamaciones
     const serviciosSub = Object.values(servicios.dropDownMenu);
     const empresasSub = Object.values(empresa.dropDownMenu);
     // console.log(politicas)
@@ -64,6 +64,9 @@ const Footer = () => {
                     <div>
                         <img src={LogFooter} alt="logoItic" />
                     </div>
+                    <BtnLibro to={url}>
+                        <img className='libroResponsive' src={require(`../images/${tinyImg}`)} alt={tinyImg} />
+                    </BtnLibro>
                 </LogoFooter>
 
                 <BlockNav>
@@ -116,24 +119,25 @@ const Footer = () => {
                                 Codigo De Conducta <br /> Corporativo 
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link target="_blank" to={política_HSEQ} rel="noreferrer">
                                 Política HSEQ
                             </Link>
-                        </li>
-                        <li>
+                        </li> */}
+                        {/* <li>
                             <Link target="_blank" to={condiciones_generales} rel="noreferrer">
                                 Condiciones Generales 
                             </Link>
-                        </li>
-                        <Link to={url}>.</Link>
-                        <br />
-                        <br />
+                        </li> */}
                         <BtnFooter to={politicas.url}><div>{politicas.btn}</div></BtnFooter>
+                        <br />
+                        <BtnLibro to={url}>
+                            <img src={require(`../images/${tinyImg}`)} alt={tinyImg} />
+                        </BtnLibro>
                     </ContUlPoliticas>
 
                     {/* .................................................................... */}
-
+                    
                     <ConAccordion>
                         <AccordionFooter>
                             <AccordionSummary
@@ -251,6 +255,7 @@ const Footer = () => {
                             <span className='address' ><LocationOnOutlinedIcon />{inicio.address}</span>
                             <span className='building'>{inicio.addressBuilding}</span>
                         </AddressFooter>
+                        
                     </ConsultasFooter>
                 </BlockNav>
 

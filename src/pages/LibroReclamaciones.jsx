@@ -22,7 +22,7 @@ const LibroReclamaciones = (props) => {
 
     // get data
     const [datos] = data;
-    const { LibroReclamaciones: { img, name, text1, helmet, categoria }, contacto: { contactanos: { checkbox } } } = datos;
+    const { inicio: { addressItic }, LibroReclamaciones: { img, name, text1, helmet, categoria }, contacto: { contactanos: { checkbox } } } = datos;
     const categorias = Object.values(categoria);
 
     // ...dinamic class name
@@ -304,6 +304,8 @@ const LibroReclamaciones = (props) => {
                         <p><span>*</span>Campo obligatorio</p>
                         <br />
                         <p>{text1}</p>
+                        <br />
+                        <p>{addressItic}</p>
                         <PTitle>1. IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE</PTitle>
                     </TitleSection>
 

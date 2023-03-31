@@ -16,10 +16,10 @@ export const ContContact = styled.div `
 export const ContImgComtact = styled.div`
   /* border: 1px solid red;//.......................... */
   width: 50%;
+  overflow: hidden;
   @media (max-width:1200px) {
       display: none;
   }
-  overflow: hidden;
     img{
       height: 100%;
       object-fit: cover;
