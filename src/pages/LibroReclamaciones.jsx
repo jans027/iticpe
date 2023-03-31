@@ -14,6 +14,10 @@ import { color } from '@mui/system';
 
 const LibroReclamaciones = (props) => {
 
+    // References to form inputs
+    // navigate to an empty entry
+    const inputRef = useRef({});
+
     // const keys
     const API_KEY = process.env.REACT_APP_API_KEY;
     const SERVICE_URL = `${process.env.REACT_APP_SERVICE_URL}`;
@@ -121,7 +125,7 @@ const LibroReclamaciones = (props) => {
         setOptionReclamo(false);
     };
     //.........................................
-    //......checkbox 2.........................
+    //......checkbox 3.........................
     const [optionEmail, setOptionEmail] = useState(false);
     const [optionCarta, setOptionCarta] = useState(false);
 
@@ -201,6 +205,16 @@ const LibroReclamaciones = (props) => {
             setErrorPhone(true)
             setClassAlert2('class_1');
             console.log('error telefono......')
+
+        } else if (// carta..............
+            optionCarta === true &&
+            dataForm.Domicilio.length === 0
+        ) {
+            setErrorRazonSocial(true)
+            setClassAlert5('class_1');
+            // scroll to input lenght 0
+            inputRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            console.log('error Carta......')
 
         } else {
             // console.log(event.target.value)
@@ -337,7 +351,7 @@ const LibroReclamaciones = (props) => {
 
                     <div className='firstBlock'>
                         <SingleInput>
-                            <LabelRazonSocial className='form_label'>{isErrorRazonSocial === true ? 'Numero No Valido' : 'Domicilio'}</LabelRazonSocial >
+                            <LabelRazonSocial ref={inputRef} className='form_label'>{isErrorRazonSocial === true ? 'Ingrese un Domicilio' : 'Domicilio'}</LabelRazonSocial >
                             <input
                                 // onChange={handleChange}
                                 className={classAlert5}
