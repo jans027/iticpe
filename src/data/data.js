@@ -698,7 +698,7 @@ export const data = [
           nameBtn: "MÁS SERVICIOS",
           cardImg: "PRODUCTO.png",
           cardText:
-            "Tiene como finalidad demostrar al mercado y a los organismos reguladores que un proveedor fabrica productos, cumpliendo en todas sus etapas con los requisitos técnicos definidos.",
+            "-Normas Técnicas\n-Reglamento Refrigeración Costa Rica \n- Tca Enel\n- Eficiencia Energética Perú",
           cards: {
             card0: {
               id: "Normas-Tecnicas",
@@ -796,7 +796,7 @@ export const data = [
           nameBtn: "VER MÁS",
           cardImg: "GESTION.png",
           cardText:
-            "Contamos con un amplio y competente equipo de profesionales con la experiencia y conocimientos para desarrollar una auditoría objetiva, imparcial y con valor agregado que le permita a la organización el mejoramiento de sus Sistemas de Gestión.",
+            "-Certificación\n- Auditoría Interna\n- Gap Análisis\n- Evaluación de Proveedores",
           cards: {
             card0: {
               id: "certificacion",
