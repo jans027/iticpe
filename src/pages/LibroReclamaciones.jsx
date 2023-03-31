@@ -146,7 +146,6 @@ const LibroReclamaciones = (props) => {
 
         const formData = new FormData(formRef.current);
         const dataForm = Object.fromEntries(formData.entries());
-        console.log(dataForm)
 
 
         //regex input DNI/CE
