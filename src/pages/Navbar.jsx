@@ -217,7 +217,7 @@ const NavBar = () => {
                     </BtnBase>
 
                     <DropdownContainer key={datos.certificaciones}>
-                        <DropdownButton><ImgCropdown src={ImgPer} alt={ImgPer} />COL<ArrowDropDownSharpIcon /></DropdownButton>
+                        <DropdownButton><ImgCropdown src={ImgPer} alt={ImgPer} />PER<ArrowDropDownSharpIcon /></DropdownButton>
                         <DropdownContent className='dropdown-content'>
                             {
                                 countriesSub.map((item) =>

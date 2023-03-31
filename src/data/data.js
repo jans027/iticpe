@@ -12,10 +12,10 @@ export const data = [
       addressItic: "Av. Pardo y Aliaga N° 675 oficina 203\nSan Isidro Lima 15046",
       address: "Av. Pardo y Aliaga N° 675 oficina 203",
       addressBuilding: "San Isidro Lima 15046",
-      facebookUrl: "https://www.facebook.com/iticcolombia",
-      instagramUrl: "https://www.instagram.com/itic_colombia/",
-      twitterUrl: "https://twitter.com/ITICColombia",
-      linkedInUrl: "https://www.linkedin.com/company/itic-colombia/",
+      facebookUrl: "https://www.facebook.com/somositicperu",
+      instagramUrl: "https://www.instagram.com/itic_peru/",
+      twitterUrl: "https://twitter.com/ITIC_Peru",
+      linkedInUrl: "https://www.linkedin.com/company/itic-peru/",
       banners: {
         card0: {
           id: "card-Banner1",
@@ -306,8 +306,8 @@ export const data = [
             "Con orgullo presentamos nuestros proyectos y procesos más importantes, los cuales han dejado huella en nuestros clientes y han contribuido a nuestro crecimiento y reconocimiento en el mercado.",
           textMap: {
             id: 'text_map',
-            text1:'Nuestros servicios han llegado a diferentes partes del mundo, ¡ y seguimos trabajando para llegar aún más lejos!',
-            text2: 'EEUU, Alemania, Italia, Francia, España, México, Finlandia, Argentina, China, Salvador, India, Guatemala, Panamá, Costa Rica, Brasil, Ecuador',
+            text1:'Nuestros servicios han llegado a diferentes partes del mundo',
+            text2: '¡ y seguimos trabajando para llegar aún más lejos!',
             text3: '',
             text4:'Departametnos donde se han prestado servicios en Colombia (Producto+Inspección RETIE):',
             text5: 'Valle, Cundinamarca, Antioquia, Boyacá, Atlántico, Meta, Cesar, Santander, Guainía, Norte de Santander, Huila, Tolima, Putumayo, Caldas, Córdoba, Risaralda, Casanare',
