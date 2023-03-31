@@ -86,9 +86,9 @@ const ContactForm = (props) => {
         const isValidEmail = emailRegex.test(dataForm.email);
 
         // ...regex input numb
-        const numbRegex = /^[0-9]+$/;
+        const numbRegex = /^([0-9]{8}|[0-9]{9}-[A-Z]{2}[0-9]{1})$/;
         const isValidnumb = numbRegex.test(dataForm.cedula)
-        const isValidnumb2 = numbRegex.test(dataForm.phone)
+        // const isValidnumb2 = numbRegex.test(dataForm.phone)
 
         if ( //Nombre completo............
             dataForm.name.trim() === "" ||
@@ -112,8 +112,8 @@ const ContactForm = (props) => {
         } else if (// telefono..............
             dataForm.phone.trim() === "" ||
             dataForm.phone === null ||
-            dataForm.phone.length === 0 ||
-            isValidnumb2 !== true
+            dataForm.phone.length === 0
+            // || isValidnumb2 !== true
         ) {
             setErrorPhone(true)
             setClassAlert2('class_1');
@@ -222,11 +222,11 @@ const ContactForm = (props) => {
                         </div>
 
                         <div>
-                            <LabelCedula className='form_label'>{isErrorCedula === true ? 'Numero No Valido' : 'Cedula'}<span>*</span></LabelCedula>
+                            <LabelCedula className='form_label'>{isErrorCedula === true ? 'Numero No Valido' : 'DNI/CE'}<span>*</span></LabelCedula>
                             <input
                                 // onChange={handleChange}
                                 className={classAlert1}
-                                type="number"
+                                type="text"
                                 placeholder='00000000000'
                                 name="cedula"
                                 id="cedula"

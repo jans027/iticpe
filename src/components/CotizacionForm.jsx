@@ -114,7 +114,7 @@ const CotizacionForm = (props) => {
 
 
         //regex input NIT
-        const nitRegex = /^\d{8}-\d$/;
+        const nitRegex = /^([1-9]\d{10})$/;
         const isValidNit = nitRegex.test(dataForm.Nit);
 
         // regex input name and last name
@@ -313,7 +313,7 @@ const CotizacionForm = (props) => {
                             />
                         </div>
                         <div>
-                            <LabelNit className='form_label'>{isErrorNit === true ? 'Numero No Valido' : 'Nit:'}<span>*</span></LabelNit>
+                            <LabelNit className='form_label'>{isErrorNit === true ? 'Numero No Valido' : 'RUC:'}<span>*</span></LabelNit>
                             <input
                                 // onChange={handleChange}
                                 className={classAlert1}
