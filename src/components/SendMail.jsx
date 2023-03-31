@@ -179,7 +179,6 @@ const SendMail = (props) => {
                     <option value="Sistemas de Gestión">Sistemas de Gestión</option>
                     <option value="Certificación de Producto">Certificación de Producto</option>
                     <option value="Servicios Industriales">Servicios Industriales</option>
-                    <option value="Certificación de Personas">Certificación de Personas</option>
                 </select>
 
                 <LabelMail className='form_label'>{isErrorMail === true ? 'E-mail No Coincide' : 'E-mail'}<span>*</span></LabelMail>

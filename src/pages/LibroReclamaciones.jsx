@@ -140,6 +140,7 @@ const LibroReclamaciones = (props) => {
     };
     //.........................................
 
+
     const sendEmail = (event) => {
         event.preventDefault();
 
@@ -223,6 +224,14 @@ const LibroReclamaciones = (props) => {
             const Nombre = 'LIBRO DE RECLAMACIONES';
             //we get consecutive number to generate a different conversation email each time
             const messageId = uuidv4().slice(0, 8);
+
+            // return all checkbox to empty
+            setOptionProducto(false);
+            setOptionServicio(false);
+            setOptionReclamo(false);
+            setOptionQueja(false);
+            setOptionEmail(false);
+            setOptionCarta(false);
 
             fetch(url, {
                 method: 'POST',
