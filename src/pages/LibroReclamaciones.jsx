@@ -182,24 +182,15 @@ const LibroReclamaciones = (props) => {
             setErrorLastName(true)
             console.log('error last name......')
 
-        } else if (// Razon social..............
-            dataForm.Razon_Social.trim() === "" ||
-            dataForm.Razon_Social === null ||
-            dataForm.Razon_Social.length === 0
+        } else if (// e mail..............
+            dataForm.E_mail.trim() === "" ||
+            dataForm.E_mail === null ||
+            dataForm.E_mail.length === 0 ||
+            isValidEmail !== true
         ) {
-            setClassAlert5('class_1');
-            setErrorRazonSocial(true)
-            console.log('error Razon Social......')
-
-        } else if (// Nit..............
-            dataForm.Nit.trim() === "" ||
-            dataForm.Nit === null ||
-            dataForm.Nit.length === 0 ||
-            isValidNit !== true
-        ) {
-            setClassAlert1('class_1');
-            setErrorNit(true)
-            console.log('error nit......')
+            setErrorMail(true)
+            setClassAlert3('class_1');
+            console.log('error mail......')
 
         } else if (// telefono..............
             dataForm.Telefono.trim() === "" ||
@@ -211,21 +202,11 @@ const LibroReclamaciones = (props) => {
             setClassAlert2('class_1');
             console.log('error telefono......')
 
-        } else if (// e mail..............
-            dataForm.E_mail.trim() === "" ||
-            dataForm.E_mail === null ||
-            dataForm.E_mail.length === 0 ||
-            isValidEmail !== true
-        ) {
-            setErrorMail(true)
-            setClassAlert3('class_1');
-            console.log('error mail......')
-
         } else {
             // console.log(event.target.value)
 
             const url = SERVICE_URL;
-            const Nombre = 'COTIZACION';
+            const Nombre = 'LIBRO DE RECLAMACIONES';
             //we get consecutive number to generate a different conversation email each time
             const messageId = uuidv4().slice(0, 8);
 
@@ -243,21 +224,31 @@ const LibroReclamaciones = (props) => {
                         `
                         Nombre : ${dataForm.Nombres} ${dataForm.Apellidos}
                         <br><br>
-                        Razon Social : ${dataForm.Razon_Social}
-                        <br><br>
-                        Nit : ${dataForm.Nit}
-                        <br><br>
-                        Telefono : ${dataForm.Telefono}
+                        Domicilio : ${dataForm.Domicilio}
                         <br><br>
                         E-Mail : ${dataForm.E_mail}
                         <br><br>
-                        Servicio : ${dataForm.seleccion}
+                        Telefono : ${dataForm.Telefono}
+                        <br><br>
+                        DNI/CE : ${dataForm.DNI_CE}
+                        <br><br>
+                        Padre o Madre : ${dataForm.Padre_o_Madre}
+                        <br><br>
+                        Bien Contratado : ${dataForm.Bien_Contratado}
+                        <br><br>
+                        Tema De Interes : ${dataForm.comentario_1}
+                        <br><br>
+                        Detalle Reclamacion : ${dataForm.Detalle_Reclamación}
+                        <br><br>
+                        Descripcion De La Reclamacion : ${dataForm.comentario_2}
+                        <br><br>
+                        Canal de Contacto : ${dataForm.Canal_Contacto}
                     `
                 })
             })
                 .then(response =>
                     response.json(),
-                    toast.success('Cotizacion Enviada con Exito!', {// alert message
+                    toast.success('Reclamacion Enviada con Exito!', {// alert message
                         position: "top-center",
                         autoClose: 500,
                         hideProgressBar: false,
@@ -276,7 +267,7 @@ const LibroReclamaciones = (props) => {
                 .catch(error =>
                     console.error(error),
                     formRef.current.reset(),// clean form
-                    toast.error('No se pudo Enviar la Cotizacion, Intentalo mas tarde!', {// alert message
+                    toast.error('No se pudo Enviar la Reclamacion, Intentalo mas tarde!', {// alert message
                         position: "top-center",
                         autoClose: 500,
                         hideProgressBar: false,
@@ -396,7 +387,7 @@ const LibroReclamaciones = (props) => {
                                 className={classAlert1}
                                 type="text"
                                 // placeholder='00000000000'
-                                name="DNI/CE"
+                                name="DNI_CE"
                                 id="DNI_CE"
                                 pattern="^([0-9]{8}|[0-9]{9}-[A-Z]{2}[0-9]{1})$"
                             />
@@ -411,7 +402,7 @@ const LibroReclamaciones = (props) => {
                                 className={classAlert1}
                                 type="text"
                                 // placeholder='00000000000'
-                                name="Padre o Madre"
+                                name="Padre_o_Madre"
                                 id="Padre_o_Madre"
                             />
                         </SingleInput>
@@ -424,11 +415,11 @@ const LibroReclamaciones = (props) => {
                         <ContCheck>
                             <p className='form_label'>Por favor, seleccione<span>*</span></p>
                             <label>
-                                <CheckboxInputLibro name='Bien Contratado' value="Producto" type="checkbox" checked={optionProducto} onChange={e => handleGroup1Option1(e.target.value)} />
+                                <CheckboxInputLibro name='Bien_Contratado' value="Producto" type="checkbox" checked={optionProducto} onChange={e => handleGroup1Option1(e.target.value)} />
                                 <p>Producto</p>
                             </label>
                             <label>
-                                <CheckboxInputLibro name='Bien Contratado' value="Servicio" type="checkbox" checked={optionServicio} onChange={e => handleGroup1Option2(e.target.value)} />
+                                <CheckboxInputLibro name='Bien_Contratado' value="Servicio" type="checkbox" checked={optionServicio} onChange={e => handleGroup1Option2(e.target.value)} />
                                 <p>Servicio</p>
                             </label>
                         </ContCheck>
@@ -448,7 +439,7 @@ const LibroReclamaciones = (props) => {
                             rows="5"
                             // placeholder='Escribe aqui tu mensaje'
                             required
-                            name="comentario">
+                            name="comentario_1">
                         </TextAreaLibro>
 
                         <PTitle>3. DETALLE DE LA RECLAMACIÓN</PTitle>
@@ -456,11 +447,11 @@ const LibroReclamaciones = (props) => {
                         <ContCheck>
                             <p className='form_label'>Por favor, seleccione<span>*</span></p>
                             <label>
-                                <CheckboxInputLibro name='Detalle De La Reclamación' value="Reclamo" type="checkbox" checked={optionReclamo} onChange={e => handleGroup2Option1(e.target.value)} />
+                                <CheckboxInputLibro name='Detalle_Reclamación' value="Reclamo" type="checkbox" checked={optionReclamo} onChange={e => handleGroup2Option1(e.target.value)} />
                                 <p>Reclamo¹</p>
                             </label>
                             <label>
-                                <CheckboxInputLibro name='Detalle De La Reclamación' value="Queja" type="checkbox" checked={optionQueja} onChange={e => handleGroup2Option2(e.target.value)} />
+                                <CheckboxInputLibro name='Detalle_Reclamación' value="Queja" type="checkbox" checked={optionQueja} onChange={e => handleGroup2Option2(e.target.value)} />
                                 <p>Queja²</p>
                             </label>
                         </ContCheck>
@@ -470,7 +461,7 @@ const LibroReclamaciones = (props) => {
                             rows="5"
                             // placeholder='Escribe aqui tu mensaje'
                             required
-                            name="comentario">
+                            name="comentario_2">
                         </TextAreaLibro>
 
                         <p>¹Reclamo: Disconformidad relacionada a los productos o servicios.</p>
@@ -489,11 +480,11 @@ const LibroReclamaciones = (props) => {
                         <ContCheck>
                             <p className='form_label'>Canal de contacto preferido <span>*</span></p>
                             <label>
-                                <CheckboxInputLibro name='Canal de Contacto' value="E-Mail" type="checkbox" checked={optionEmail} onChange={e => handleGroup3Option1(e.target.value)} />
+                                <CheckboxInputLibro name='Canal_Contacto' value="E-Mail" type="checkbox" checked={optionEmail} onChange={e => handleGroup3Option1(e.target.value)} />
                                 <p>E-Mail</p>
                             </label>
                             <label>
-                                <CheckboxInputLibro name='Canal de Contacto' value="Carta" type="checkbox" checked={optionCarta} onChange={e => handleGroup3Option2(e.target.value)} />
+                                <CheckboxInputLibro name='Canal_Contacto' value="Carta" type="checkbox" checked={optionCarta} onChange={e => handleGroup3Option2(e.target.value)} />
                                 <p>Carta</p>
                             </label>
                         </ContCheck>

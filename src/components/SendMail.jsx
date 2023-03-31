@@ -110,7 +110,7 @@ const SendMail = (props) => {
         } else {
             // console.log(dataForm)
             const url = SERVICE_URL;
-            const Nombre = 'CERTIFICADO';
+            const Nombre = 'CONSULTA';
             //we get consecutive number to generate a different conversation email each time
             const messageId = uuidv4().slice(0, 8);
 
