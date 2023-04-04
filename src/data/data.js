@@ -158,9 +158,9 @@ export const data = [
             cards: {
               document1: {
                 id: "cardInspec",
-                url: "https://onac.org.co/certificados/15-OIN-014.pdf",
+                url: "https://cdn.www.gob.pe/uploads/document/file/4094787/18%20ITIC%20%282023-02-06%29%20-%20ED%2016.pdf?v=1675725137",
                 img: "Inspeccion_peru.png",
-                name: "INSPECCION",
+                name: "INSPECCIÓN",
                 acreditacion: 'inspeccion',
                 text0: 'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
                 textP:
@@ -700,6 +700,20 @@ export const data = [
           cardText:
             "-Normas Técnicas\n-Reglamento Refrigeración Costa Rica \n- Tca Enel\n- Eficiencia Energética Perú",
           cards: {
+            card3: {
+              id: "eficiencia-energetica-peru",
+              img: "certificacion-producto/cp-energetica-peru.png",
+              imgPc: "certificacion-producto/cp-energetica-peru-dk.png",
+              imgMobile: "certificacion-producto/cp-energetica-peru-mb.png",
+              text1: "EFICIENCIA \nENERGÉTICA PERÚ",
+              text2: "EFICIENCIA ENERGÉTICA PERÚ",
+              helmet: 'Eficiencia energetica perú',
+              acreditacion: 'productos',
+              normaNumero: true,
+              paragraph1:
+                'Reglamento Técnico Eficiencia Energética (Perú)\n\nCertificación de etiquetado de eficiencia energética bajo Decreto Supremo 009 de 2017 aplicable a lámparas, motores, electrodomésticos y gasodomésticos.\n',
+              btn1: "REGRESAR",
+            },
             card0: {
               id: "Normas-Tecnicas",
               img: "certificacion-producto/cp-normas.png",
@@ -712,20 +726,6 @@ export const data = [
               normaNumero: true,
               paragraph1:
                 'Certifamos sus productos de acuerdo a normas técnicas Nacionales e internacionales como: \n\nNTC\nNTP\nIEC\nASTM\nIEEE\nISO\nASME\nUL\nentre otras.\n',
-              btn1: "REGRESAR",
-            },
-            card1: {
-              id: "reglamento-refrigeracion-costa-rica",
-              img: "certificacion-producto/cp-refrigeracion.png",
-              imgPc: "certificacion-producto/cp-refrigeracion-dk.png",
-              imgMobile: "certificacion-producto/cp-refrigeracion-mb.png",
-              text1: "REGLAMENTO \nREFRIGERACIÓN \nCOSTA RICA",
-              text2: "REGLAMENTO REFRIGERACIÓN \nCOSTA RICA",
-              helmet: 'Reglamento refrigeración costa rica',
-              acreditacion: 'productos',
-              normaNumero: true,
-              paragraph1:
-                'Reglamento Técnico Refrigeración (Costa Rica) \n\nCertificación del desempeño de refrigeradores y congeladores electrodomésticos operados por motocompresor hermético con relación a los valores máximos de consumo de energía eléctrica bajo RTCR 482 de 2015.\n',
               btn1: "REGRESAR",
             },
             card2: {
@@ -742,21 +742,34 @@ export const data = [
                 'TCA ENEL\n\nTechnical Conformity Assessment - Certificación de tercera parte de productos eléctricos de acuerdo con los estándares y lineamientos requeridos por ENEL para la aprobación de sus proveedores.\n',
               btn1: "REGRESAR",
             },
-            card3: {
-              id: "eficiencia-energetica-peru",
-              img: "certificacion-producto/cp-energetica-peru.png",
-              imgPc: "certificacion-producto/cp-energetica-peru-dk.png",
-              imgMobile: "certificacion-producto/cp-energetica-peru-mb.png",
-              text1: "EFICIENCIA \nENERGÉTICA PERÚ",
-              text2: "EFICIENCIA ENERGÉTICA PERÚ",
-              helmet: 'Eficiencia energetica perú',
+            card1: {
+              id: "reglamento-refrigeracion-costa-rica",
+              img: "certificacion-producto/cp-refrigeracion.png",
+              imgPc: "certificacion-producto/cp-refrigeracion-dk.png",
+              imgMobile: "certificacion-producto/cp-refrigeracion-mb.png",
+              text1: "REGLAMENTO \nREFRIGERACIÓN \nCOSTA RICA",
+              text2: "REGLAMENTO REFRIGERACIÓN \nCOSTA RICA",
+              helmet: 'Reglamento refrigeración costa rica',
               acreditacion: 'productos',
               normaNumero: true,
               paragraph1:
-                'Reglamento Técnico Eficiencia Energética (Perú)\n\nCertificación de etiquetado de eficiencia energética bajo Decreto Supremo 009 de 2017 aplicable a lámparas, motores, electrodomésticos y gasodomésticos.\n',
+                'Reglamento Técnico Refrigeración (Costa Rica) \n\nCertificación del desempeño de refrigeradores y congeladores electrodomésticos operados por motocompresor hermético con relación a los valores máximos de consumo de energía eléctrica bajo RTCR 482 de 2015.\n',
               btn1: "REGRESAR",
             },
-
+            card4: {
+              id: "reglamentacion_colombiana",
+              img: "certificacion-producto/cp-normas.png",
+              imgPc: "certificacion-producto/cp-normas-dk.png",
+              imgMobile: "certificacion-producto/cp-normas-mb.png",
+              text1: "REGLAMENTACIÓN \nCOLOMBIANA",
+              text2: "REGLAMENTACIÓN COLOMBIANA",
+              helmet: 'Reglamentacion Colombiana',
+              acreditacion: 'productos',
+              normaNumero: true,
+              paragraph1:
+                'Certificación de productos bajo reglamentos técnicos colombianos (RETIE, RETILAP, RETIQ, entre otros)\n',
+              btn1: "REGRESAR",
+            },
           },
           documents: {
             document0: {
