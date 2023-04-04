@@ -1037,7 +1037,7 @@ export const data = [
           4: "Otro",
         },
         checkbox:
-        "Al dar click al check, nos autoriza al tratamiento de sus datos personales. Con el fin de dar cumplimiento a lo establecido en la Ley 1581 de 2012 y de su Decreto reglamentario 1377 de 2013, INTERNATIONAL TESTING INSPECTION & CERTIFICATION COLOMBIA S.A.S., identificada con NIT 900424702-7, con domicilio principal en la Calle 108 # 45-27 Bogotá D.C, portal Web www.iticco.com número de teléfono 601 3900757 y correo electrónico quejasreclamosapelaciones@iticco.com",
+          'Tu privacidad es importante para nosotros Al hacer clic en "Aceptar todo", aceptas el almacenamiento de cookies en tu dispositivo para mejorar la navegación del sitio, medir el rendimiento del sitio y mostrar publicidad personalizada.Ten en cuenta que tu consentimiento puede ser válido para otros sitios web.Puedes personalizar o retirar tu consentimiento en cualquier momento haciendo clic en el enlace "Configuración de cookies".Para obtener más información sobre cómo utilizamos las cookies, incluida la vida útil total de las cookies y la identidad de los terceros que intervienen en nuestro sitio web, consulta nuestra política de protección de datos personales, disponible en el pie de página del sitio.',
           },
     },
     countries: {
