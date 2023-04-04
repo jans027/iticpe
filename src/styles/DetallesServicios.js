@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ContNavigationPc = styled.div`
@@ -207,6 +208,21 @@ export const ContAcredt = styled.div`
     P{
         width: 100%;
         
+    }
+`
+export const BtnPolCol = styled(Link)`
+    text-decoration: none;
+    padding: .5em;
+    border-radius: 1em;
+    background-color: var(--color4);
+    color: var(--color5);
+    font-weight: 700;
+    &:hover{
+        color: var(--color1);
+    }
+    &:active{
+        background-color: var(--color1);
+        color: var(--color4);
     }
 `
 

@@ -5,7 +5,7 @@ import BannerServicios from '../components/BannerServicios';
 import ContacBar from '../components/ContacBar';
 // import NavServicios from '../components/NavServicios';
 import { data } from '../data/data';
-import { ButtonSection, CardAcredtDetalles, CardDetalles, ContAcredt, ContCardDeta, ContImgMobile, ContImgPc, ContNavigationPc, ContTextoG, ParagraphSection, TitleSection } from '../styles/DetallesServicios';
+import { BtnPolCol, ButtonSection, CardAcredtDetalles, CardDetalles, ContAcredt, ContCardDeta, ContImgMobile, ContImgPc, ContNavigationPc, ContTextoG, ParagraphSection, TitleSection } from '../styles/DetallesServicios';
 import { ContPagesEmpresa } from '../styles/NavEmpresa';
 import { ConNosotros } from '../styles/Nosotros';
 // Icon
@@ -119,6 +119,7 @@ const DetallesServicios = (props) => {
                         </MobileTitle> */}
 
                         <ContCardDeta>
+
                             {
                                 cardGet.map((item) =>
                                     <CardDetalles key={item.id}  >
@@ -141,6 +142,8 @@ const DetallesServicios = (props) => {
                                                             )
                                                         })}
                                                     </span>
+
+                                                    {item.text2 === 'REGLAMENTACIÓN COLOMBIANA' ? <BtnPolCol target='_blank' to='https://jansdesarrolladorweb.com/servicios/producto'>CONOCE MAS...</BtnPolCol>:''}
 
                                                 </ParagraphSection>
 
@@ -176,7 +179,7 @@ const DetallesServicios = (props) => {
 
                                                 </ContAcredt>
                                             }
-                                        <ButtonSection ><div onClick={handleClick}>{item.btn1}</div></ButtonSection>
+                                            <ButtonSection ><div onClick={handleClick}>{item.btn1}</div></ButtonSection>
                                         </div>
                                     </CardDetalles>
                                 )
