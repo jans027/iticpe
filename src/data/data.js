@@ -479,6 +479,18 @@ export const data = [
             },
           },
         },
+        trabaja: {
+          key: 8,
+          id: "trabaja_con_nosotros",
+          name: "TRABAJA CON NOSOTROS",
+          subTitle: 'Únete al equipo de ITIC y sé parte del cambio hacia una industria más responsable',
+          nameNav2: "Trabaja Con Nosotros",
+          helmet: "Trabaja Con Nosotros",
+          url: "/empresa/trabaja-con-nosotros",
+          label: 'Documentos: CV',
+          labelSolic: "Solicitud",
+          img: "",
+        },
       },
     },
     servicios: {

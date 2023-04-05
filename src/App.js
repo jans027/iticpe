@@ -33,6 +33,7 @@ import ButtonToTop from "./components/ButtonToTop";
 import Cookie from "./components/Cookie";
 import Cookies from "js-cookie";
 import LibroReclamaciones from "./pages/LibroReclamaciones";
+import Trabaja from "./pages/Trabaja";
 
 
 function App() {
@@ -114,6 +115,8 @@ function App() {
           <Route path="/empresa/Nuestras-Experiencias" element={<Clientes />} />
           <Route path="/empresa/proyectos" element={<Proyectos />} />
           <Route path="/empresa/politicas" element={<Politicas />} />
+          <Route path="/empresa/trabaja-con-nosotros" element={<Trabaja />} />
+
 
 
           <Route path="/servicios/gestion/:id" element={<DetallesServicios gestion={gestion} />} />
