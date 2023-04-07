@@ -12,12 +12,12 @@ import { Link } from 'react-router-dom'
 // Icons
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 // Documents
-import codigo_conducta from '../documents/CCC-01-CÓDIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf';
+import codigo_conducta from '../documents/CCC-01-CODIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf';
 import condiciones_generales from '../documents/ITIC-DG-NA-DI-002-CONDICIONES-GENERALES-DEL-NEGOCIO-(R07).pdf';
 import declaracion_independencia from '../documents/ITIC-DG-NA-DI-003-DECLARACION-DE-INDEPENDENCIA-IMPARCIALIDAD-E-INTEGRIDAD-(R05).pdf';
-import politica_suspension from '../documents/ITIC-DG-NA-DI-004-POLITICA-DE-SUSPENSIÓN-DE-TAREAS-(R02).pdf';
+import politica_suspension from '../documents/ITIC-DG-NA-DI-004-POLITICA-DE-SUSPENSION-DE-TAREAS-(R02).pdf';
 import politica_integral from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-QHSE-ITICPE-(R08).pdf';
-import computo from '../documents/PSI-01-MANEJO-DE-EQUIPOS-DE-COMPUTO-Y-AYUDAS-INFORMÁTICAS-(R01).pdf';
+import computo from '../documents/PSI-01-MANEJO-DE-EQUIPOS-DE-COMPUTO-Y-AYUDAS-INFORMATICAS-(R01).pdf';
 import testing_inspection from '../documents/RIT-APROBADO-018239-2023-INTERNATIONAL-TESTING-INSPECTION-&-CERTIFICATION-PERU-S.A.C..pdf';
 import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIONES-(R09).pdf';
 

@@ -825,9 +825,9 @@ export const data = [
           cards: {
             card0: {
               id: "certificacion",
-              img: "sistema-gestion/sg-certificación.png",
-              imgPc: "sistema-gestion/sg-certificación-desktop.png",
-              imgMobile: "sistema-gestion/sg-certificación-mobile.png",
+              img: "sistema-gestion/sg-certificacion.png",
+              imgPc: "sistema-gestion/sg-certificacion-desktop.png",
+              imgMobile: "sistema-gestion/sg-certificacion-mobile.png",
               text1: "CERTIFICACIÓN",
               text2: "CERTIFICACIÓN",
               helmet:'Certificación',

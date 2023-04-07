@@ -14,12 +14,9 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import { AccordionFooter, AddressFooter, BlockNav, BtnFooter, BtnLibro, ConAccordion, ConEmprFooter, ConServFooter, ConsultasFooter, ContFooter, ContUlPoliticas, Copy, EnlaceDesplegable, LinkConsulta1, LinkConsultaMovile, LogoFooter, Redes, TitleAccor } from '../styles/Footer';
 //Documents
 import declaracion_independencia from '../documents/ITIC-DG-NA-DI-003-DECLARACION-DE-INDEPENDENCIA-IMPARCIALIDAD-E-INTEGRIDAD-(R05).pdf'; 
-import conducta_corporativo from '../documents/CCC-01-CÓDIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf'; 
+import conducta_corporativo from '../documents/CCC-01-CODIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf'; 
 import política_HSEQ from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-QHSE-ITICPE-(R08).pdf'; 
 import condiciones_generales from '../documents/ITIC-DG-NA-DI-002-CONDICIONES-GENERALES-DEL-NEGOCIO-(R07).pdf'; 
-
-
-
 // Images
 import LogFooter from '../images/Logo-iticpe-blanco.svg';
 import ModalForm from './ModalForm';
@@ -42,7 +39,6 @@ const Footer = () => {
         servicios,
         empresa,
         consulta,
-        cotizacion,
         contacto,
         politicas,
         LibroReclamaciones
@@ -119,16 +115,6 @@ const Footer = () => {
                                 Codigo De Conducta <br /> Corporativo 
                             </Link>
                         </li>
-                        {/* <li>
-                            <Link target="_blank" to={política_HSEQ} rel="noreferrer">
-                                Política HSEQ
-                            </Link>
-                        </li> */}
-                        {/* <li>
-                            <Link target="_blank" to={condiciones_generales} rel="noreferrer">
-                                Condiciones Generales 
-                            </Link>
-                        </li> */}
                         <BtnFooter to={politicas.url}><div>{politicas.btn}</div></BtnFooter>
                         <br />
                         <BtnLibro to={url}>
