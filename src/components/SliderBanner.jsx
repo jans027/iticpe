@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { data } from "../data/data";
 // import Slider from "react-slick";
 import { ContCardImg, ContImgCarousel } from "../styles/SliderBanner";
-import { BannerLoading } from "../styles/ImgLoading";
+
 
 
 // get data
@@ -11,6 +11,7 @@ const { inicio: { banners } } = datos;
 const card = Object.values(banners)
 
 export default class SimpleSlider extends Component {
+
 
     render() {
         const settings = {
@@ -31,7 +32,7 @@ export default class SimpleSlider extends Component {
                         card.map((item) =>
                             <ContCardImg key={item.id}>
                                 <div key={item.id}>
-                                    <img  className="imgDk"src={require(`../images/${item.imgDk}`)} alt={item.id} />
+                                    <img className='imgDk' src={require(`../images/${item.imgDk}`)} alt={item.id} />
                                     <img className="imgTb" src={require(`../images/${item.imgTb}`)} alt={item.id} />
                                     <img className="imgMb" src={require(`../images/${item.imgMb}`)} alt={item.id} />
                                 </div>
