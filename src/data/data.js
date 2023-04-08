@@ -770,9 +770,9 @@ export const data = [
             },
             card4: {
               id: "reglamentacion_colombiana",
-              img: "certificacion-producto/cp-normas.png",
-              imgPc: "certificacion-producto/cp-normas-dk.png",
-              imgMobile: "certificacion-producto/cp-normas-mb.png",
+              img: "certificacion-producto/cp-reglamentacion.png",
+              imgPc: "certificacion-producto/cp-reglamentacion-dk.png",
+              imgMobile: "certificacion-producto/cp-reglamentacion-mb.png",
               text1: "REGLAMENTACIÓN \nCOLOMBIANA",
               text2: "REGLAMENTACIÓN COLOMBIANA",
               helmet: 'Reglamentacion Colombiana',

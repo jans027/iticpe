@@ -37,13 +37,6 @@ export const ContCardImg = styled.div`
     img{
         width: 100%;
     }
-    .lazyload-wrapper {
-        opacity: 0;
-        transition: opacity 300ms;
-    }
-    .lazyload-wrapper.loaded {
-        opacity: 1;
-    }
     .imgDk{
         display: block;
         @media (max-width:960px) {

@@ -5,7 +5,7 @@ import TrabajaForm from '../components/TrabajaForm';
 //data
 import { data } from '../data/data';
 // images
-import ImgBannerPc from '../images/shutterstock_150293498---copia.png';
+import ImgBannerPc from '../images/Trabaja-nosotros.png';
 import ImgBannerMobile from '../images/contacto_mobile.png';
 // helmet
 import { Helmet } from 'react-helmet';
