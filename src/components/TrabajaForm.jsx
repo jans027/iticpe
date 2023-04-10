@@ -124,8 +124,11 @@ const TrabajaForm = (props) => {
         const isValidEmail = emailRegex.test(dataForm.email);
 
         // ...regex input numb
+        const dniRegex = /^([0-9]{8}|[0-9]{9}-[A-Z]{2}[0-9]{1})$/;
+        const isValidDni = dniRegex.test(dataForm.cedula);
+
+        // ...regex input numb
         const numbRegex = /^[0-9]+$/;
-        const isValidnumb = numbRegex.test(dataForm.cedula)
         const isValidnumb2 = numbRegex.test(dataForm.phone)
 
         if ( //Nombre completo............
@@ -142,7 +145,7 @@ const TrabajaForm = (props) => {
             dataForm.cedula.trim() === "" ||
             dataForm.cedula === null ||
             dataForm.cedula.length === 0 ||
-            isValidnumb !== true
+            isValidDni !== true
         ) {
             setClassAlert1('class_1');
             setErrorCedula(true)
@@ -262,11 +265,11 @@ const TrabajaForm = (props) => {
                         </div>
 
                         <div>
-                            <LabelCedula className='form_label'>{isErrorCedula === true ? 'Numero No Valido' : 'Cedula'}<span>*</span></LabelCedula>
+                            <LabelCedula className='form_label'>{isErrorCedula === true ? 'Numero No Valido' : 'DNI/CE'}<span>*</span></LabelCedula>
                             <input
                                 // onChange={handleChange}
                                 className={classAlert1}
-                                type="number"
+                                type="text"
                                 placeholder='00000000000'
                                 name="cedula"
                                 id="cedula"
