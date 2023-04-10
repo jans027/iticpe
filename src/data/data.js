@@ -1044,9 +1044,7 @@ export const data = [
         solicitud: {
           0: "Felicitación",
           1: "Solicitud",
-          2: "Apelación",
-          3: "Queja o Reclamo",
-          4: "Otro",
+          2: "Otro",
         },
         checkbox:
           'Tu privacidad es importante para nosotros Al hacer clic en "Aceptar todo", aceptas el almacenamiento de cookies en tu dispositivo para mejorar la navegación del sitio, medir el rendimiento del sitio y mostrar publicidad personalizada.Ten en cuenta que tu consentimiento puede ser válido para otros sitios web.Puedes personalizar o retirar tu consentimiento en cualquier momento haciendo clic en el enlace "Configuración de cookies".Para obtener más información sobre cómo utilizamos las cookies, incluida la vida útil total de las cookies y la identidad de los terceros que intervienen en nuestro sitio web, consulta nuestra política de protección de datos personales, disponible en el pie de página del sitio.',

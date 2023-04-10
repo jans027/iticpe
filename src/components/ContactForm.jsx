@@ -274,8 +274,6 @@ const ContactForm = (props) => {
                             <option value={solicitud[0]}>{solicitud[0]}</option>
                             <option value={solicitud[1]}>{solicitud[1]}</option>
                             <option value={solicitud[2]}>{solicitud[2]}</option>
-                            <option value={solicitud[3]}>{solicitud[3]}</option>
-                            <option value={solicitud[4]}>{solicitud[4]}</option>
                         </select>
 
                         <TextArea
