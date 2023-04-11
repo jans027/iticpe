@@ -584,7 +584,7 @@ export const data = [
               acreditacion: 'inspeccion',
               normaNumero: false,
               paragraph1:
-                "Supervisión Obras civiles, Infraestructura, obras menores",
+                "Servicios de inspección, supervisión y la consultoría en obras civiles, con énfasis en:\n\n- Consultoría en Geotecnia, Estabilidad de Taludes\n- Estudios y diseños de fundaciones\n- Estudios geotécnicos\n- Patología de obras\n\n- Supervisión de Obras Civiles \n- Edificaciones, utilitarios y habitabilidad\n- Vías, puentes y viaductos\n- Mejoramiento de terrenos\n- Bases y cimentaciones\n\n- Inspección END\n- Atestiguamiento de pruebas de laboratorio\n- Pruebas en sitio Durezas, carbonatación, Corrosión de concretos",
               btn1: "REGRESAR",
             },
             card5: {
