@@ -235,9 +235,9 @@ export const data = [
               paragraph0:
                 "Soy Ingeniera Metalúrgica, especialista en Alta Gerencia y Gestión de la Calidad, con una amplia experiencia en empresas multinacionales líderes en servicios de Inspección, Certificación y Ensayos, enfocados en los sectores de Oil & Gas, Minero e Infraestructura.",
               paragraph1:
-                "Como  líder he demostrado capacidad para implementar planes efectivos y alcanzar los objetivos empresariales . mi experiencia en empresas multinacionales me ha permitido desarrollar una visión global de los negocios, así como la habilidad de liderar equipos multidisciplinarios en entornos altamente competitivos..",
+                "Como líder he demostrado capacidad para implementar planes efectivos y alcanzar los objetivos empresariales . Mi experiencia en empresas multinacionales me ha permitido desarrollar una visión global de los negocios, así como la habilidad de liderar equipos multidisciplinarios en entornos altamente competitivos.",
               paragraph2:
-                "Como Gerente General, he sido un agente de cambio, implementando prácticas empresariales innovadoras y creando un ambiente de trabajo altamente motivador y encaminado al logro de resultados. enfocada en la excelencia operacional, la integridad, la calidad y la satisfacción del cliente, clave para el éxito de las empresas que he liderado.",
+                "Como Gerente General, he sido un agente de cambio, implementando prácticas empresariales innovadoras y creando un ambiente de trabajo altamente motivador y encaminado al logro de resultados. Enfocada en la excelencia operacional, la integridad, la calidad y la satisfacción del cliente, clave para el éxito de las empresas que he liderado.",
             },
           },
           cards1: {
@@ -245,7 +245,7 @@ export const data = [
               id: "card_equip_0",
               img: "Equipo/Luis.png",
               name: "Luis Baron",
-              cargo: "Gerente de \nOperaciones",
+              cargo: "Gerente de \nOperaciones\n",
               linkedInn: "https://www.linkedin.com/in/luis-jaime-baron-tenza-73415b77/",
               email: "luis.baron@iticco.com",
             },
@@ -269,7 +269,7 @@ export const data = [
               id: "card_equip_4",
               img: "Equipo/Nancy.png",
               name: "Nancy Niño",
-              cargo: "Jefe sistemas de \ngestión Colombia - Perú",
+              cargo: "Jefe sistemas \nde gestión \nColombia - Perú",
               linkedInn: "https://www.linkedin.com/in/nancy-ni%C3%B1o-71982926/",
               email: "nancy.nino@iticco.com",
             },
@@ -654,7 +654,7 @@ export const data = [
               acreditacion: 'inspeccion',
               normaNumero: false,
               paragraph1:
-                'Servicios de direccionamiento, planeación, ejecución, y monitoreso de proyectos\n Servicios Integrales Administrativos, técnicos, financieros, legales, ambentales.',
+                'A través de este servicio se busca  identificar las necesidades de un proyecto, así como las preocupaciones y expectativas de los grupos de interés, logrando el equilibrio de las restricciones del proyecto, tales como el alcance, la calidad, el cronograma, el presupuesto, los recursos, los recursos y el riesgo.\n\n- Verificación de diseños, Soporte en las compras y Expediting\n- Planificación y control de la ejecución\n- Administración de contratos\n- Supervisión y control de las especificaciones\n- Aprobación de obras , equipos y materiales\n\n',
               btn1: "REGRESAR",
             },
             card10: {

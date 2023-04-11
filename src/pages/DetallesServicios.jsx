@@ -143,7 +143,7 @@ const DetallesServicios = (props) => {
                                                         })}
                                                     </span>
 
-                                                    {item.text2 === 'REGLAMENTACIÓN COLOMBIANA' ? <BtnPolCol target='_blank' to='https://jansdesarrolladorweb.com/servicios/producto'>CONOCE MAS...</BtnPolCol>:''}
+                                                    {item.text2 === 'REGLAMENTACIÓN COLOMBIANA' ? <BtnPolCol target='_blank' to='https://itic.vercel.app/servicios/producto'>CONOCE MAS...</BtnPolCol>:''}
 
                                                 </ParagraphSection>
 
