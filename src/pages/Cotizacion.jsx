@@ -12,7 +12,7 @@ import { ContCotizacion, ContCotizacionForm, ContImgCotizacion } from '../styles
 
 // get data
 const [datos] = data;
-const { cotizacion: { id, name, subTitle , helmet} }  = datos;
+const { cotizacion: { id, name, subTitle, helmet } } = datos;
 
 
 export default class Cotizacion extends Component {
@@ -43,7 +43,10 @@ export default class Cotizacion extends Component {
 
     return (
       <>
-        <Helmet><title>{helmet} – ITICPE</title></Helmet>
+        <Helmet>
+          <title>{helmet} – ITICPE</title>
+          <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+        </Helmet>
 
         <ContCotizacion>
           <ContImgCotizacion>

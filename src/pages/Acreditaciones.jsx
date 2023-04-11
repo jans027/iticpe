@@ -67,7 +67,10 @@ const Contact = () => {
 
     return (
         <>
-            <Helmet><title>{helmet} – ITICPE</title></Helmet>
+            <Helmet>
+                <title>{helmet} – ITICPE</title>
+                <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+            </Helmet>
             <BannerEmpresa />
             <ContPagesEmpresa>
                 <div className='ContSectionEm'>
@@ -177,14 +180,14 @@ const Contact = () => {
                                 itemsUrlDown.map((item) =>
                                     <Link to={item.url} key={item.name}>
                                         <div>
-                                        <p>{item.name.split('\n').map((line, i) => {
-                                            return (
-                                                <React.Fragment key={i}>
-                                                    {line}
-                                                    <br />
-                                                </React.Fragment>
-                                            )
-                                        })}</p>
+                                            <p>{item.name.split('\n').map((line, i) => {
+                                                return (
+                                                    <React.Fragment key={i}>
+                                                        {line}
+                                                        <br />
+                                                    </React.Fragment>
+                                                )
+                                            })}</p>
                                             <ArrowDropDownIcon />
                                         </div>
                                     </Link>
