@@ -311,7 +311,10 @@ const LibroReclamaciones = (props) => {
 
     return (
         <FormLibro>
-            <Helmet><title>{helmet} – ITICPE</title></Helmet>
+            <Helmet>
+                <title>{helmet} – ITICPE</title>
+        <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />I
+            </Helmet>
 
             <TitleLibro>{name}</TitleLibro>
             <ImgLibro><img src={require(`../images/${img}`)} alt="" /></ImgLibro>

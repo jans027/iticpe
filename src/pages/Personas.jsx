@@ -48,7 +48,10 @@ const Personas = () => {
 
   return (
     <>
-      <Helmet><title>{helmet} – ITICPE</title></Helmet>
+      <Helmet>
+        <title>{helmet} – ITICPE</title>
+        <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+      </Helmet>
 
       <BannerServicios />
       <ContPagesEmpresa>
