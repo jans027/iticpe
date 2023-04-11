@@ -106,7 +106,7 @@ const CotizacionForm = (props) => {
     };
     //......Select and Sub Select..............
 
-    const sendEmail = (event) => {
+    const sendEmail = async (event) => {
         event.preventDefault();
 
         const formData = new FormData(formRef.current);
@@ -198,7 +198,7 @@ const CotizacionForm = (props) => {
             //we get consecutive number to generate a different conversation email each time
             const messageId = uuidv4().slice(0, 8);
 
-            fetch(url, {
+            await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -224,30 +224,31 @@ const CotizacionForm = (props) => {
                     `
                 })
             })
-                .then(response =>
-                    response.json(),
-                    toast.success('Cotizacion Enviada con Exito!', {// alert message
-                        position: "top-center",
-                        autoClose: 500,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                    }
-                    )
+            .then(response => {
+                if (response.ok) {
+                    // throw new Error('La petición ha fallado!')
+                    return response.json()
                         .then(data =>
-                            console.log(data),
+                            // console.log(data),
                             formRef.current.reset(),// clean form
-                        )
-                )
-                .catch(error =>
-                    console.error(error),
-                    formRef.current.reset(),// clean form
-                    toast.error('No se pudo Enviar la Cotizacion, Intentalo mas tarde!', {// alert message
+                            toast.success('En breve nos pondremos en contacto contigo!', {// alert message
+                                position: "top-center",
+                                autoClose: 1000,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: true,
+                                draggable: true,
+                                progress: undefined,
+                                theme: "light",
+                            })
+                            )
+                        .catch(error => console.error(error));
+                } else {
+                    // throw new Error('La petición ha fallado!')
+                    console.log(response.status)
+                    toast.error('No se pudo Enviar tu solicitud, Intentalo mas tarde!', {// alert message
                         position: "top-center",
-                        autoClose: 500,
+                        autoClose: 1000,
                         hideProgressBar: false,
                         closeOnClick: true,
                         pauseOnHover: true,
@@ -255,7 +256,12 @@ const CotizacionForm = (props) => {
                         progress: undefined,
                         theme: "light",
                     })
-                );
+                }
+            })
+            .catch(error =>
+                console.log(error),
+                formRef.current.reset(),// clean form
+            );
         }
     };
 
