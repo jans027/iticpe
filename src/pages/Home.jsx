@@ -14,15 +14,16 @@ const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>ITICPE Peru – Committed to our service Integrity</title>
-                <meta name="description" content="Helmet application" />
+                <title>ITICPE Peru – Comprometidos con la integridad de nuestros servicios.</title>
+                <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+                <meta name="Certificaciones" content="Helmet application" />
             </Helmet>
-            <SimpleSlider/>
-            <SectionServicios/>
-            <SecAcreditaciones/>
-            <SecEnfoque/>
+            <SimpleSlider />
+            <SectionServicios />
+            <SecAcreditaciones />
+            <SecEnfoque />
             <SecExperiencia />
-            <SliderLogo/>
+            <SliderLogo />
             <SecContactanos />
         </div>
     )

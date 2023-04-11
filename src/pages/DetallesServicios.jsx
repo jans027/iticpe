@@ -123,7 +123,10 @@ const DetallesServicios = (props) => {
                             {
                                 cardGet.map((item) =>
                                     <CardDetalles key={item.id}  >
-                                        <Helmet><title>{`${item.helmet} – ITIC Colombia`}</title></Helmet>
+                                        <Helmet>
+                                            <title>{`${item.helmet} – ITIC Colombia`}</title>
+                                            <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+                                        </Helmet>
                                         <ContImgPc><img src={require(`../images/${item.imgPc}`)} alt={item.id} /></ContImgPc>
                                         <ContImgMobile><img src={require(`../images/${item.imgMobile}`)} alt={item.id} /></ContImgMobile>
 
@@ -143,7 +146,7 @@ const DetallesServicios = (props) => {
                                                         })}
                                                     </span>
 
-                                                    {item.text2 === 'REGLAMENTACIÓN COLOMBIANA' ? <BtnPolCol target='_blank' to='https://itic.vercel.app/servicios/producto'>CONOCE MAS...</BtnPolCol>:''}
+                                                    {item.text2 === 'REGLAMENTACIÓN COLOMBIANA' ? <BtnPolCol target='_blank' to='https://itic.vercel.app/servicios/producto'>CONOCE MAS...</BtnPolCol> : ''}
 
                                                 </ParagraphSection>
 
