@@ -12,7 +12,10 @@ const PoliticasNavegacion = () => {
 
     return (
         <>
-            <Helmet><title>{helmet} – ITICPE</title></Helmet>
+            <Helmet>
+                <title>{helmet} – ITICPE</title>
+                <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+            </Helmet>
 
             <ContPoliticas>
                 <TitlePoliticas>{text1}</TitlePoliticas>

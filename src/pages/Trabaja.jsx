@@ -52,7 +52,10 @@ export default class Trabaja extends Component {
 
         return (
             <>
-                <Helmet><title>{helmet} – ITIC Colombia</title></Helmet>
+                <Helmet>
+                    <title>{helmet} – ITIC Colombia</title>
+                    <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+                </Helmet>
 
                 <ContContact>
                     <ContImgComtact>

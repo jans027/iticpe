@@ -19,10 +19,10 @@ const Producto = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    
+
     //Get data
     const [datos] = data;
-    const { servicios: { dropDownMenu: { producto: {helmet, name, cardImg, subTitle2, cards } } } } = datos
+    const { servicios: { dropDownMenu: { producto: { helmet, name, cardImg, subTitle2, cards } } } } = datos
 
 
     // extract values of cards
@@ -43,12 +43,15 @@ const Producto = () => {
     // console.log(itemsUrl)
     //.......................................................
 
-    
+
 
 
     return (
         <>
-            <Helmet><title>{helmet} – ITICPE</title></Helmet>
+            <Helmet>
+                <title>{helmet} – ITICPE</title>
+                <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+            </Helmet>
             <BannerServicios />
             <ContPagesEmpresa>
                 <div className='ContSectionEm'>
