@@ -14,23 +14,22 @@ export const ConSectionServicios = styled.div`
     padding: 2rem 0;
 `
 export const ContCardsServi = styled.div`
-    /* border: 1px solid red;//....................... */
     width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 30px 0;
+    /* border: 1px solid red;//....................... */
 `
 export const CardServicios = styled.div`
-    /* border: 1px solid red;//.................. */
-    width: 27%;
+    width: 25%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     align-items: center;
     transition: 30ms;
+    /* border: 1px solid red;//.................. */
     @media(max-width:800px){
         width: 50%;
     }
@@ -76,7 +75,7 @@ export const EnlaceImg = styled(Link)`
     }
     
 `
-export const ContTextCard = styled.div`
+export const ContTextCard =styled.div`
     width: 75%;
     margin: auto; 
     padding-bottom: 2em;

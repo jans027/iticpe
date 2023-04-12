@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { data } from '../data/data';
 import { SubTitleSection, TitleSection } from '../styles/SecAcreditaciones';
 import { ConSectionServicios, ContMapa, ContTexto1, ContTexto2 } from '../styles/SectionServicios';
-import { ConSectionExperiencia } from '../styles/SliderExperiencia';
+import { ConSectionExperiencia, Separador } from '../styles/SliderExperiencia';
 import SliderExperiencias from './SliderExperiencia';
+import MapaPer from './MapaPer';
 
 
 
@@ -63,6 +64,8 @@ const SecExperiencia = (props) => {
                         <p className='text2'>{text3}</p>
                     </ContTexto2>
                 </ContMapa>
+                <Separador />
+                <MapaPer/>
                 <SliderExperiencias />
             </ConSectionExperiencia>
 
