@@ -54,7 +54,6 @@ export default class Trabaja extends Component {
             <>
                 <Helmet>
                     <title>{helmet} – ITIC Colombia</title>
-                    <link rel="shortcut icon" href="%PUBLIC_URL%/Itic32px.png" />
                 </Helmet>
 
                 <ContContact>

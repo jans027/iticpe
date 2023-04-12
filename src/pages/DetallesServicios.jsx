@@ -125,7 +125,6 @@ const DetallesServicios = (props) => {
                                     <CardDetalles key={item.id}  >
                                         <Helmet>
                                             <title>{`${item.helmet} – ITIC Colombia`}</title>
-                                            <link rel="shortcut icon" href="%PUBLIC_URL%/Itic32px.png" />
                                         </Helmet>
                                         <ContImgPc><img src={require(`../images/${item.imgPc}`)} alt={item.id} /></ContImgPc>
                                         <ContImgMobile><img src={require(`../images/${item.imgMobile}`)} alt={item.id} /></ContImgMobile>

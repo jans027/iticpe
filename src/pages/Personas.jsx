@@ -50,7 +50,6 @@ const Personas = () => {
     <>
       <Helmet>
         <title>{helmet} – ITICPE</title>
-        <link rel="shortcut icon" href="%PUBLIC_URL%/Itic32px.png" />
       </Helmet>
 
       <BannerServicios />
