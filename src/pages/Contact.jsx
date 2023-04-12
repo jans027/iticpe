@@ -11,12 +11,12 @@ import { Helmet } from 'react-helmet';
 
 // get data
 const [datos] = data;
-const { contacto: { contactanos:{ 
+const { contacto: { contactanos: {
     id,
-    title, 
+    title,
     helmet,
-    subTitle, 
-    } } } = datos;
+    subTitle,
+} } } = datos;
 
 
 export default class SecContactanos extends Component {
@@ -48,7 +48,10 @@ export default class SecContactanos extends Component {
 
         return (
             <>
-                <Helmet><title>{helmet} – ITICPE</title></Helmet>
+                <Helmet>
+                    <title>{helmet} – ITICPE</title>
+                    <link rel="shortcut icon" href="%PUBLIC_URL%/Itic32px.png" />
+                </Helmet>
 
                 <ContContact>
                     <ContImgComtact>
@@ -68,12 +71,12 @@ export default class SecContactanos extends Component {
                                     )
                                 })}
                             </p>
-                            <ContactForm/>
+                            <ContactForm />
                         </div>
                     </ContContactForm>
                 </ContContact>
-                <Address/>
-                <SecMap/>
+                <Address />
+                <SecMap />
             </>
         )
     }

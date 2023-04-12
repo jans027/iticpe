@@ -1297,7 +1297,7 @@ export const data = [
             },
         card31: {
           id: "card_logo_31",
-            img: "Logos_Clientes/Logo_31.jpg",
+            img: "Logos_Clientes/Logo_31.png",
             },
         card32: {
           id: "card_logo_32",

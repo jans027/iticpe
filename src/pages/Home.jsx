@@ -15,7 +15,7 @@ const Home = () => {
         <div>
             <Helmet>
                 <title>ITICPE Peru – Comprometidos con la integridad de nuestros servicios.</title>
-                <link rel="shortcut icon" href="%PUBLIC_URL%/tic32px.png" />
+                <link rel="shortcut icon" href="%PUBLIC_URL%/Itic32px.png" />
                 <meta name="Certificaciones" content="Helmet application" />
             </Helmet>
             <SimpleSlider />
