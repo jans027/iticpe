@@ -30,7 +30,7 @@ export const data = [
         card1: {
           id: "card-Banner2",
           title: "INSPECCIÓN",
-          imgDk: 'banners-ppales/Banner-ppal-dk-granjas.png',
+          imgDk: 'banners-ppales/Banner-ppal-dk-granjas.jpg',
           imgTb: 'banners-ppales/Banner-ppal-tb-granjas.png',
           imgMb: 'banners-ppales/Banner-ppal-mb-granjas.png',
           paragraph:
@@ -1151,7 +1151,7 @@ export const data = [
       id: "Enfoque",
         title: "NUESTRO \nADN",
           subTitle: "SOLUCIONES APLICABLES A \nCUALQUIER INDUSTRIA",
-            img: "banner_2_desktop.png",
+            img: "banner_2_desktop.jpg",
               url: "/empresa/nosotros",
                 textBtn: "MÁS SOBRE NOSOTROS",
                   paragraph:

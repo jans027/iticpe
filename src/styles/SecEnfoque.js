@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import ImgBanner from '../images/banner_2_desktop.png'
+import ImgBanner from '../images/banner_2_desktop.jpg'
 
 
 
