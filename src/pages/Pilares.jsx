@@ -75,6 +75,7 @@ const Pilares = () => {
             </MobileTitle>
 
             <TitleP>{title}</TitleP>
+            <h1>NUESTROS PILARES</h1>
 
             <ConCardsPi>
               {

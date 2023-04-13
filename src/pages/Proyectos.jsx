@@ -70,6 +70,7 @@ const Proyectos = () => {
                 )
               })}<ArrowDropDownIcon /></p>
             </MobileTitle>
+            <h1>NUESTRA EXPERIENCIA</h1>
 
             <TitleSectionPro><p>{nameSecction}</p></TitleSectionPro>
 

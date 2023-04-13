@@ -71,6 +71,7 @@ const Nosotros = () => {
                 )
               })}<ArrowDropDownIcon /></p>
             </MobileTitle>
+            <h1>ACERCA DE NOSOTROS</h1>
 
             <ContNumber1>
               <div>

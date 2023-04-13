@@ -81,6 +81,7 @@ const Politicas = () => {
                 )
               })}<ArrowDropDownIcon /></p>
             </MobileTitle>
+            <h1>POLÍTICAS, CÓDIGOS Y REGLAMENTOS</h1>
 
             <TitleSectionPro><p>{name}</p></TitleSectionPro>
 

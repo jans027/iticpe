@@ -73,6 +73,7 @@ const Gestion = () => {
                 )
               })}<ArrowDropDownIcon /></p>
             </MobileTitle>
+            <h1>SISTEMAS DE GESTIÓN</h1>
 
             <ContCard1>
               <ContCard2>

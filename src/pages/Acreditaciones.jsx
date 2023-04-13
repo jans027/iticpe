@@ -94,7 +94,6 @@ const Contact = () => {
                                 )
                             })}<ArrowDropDownIcon /></p>
                         </MobileTitle>
-
                         <ConTitleAcred>
                             <TitleAcred>{title}</TitleAcred>
                             <SubTitleSection>{subTitle}</SubTitleSection>
@@ -173,6 +172,7 @@ const Contact = () => {
 
                             </Slider>
                         </ContCardsAcredMobile>
+                        <h1>Acreditaciones</h1>
 
                         <MenuMobileNos>
                             {

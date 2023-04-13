@@ -66,6 +66,7 @@ export default class Cotizacion extends Component {
                 })}
               </p>
               <CotizacionForm />
+              <h1>Solicita Tu Cotización</h1>
             </div>
           </ContCotizacionForm>
         </ContCotizacion>

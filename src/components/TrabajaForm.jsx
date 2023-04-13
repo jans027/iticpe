@@ -188,7 +188,7 @@ const TrabajaForm = (props) => {
                         `
                         Nombre : ${dataForm.name}
                         <br><br>
-                        Numero de Cedula : ${dataForm.cedula}
+                        Numero de DNI/CE : ${dataForm.cedula}
                         <br><br>
                         Telefono : ${dataForm.phone}
                         <br><br>

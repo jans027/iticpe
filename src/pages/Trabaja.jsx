@@ -55,6 +55,7 @@ export default class Trabaja extends Component {
                 <Helmet>
                     <title>{helmet} – ITIC Colombia</title>
                 </Helmet>
+                <h1>TRABAJA CON NOSOTROS</h1>
 
                 <ContContact>
                     <ContImgComtact>

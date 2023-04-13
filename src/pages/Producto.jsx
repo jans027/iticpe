@@ -75,6 +75,7 @@ const Producto = () => {
                                 )
                             })}<ArrowDropDownIcon /></p>
                         </MobileTitle>
+                        <h1>CERTIFICACIÓN DE PRODUCTO</h1>
 
                         <ContCard1>
                             <ContCard2>

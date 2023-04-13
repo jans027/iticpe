@@ -137,6 +137,7 @@ const Certificaciones = () => {
 
               </Slider>
             </ContCardsCertiMobile>
+            <h1>Certificaciones</h1>
 
             <MenuMobileNos>
               {

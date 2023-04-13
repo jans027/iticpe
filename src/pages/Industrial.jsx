@@ -76,6 +76,7 @@ const Industrial = () => {
                 )
               })}<ArrowDropDownIcon /></p>
             </MobileTitle>
+            <h1>SERVICIOS INDUSTRIALES</h1>
 
             <ContCard1>
               <ContCard2>

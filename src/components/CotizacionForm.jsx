@@ -214,7 +214,7 @@ const CotizacionForm = (props) => {
                         <br><br>
                         Razon Social : ${dataForm.Razon_Social}
                         <br><br>
-                        Nit : ${dataForm.Nit}
+                        Ruc : ${dataForm.Nit}
                         <br><br>
                         Telefono : ${dataForm.Telefono}
                         <br><br>

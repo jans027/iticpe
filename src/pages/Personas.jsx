@@ -76,6 +76,7 @@ const Personas = () => {
                 )
               })}<ArrowDropDownIcon /></p>
             </MobileTitle>
+            <h1>CERTIFICACIÓN DE PERSONAS</h1>
 
             <ContCard1>
               <ContCard2>

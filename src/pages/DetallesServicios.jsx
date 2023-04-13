@@ -99,32 +99,13 @@ const DetallesServicios = (props) => {
                     {/* <NavServicios /> */}
                     <ConNosotros>
 
-                        {/* <MenuMobileNos>
-                            {
-                                itemsUrlUp.map((item) =>
-                                    <Link to={item.url} key={item.name}><div>{item.name}<ArrowDropDownIcon /></div></Link>
-                                )
-                            }
-                        </MenuMobileNos> */}
-
-                        {/* <MobileTitle>
-                            <p>{name.split('\n').map((line, i) => {
-                                return (
-                                    <React.Fragment key={i}>
-                                        {line}
-                                        <br />
-                                    </React.Fragment>
-                                )
-                            })}<ArrowDropDownIcon /></p>
-                        </MobileTitle> */}
-
                         <ContCardDeta>
 
                             {
                                 cardGet.map((item) =>
                                     <CardDetalles key={item.id}  >
                                         <Helmet>
-                                            <title>{`${item.helmet} – ITIC Colombia`}</title>
+                                            <title>{`${item.helmet} – ITIC Perú`}</title>
                                         </Helmet>
                                         <ContImgPc><img src={require(`../images/${item.imgPc}`)} alt={item.id} /></ContImgPc>
                                         <ContImgMobile><img src={require(`../images/${item.imgMobile}`)} alt={item.id} /></ContImgMobile>
@@ -182,28 +163,13 @@ const DetallesServicios = (props) => {
                                                 </ContAcredt>
                                             }
                                             <ButtonSection ><div onClick={handleClick}>{item.btn1}</div></ButtonSection>
+                                            <h1>{item.text2}</h1>
                                         </div>
                                     </CardDetalles>
                                 )
                             }
                         </ContCardDeta>
 
-                        {/* <MenuMobileNos>
-                            {
-                                itemsUrlDown.map((item) =>
-                                    <Link to={item.url} key={item.name}><div>
-                                        <p>{item.name.split('\n').map((line, i) => {
-                                            return (
-                                                <React.Fragment key={i}>
-                                                    {line}
-                                                    <br />
-                                                </React.Fragment>
-                                            )
-                                        })}</p>
-                                        <ArrowDropDownIcon /></div></Link>
-                                )
-                            }
-                        </MenuMobileNos> */}
                     </ConNosotros>
                 </div>
                 <ContacBar />

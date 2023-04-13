@@ -118,6 +118,7 @@ const Equipo = () => {
                 }
               </div>
             </ContCardEmployes>
+            <h1>NUESTRO EQUIPO</h1>
 
             <MenuMobileNos>
               {

@@ -51,6 +51,8 @@ export default class SecContactanos extends Component {
                 <Helmet>
                     <title>{helmet} – ITICPE</title>
                 </Helmet>
+                <h1>Contactanos</h1>
+
 
                 <ContContact>
                     <ContImgComtact>
