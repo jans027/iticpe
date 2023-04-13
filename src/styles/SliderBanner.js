@@ -2,9 +2,6 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 
-
-
-
 export const ContImgCarousel = styled(Slider)`
     /* border: 2px solid red;//................. */
     top: 135px;
@@ -14,9 +11,14 @@ export const ContImgCarousel = styled(Slider)`
     @media (max-width:1100px) {
         top: 82px;
     }
-
     .slick-arrow{
         /* border: 1px solid red; */
+        display: none!important;
+    }
+    .visible{
+        display: block!important;
+    }
+    .invisible{
         display: none!important;
     }
 
@@ -26,7 +28,7 @@ export const ContCardImg = styled.div`
     width: 100%;
     height:auto;
     @media (max-width:1100px) {
-    top: 88px;
+        top: 88px;
     }
     @media (max-width:641px) {
     }
@@ -36,6 +38,7 @@ export const ContCardImg = styled.div`
     height:auto;
     img{
         width: 100%;
+
     }
     .imgDk{
         display: block;

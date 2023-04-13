@@ -20,7 +20,7 @@ export const data = [
         card0: {
           id: "card-Banner1",
           title: "INSPECCIÓN",
-          imgDk:'banners-ppales/Banner-ppal-dk-iticpe.png',
+          imgDk:'banners-ppales/Banner-ppal-dk-iticpe.jpg',
           imgTb:'banners-ppales/Banner-ppal-tb-iticpe.png',
           imgMb:'banners-ppales/Banner-ppal-mb-iticpe.png',
           paragraph:
