@@ -167,14 +167,14 @@ export const MenuDrop = styled(Menu)`
     }
 `
 export const LogoNav = styled(Link)`
-        transition:10ms;
-        width:clamp(150px, 15%, 215px);
+    transition:10ms;
+    width:clamp(150px, 15%, 215px);
     :active{
-            transform: scale(.98);
+        transform: scale(.98);
     }
     img{
         height: 100%;
-        }
+    }
 `
 // simple dropdown menu whit hover effect
 export const DropdownContainer = styled.div`
