@@ -1055,7 +1055,7 @@ export const data = [
       colombia: {
         id: "colombia",
         name: "COL",
-        url: "https://itic.vercel.app",
+        url: "https://iticco.com",
         img: "Bandera-col.png",
       },
       // peru: {
