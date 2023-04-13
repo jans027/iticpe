@@ -1,5 +1,7 @@
 import React from 'react'
+//data
 import { data } from '../data/data';
+//styles
 import { SubTitleSection, TitleSection } from '../styles/SecAcreditaciones';
 import { CardServicios, ConSectionServicios, ContCardsServi, ContTextCard, EnlaceBtnS, EnlaceImg } from '../styles/SectionServicios';
 

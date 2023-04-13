@@ -18,6 +18,7 @@ export const ContCardsServi = styled.div`
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px 0;
     /* border: 1px solid red;//....................... */
 `
