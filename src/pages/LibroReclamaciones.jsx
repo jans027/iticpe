@@ -316,7 +316,7 @@ const LibroReclamaciones = (props) => {
             </Helmet>
 
             <TitleLibro>{name}</TitleLibro>
-            <h1>Libro De Reclamaciones</h1>
+            <h1>Libro De Reclamaciones  </h1>
             <ImgLibro><img src={require(`../images/${img}`)} alt="" /></ImgLibro>
 
             <div className='cont_form_mail'>

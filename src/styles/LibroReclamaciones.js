@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const TitleLibro = styled.h1`
+export const TitleLibro = styled.h2`
     /* border: 1px solid red;//.................... */
     font-size: clamp(28px, 3.8vw, 70px);
     font-weight: 900;
