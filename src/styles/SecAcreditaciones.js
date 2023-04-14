@@ -65,7 +65,7 @@ export const CardAcred = styled.div`
         }
     }
 `
-export const TitleSection = styled.h1`
+export const TitleSection = styled.h2`
     font-size: clamp(28px, 3.8vw, 70px);
     font-weight: 900;
     padding:1rem 0 1rem 0;

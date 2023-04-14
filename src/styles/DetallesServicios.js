@@ -79,7 +79,7 @@ export const ContImgMobile = styled.div`
         display: block;
     }
 `
-export const TitleSection = styled.h1`
+export const TitleSection = styled.h2`
     /* border: 1px solid red;//.................. */
     width: 82%;
     margin: auto;

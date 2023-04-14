@@ -54,7 +54,6 @@ export const TextInfo = styled.button`
         margin-left:.9em;
     }
 `
-
 export const ButtonCookie = styled.button`
     max-width: 280px;
     width: 25%;
