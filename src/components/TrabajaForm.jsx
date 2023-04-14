@@ -122,8 +122,8 @@ const TrabajaForm = (props) => {
         const isValidEmail = emailRegex.test(dataForm.email);
 
         // ...regex input numb
-        const dniRegex = /^([0-9]{8}|[0-9]{9}-[A-Z]{2}[0-9]{1})$/;
-        const isValidDni = dniRegex.test(dataForm.cedula);
+        // const dniRegex = /^([0-9]{8}|[0-9]{9}[A-Z]{2}[0-9]{1})$/;
+        // const isValidDni = dniRegex.test(dataForm.cedula);
 
         // ...regex input numb
         const numbRegex = /^[0-9]+$/;
@@ -142,8 +142,7 @@ const TrabajaForm = (props) => {
         } else if (// cedula..............
             dataForm.cedula.trim() === "" ||
             dataForm.cedula === null ||
-            dataForm.cedula.length === 0 ||
-            isValidDni !== true
+            dataForm.cedula.length === 0 
         ) {
             setClassAlert1('class_1');
             setErrorCedula(true)

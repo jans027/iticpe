@@ -114,7 +114,7 @@ const CotizacionForm = (props) => {
 
 
         //regex input NIT
-        const nitRegex = /^([1-9]\d{10})$/;
+        const nitRegex = /^10\d{8}$|^20\d{8}$|^17\d{8}$/;
         const isValidNit = nitRegex.test(dataForm.Nit);
 
         // regex input name and last name
