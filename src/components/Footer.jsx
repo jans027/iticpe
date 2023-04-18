@@ -13,10 +13,12 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 //styles
 import { AccordionFooter, AddressFooter, BlockNav, BtnFooter, BtnLibro, ConAccordion, ConEmprFooter, ConServFooter, ConsultasFooter, ContFooter, ContUlPoliticas, Copy, EnlaceDesplegable, LinkConsulta1, LinkConsultaMovile, LogoFooter, Redes, TitleAccor } from '../styles/Footer';
 //Documents
-import declaracion_independencia from '../documents/ITIC-DG-NA-DI-003-DECLARACION-DE-INDEPENDENCIA-IMPARCIALIDAD-E-INTEGRIDAD-(R05).pdf'; 
-import conducta_corporativo from '../documents/CCC-01-CODIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf'; 
-import política_HSEQ from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-QHSE-ITICPE-(R08).pdf'; 
-import condiciones_generales from '../documents/ITIC-DG-NA-DI-002-CONDICIONES-GENERALES-DEL-NEGOCIO-(R07).pdf'; 
+import declaracion_independencia from '../documents/ITIC-DG-NA-DI-003-DECLARACION-DE-INDEPENDENCIA-IMPARCIALIDAD-E-INTEGRIDAD-(R05).pdf';
+import conducta_corporativo from '../documents/CCC-01-CODIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf';
+import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIONES-(R09).pdf';
+import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
+import política_HSEQ from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-QHSE-ITICPE-(R08).pdf';
+import condiciones_generales from '../documents/ITIC-DG-NA-DI-002-CONDICIONES-GENERALES-DEL-NEGOCIO-(R07).pdf';
 // Images
 import LogFooter from '../images/Logo-iticpe-blanco.svg';
 import ModalForm from './ModalForm';
@@ -106,13 +108,13 @@ const Footer = () => {
                     <ContUlPoliticas>
                         <h3>{politicas.name}</h3>
                         <li>
-                            <Link target="_blank" to={declaracion_independencia} rel="noreferrer">
-                                Declaracion De Independencia <br /> Imparcialidad E Integridad
+                            <Link target="_blank" to={quejas_apelaciones} rel="noreferrer">
+                                Quejas y Apelaciones
                             </Link>
                         </li>
                         <li>
-                            <Link target="_blank" to={conducta_corporativo} rel="noreferrer">
-                                Codigo De Conducta <br /> Corporativo 
+                            <Link target="_blank" to={PolíticaProtecciónDatos} rel="noreferrer">
+                                Política de Protección <br /> de Datos
                             </Link>
                         </li>
                         <BtnFooter to={politicas.url}><div>{politicas.btn}</div></BtnFooter>
@@ -123,7 +125,7 @@ const Footer = () => {
                     </ContUlPoliticas>
 
                     {/* .................................................................... */}
-                    
+
                     <ConAccordion>
                         <AccordionFooter>
                             <AccordionSummary
@@ -143,7 +145,6 @@ const Footer = () => {
                                             >
                                                 <li
                                                     key={item.nameFooter}
-                                                    // onClick={(e) => handleClick(e)}
                                                     id={item.nameFooter}
                                                 >
                                                     <Link to={item.url}>{item.nameFooter}</Link>
@@ -193,13 +194,13 @@ const Footer = () => {
                                 <EnlaceDesplegable>
                                     <ul>
                                         <li>
-                                            <Link target="_blank" to={declaracion_independencia} rel="noreferrer">
-                                                Declaracion De Independencia <br /> Imparcialidad E Integridad
+                                            <Link target="_blank" to={quejas_apelaciones} rel="noreferrer">
+                                                Quejas y Apelaciones
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link target="_blank" to={conducta_corporativo} rel="noreferrer">
-                                                Codigo De Conducta <br /> Corporativo
+                                            <Link target="_blank" to={PolíticaProtecciónDatos} rel="noreferrer">
+                                                Política de Protección <br /> de Datos
                                             </Link>
                                         </li>
                                         <li>
@@ -219,7 +220,7 @@ const Footer = () => {
                                 </EnlaceDesplegable>
                             </AccordionDetails>
                         </AccordionFooter>
-                        
+
                         <LinkConsultaMovile>
                             <div><Link to={consulta.url}><ModalForm /></Link></div>
                             {/* <div><Link to={cotizacion.url}>{cotizacion.name}</Link></div> */}
@@ -241,7 +242,7 @@ const Footer = () => {
                             <span className='address' ><LocationOnOutlinedIcon />{inicio.address}</span>
                             <span className='building'>{inicio.addressBuilding}</span>
                         </AddressFooter>
-                        
+
                     </ConsultasFooter>
                 </BlockNav>
 

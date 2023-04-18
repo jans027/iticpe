@@ -20,6 +20,8 @@ import politica_integral from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-
 import computo from '../documents/PSI-01-MANEJO-DE-EQUIPOS-DE-COMPUTO-Y-AYUDAS-INFORMATICAS-(R01).pdf';
 import testing_inspection from '../documents/RIT-APROBADO-018239-2023-INTERNATIONAL-TESTING-INSPECTION-&-CERTIFICATION-PERU-S.A.C..pdf';
 import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIONES-(R09).pdf';
+import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
+
 
 import { Helmet } from 'react-helmet'
 
@@ -87,9 +89,13 @@ const Politicas = () => {
 
             <ContCardPol>
 
+              <CardPol target='_blank' to={PolíticaProtecciónDatos} rel="noopener noreferrer">
+                <div className='text_img_poli'><FileOpenOutlinedIcon /></div>
+                <div><div className='text_card_poli'><p>Política de Protección de Datos</p></div></div>
+              </CardPol>
               <CardPol target='_blank' to={codigo_conducta} rel="noopener noreferrer">
                 <div className='text_img_poli'><FileOpenOutlinedIcon /></div>
-                <div><div className='text_card_poli'><p>Política de protección de datos personales</p></div></div>
+                <div><div className='text_card_poli'><p>Codigo De Conducta Corporativo</p></div></div>
               </CardPol>
               <CardPol target='_blank' to={condiciones_generales} rel="noopener noreferrer">
                 <div className='text_img_poli'><FileOpenOutlinedIcon /></div>
@@ -119,6 +125,7 @@ const Politicas = () => {
                 <div className='text_img_poli'><FileOpenOutlinedIcon /></div>
                 <div><div className='text_card_poli'><p>Quejas y Apelaciones</p></div></div>
               </CardPol>
+              
 
 
             </ContCardPol>
