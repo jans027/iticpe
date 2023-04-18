@@ -46,12 +46,18 @@ export const TextInfo = styled.button`
     }
     .textCookie{
         padding-bottom: .5em;
-        font-size: 18px;
+        font-size: 16px;
+        @media (max-width:800px) {
+            font-size: 12px;
+        }
     }
     a{
         color: var(--color5);        
-        font-size: 18px;
+        font-size: 16px;
         margin-left:.9em;
+        @media (max-width:800px) {
+            font-size: 12px;
+        }
     }
 `
 export const ButtonCookie = styled.button`
