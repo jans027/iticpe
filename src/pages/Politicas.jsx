@@ -23,7 +23,6 @@ import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIO
 import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
 //import helmet
 import { Helmet } from 'react-helmet'
-import PDFViewer from '../components/PDFViewer'
 
 
 

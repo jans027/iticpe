@@ -35,7 +35,6 @@ import Cookie from "./components/Cookie";
 import Cookies from "js-cookie";
 import LibroReclamaciones from "./pages/LibroReclamaciones";
 import Trabaja from "./pages/Trabaja";
-import PDFViewer from "./components/PDFViewer";
 
 
 function App() {
