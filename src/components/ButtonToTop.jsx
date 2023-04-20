@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+//import element ,aterial ui
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+//styles
 import { ButtonTop } from '../styles/ButtonToTop';
 
 const ButtonToTop = () => {
+
     const handleClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+    
     return (
         <>
             <ButtonTop onClick={handleClick}>

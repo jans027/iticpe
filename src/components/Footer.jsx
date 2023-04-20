@@ -13,8 +13,6 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 //styles
 import { AccordionFooter, AddressFooter, BlockNav, BtnFooter, BtnLibro, ConAccordion, ConEmprFooter, ConServFooter, ConsultasFooter, ContFooter, ContUlPoliticas, Copy, EnlaceDesplegable, LinkConsulta1, LinkConsultaMovile, LogoFooter, Redes, TitleAccor } from '../styles/Footer';
 //Documents
-import declaracion_independencia from '../documents/ITIC-DG-NA-DI-003-DECLARACION-DE-INDEPENDENCIA-IMPARCIALIDAD-E-INTEGRIDAD-(R05).pdf';
-import conducta_corporativo from '../documents/CCC-01-CODIGO-DE-CONDUCTA-CORPORATIVO-(R01).pdf';
 import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIONES-(R09).pdf';
 import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
 import política_HSEQ from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-QHSE-ITICPE-(R08).pdf';
@@ -43,9 +41,8 @@ const Footer = () => {
         consulta,
         contacto,
         politicas,
-        LibroReclamaciones
+        LibroReclamaciones:{url, tinyImg}
     } = datos;
-    const { url, tinyImg } = LibroReclamaciones
     const serviciosSub = Object.values(servicios.dropDownMenu);
     const empresasSub = Object.values(empresa.dropDownMenu);
     // console.log(politicas)
@@ -73,15 +70,8 @@ const Footer = () => {
                         <h3>{empresa.name}</h3>
                         {
                             empresasSub.map((item) =>
-                                <ul
-                                    id="droppin"
-                                    key={item.id}
-                                >
-                                    <li
-                                        key={item.nameFooter}
-                                        // onClick={(e) => handleClick(e)}
-                                        id={item.nameFooter}
-                                    >
+                                <ul id="droppin" key={item.id} >
+                                    <li key={item.nameFooter} id={item.nameFooter} >
                                         <Link to={item.url}>{item.nameFooter}</Link>
                                     </li>
                                 </ul>
@@ -93,10 +83,7 @@ const Footer = () => {
                         <h3>{servicios.name}</h3>
                         {
                             serviciosSub.map((item) =>
-                                <ul
-                                    id="droppin"
-                                    key={item.id}
-                                >
+                                <ul id="droppin" key={item.id} >
                                     <li key={item.nameFooter} id={item.nameFooter}>
                                         <Link to={item.url}>{item.nameFooter}</Link>
                                     </li>
@@ -139,14 +126,8 @@ const Footer = () => {
                                 <EnlaceDesplegable>
                                     {
                                         empresasSub.map((item) =>
-                                            <ul
-                                                id="droppin"
-                                                key={item.id}
-                                            >
-                                                <li
-                                                    key={item.nameFooter}
-                                                    id={item.nameFooter}
-                                                >
+                                            <ul id="droppin" key={item.id} >
+                                                <li key={item.nameFooter} id={item.nameFooter} >
                                                     <Link to={item.url}>{item.nameFooter}</Link>
                                                 </li>
                                             </ul>
@@ -168,10 +149,7 @@ const Footer = () => {
                                 <EnlaceDesplegable>
                                     {
                                         serviciosSub.map((item) =>
-                                            <ul
-                                                id="droppin"
-                                                key={item.id}
-                                            >
+                                            <ul id="droppin" key={item.id} >
                                                 <li key={item.nameFooter} id={item.nameFooter}>
                                                     <Link to={item.url}>{item.nameFooter}</Link>
                                                 </li>
@@ -223,7 +201,6 @@ const Footer = () => {
 
                         <LinkConsultaMovile>
                             <div><Link to={consulta.url}><ModalForm /></Link></div>
-                            {/* <div><Link to={cotizacion.url}>{cotizacion.name}</Link></div> */}
                         </LinkConsultaMovile>
                     </ConAccordion>
 
@@ -232,7 +209,6 @@ const Footer = () => {
                     <ConsultasFooter>
                         <LinkConsulta1>
                             <div><Link to={consulta.url}><ModalForm /></Link></div>
-                            {/* <div><Link to={cotizacion.url}>{cotizacion.name}</Link></div> */}
                         </LinkConsulta1>
                         <AddressFooter>
                             <p>{contacto.name}</p>

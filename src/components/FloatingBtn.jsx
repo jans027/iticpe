@@ -1,12 +1,17 @@
 import React from 'react'
+//import react router dom
 import { Link } from 'react-router-dom';
+//import data
 import { data } from '../data/data';
+//styles
 import { ConBtnFloat } from '../styles/FloatingBtn';
 
 const FloatingBtn = () => {
 
-    const [datos] = data
-    const { inicio: { whatsappUrl, whatsappImg } } = datos
+    //get data
+    const [datos] = data;
+    //destructuring data
+    const { inicio: { whatsappUrl, whatsappImg } } = datos;
 
     return (
         <>

@@ -1,4 +1,5 @@
 import React from 'react'
+//import data
 import { data } from '../data/data';
 // icons
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';

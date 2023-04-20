@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+// import react router dom
 import { Link } from 'react-router-dom';
+//styles
 import { ButtonCookie, ContInfo, ContModalCookie, TextInfo } from '../styles/Cookie';
 //import cocuments
 import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
@@ -40,8 +42,9 @@ const Cookie = () => {
                                 INTERNATIONAL TESTING INSPECTION AND CERTIFICATION PERÚ S.A.C (en adelante, “ITICPE”), identificada con RUC N° 20451575989, ubicada en Av. Pardo y Aliaga Nro. 675 Int. 203, San Isidro, Lima; reconoce la importancia que tiene la privacidad de los datos personales de nuestros clientes, por ello, garantizamos la absoluta confidencialidad de los mismos y el empleo de estándares de seguridad conforme a lo establecido en la Ley de Protección de Datos Personales - Ley N° 29733 y su Reglamento aprobado por el Decreto Supremo N° 003-2013-JUS (en adelante, “las normas de protección de datos personales”).<br/>
 
                                 ITICPE es el primer responsable del tratamiento de datos de su información personal. Los principios que se fijan en nuestra Política de Privacidad  que se aplican a todos los responsables del tratamiento de datos de ITICPE y se encuentra disponibles en 
-                                    <Link target='_blank' to={PolíticaProtecciónDatos}>Ver Política de protección de datos</Link>
                                 </p>
+                                <Link target='_blank' to={PolíticaProtecciónDatos}>Ver Política de protección de datos</Link>
+                                <br /><br />
                             </TextInfo>
                             <ButtonCookie type='submit' onClick={handleSetCookie}>Aceptar</ButtonCookie>
                         </ContInfo>

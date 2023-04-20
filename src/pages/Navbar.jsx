@@ -97,10 +97,7 @@ const NavBar = () => {
                 </LogoNav>
 
                 <MenuPcLaptop>
-                    <BtnBase
-                        id="inicio"
-                        className="inicio"
-                    >
+                    <BtnBase id="inicio" className="inicio">
                         <Link to={inicio.url}>{inicio.name}</Link>
                     </BtnBase>
 
@@ -108,9 +105,9 @@ const NavBar = () => {
                         <DropdownButton>{empresa.name}<ArrowDropDownSharpIcon /></DropdownButton>
                         <DropdownContent className='dropdown-content'>
                             {
-                                empresasSub.map((item) =>
-                                    <div onClick={(event) => handleClick2(event)} >
-                                        <Link id={item.name} key={item.id} name="certificaciones" to={item.url}>
+                                empresasSub.map((item, index) =>
+                                    <div key={item.id} onClick={(event) => handleClick2(event)} >
+                                        <Link id={item.name} name="certificaciones" to={item.url}>
                                             {item.name}
                                         </Link><br />
                                     </div>
@@ -119,100 +116,15 @@ const NavBar = () => {
                         </DropdownContent>
                     </DropdownContainer>
 
-                    {/* <ul>
-                        <BtnBase
-                            // id="basic-button"
-                            aria-controls={open2 ? 'basic-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open2 ? 'true' : undefined}
-                            onClick={(event) => handleClick2(event)}
-                            name='cotizacion'
-                        >
-                            <Link>{empresa.name}<ArrowDropDownSharpIcon /></Link>
-                        </BtnBase>
-                        <MenuDrop
-                            // id="basic-menu"
-                            anchorEl={menu2}
-                            open={open2}
-                            onClose={handleClose2}
-                            MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                            }}
-                        >
-                            {
-                                empresasSub.map((item) =>
-                                    <MenuItem key={item.id} onClick={handleClose2}>
-                                        <Link to={item.url}>{item.name}</Link>
-                                    </MenuItem>
-                                )
-                            }
-                        </MenuDrop>
-                    </ul> */}
-
-                    <DropdownContainer key={datos.certificaciones}>
-                        <DropdownButton>{servicios.name}<ArrowDropDownSharpIcon /></DropdownButton>
-                        <DropdownContent className='dropdown-content'>
-                            {
-                                serviciosSub.map((item) =>
-                                    <div onClick={(event) => handleClick1(event)} >
-                                        <Link id={item.name} key={item.id} name="certificaciones" to={item.url}>
-                                            {item.name}
-                                        </Link><br />
-                                    </div>
-                                )
-                            }
-                        </DropdownContent>
-                    </DropdownContainer>
-
-                    {/* <ul>
-                        <BtnBase
-                            // id="basic-button"
-                            aria-controls={open1 ? 'basic-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open1 ? 'true' : undefined}
-                            onClick={(event) => handleClick1(event)}
-                            name='servicios'
-                        >
-                            <Link>{servicios.name}<ArrowDropDownSharpIcon /></Link>
-                        </BtnBase>
-                        <MenuDrop
-                            // id="basic-menu"
-                            anchorEl={menu1}
-                            open={open1}
-                            onClose={handleClose1}
-                            MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                            }}
-                        >
-                            {
-                                serviciosSub.map((item) =>
-                                    <MenuItem key={item.id} onClick={handleClose1}>
-                                        <Link to={item.url}>{item.name}</Link>
-                                    </MenuItem>
-                                )
-                            }
-                        </MenuDrop>
-                    </ul> */}
-
-                    <BtnBase
-                        id="inicio"
-                        className="inicio"
-                    >
+                    <BtnBase id="inicio" className="inicio">
                         <Link to={cotizacion.url}>{cotizacion.name}</Link>
                     </BtnBase>
 
-                    <BtnBase
-                        id="inicio"
-                        className="inicio"
-                    >
-                        {/* <Link>{consulta.name}</Link> */}
+                    <BtnBase id="inicio" className="inicio">
                         <ModalForm />
                     </BtnBase>
 
-                    <BtnBase
-                        id="inicio"
-                        className="inicio"
-                    >
+                    <BtnBase id="inicio" className="inicio">
                         <Link to={contacto.url}>{contacto.name}</Link>
                     </BtnBase>
 
@@ -221,7 +133,7 @@ const NavBar = () => {
                         <DropdownContent className='dropdown-content'>
                             {
                                 countriesSub.map((item) =>
-                                    <div onClick={(event) => handleClick1(event)} >
+                                    <div key={item.id} onClick={(event) => handleClick1(event)} >
                                         <Link id={item.name} key={item.id} name="certificaciones" to={item.url}>
                                             <ImgCropdown src={require(`../images/${item.img}`)} alt={item.img} />
                                             {item.name}
@@ -232,36 +144,6 @@ const NavBar = () => {
                         </DropdownContent>
                     </DropdownContainer>
 
-                    {/* <ul>
-                        <BtnBase
-                            // id="basic-button"
-                            aria-controls={open3 ? 'basic-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open3 ? 'true' : undefined}
-                            onClick={(event) => handleClick3(event)}
-                            name='servicios'
-                        >
-                            <img src={ImgPer} alt="" />
-                            <Link>PER<ArrowDropDownSharpIcon /></Link>
-                        </BtnBase>
-                        <MenuDrop
-                            // id="basic-menu"
-                            anchorEl={menu3}
-                            open={open3}
-                            onClose={handleClose3}
-                            MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                            }}
-                        >
-                            {
-                                countriesSub.map((item) =>
-                                    <MenuItem key={item.id} onClick={handleClose3}>
-                                        <Link to={item.url}><img src={require(`../images/${item.img}`)} alt="" /> {item.name}</Link>
-                                    </MenuItem>
-                                )
-                            }
-                        </MenuDrop>
-                    </ul> */}
                 </MenuPcLaptop>
 
                 <MenuMobile />

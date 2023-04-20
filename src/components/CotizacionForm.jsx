@@ -1,7 +1,10 @@
 import React, { useRef, useState } from 'react'
+//import data
 import { data } from '../data/data';
+//styled
 import styled from "styled-components";
 import { BtnFormContact, CheckboxInput, CheckboxLabel, FormContact } from '../styles/Contact';
+//alert toast
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // consecutive number
@@ -46,6 +49,7 @@ const CotizacionForm = (props) => {
     const [isErrorPhone, setErrorPhone] = useState(false)
     const [isErrorMail, setErrorMail] = useState(false)
 
+    //styles errors
     const LabelName = styled.label`
         color: ${isErrorName === true ? 'red' : 'black'};
     `;

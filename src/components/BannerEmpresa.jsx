@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
+//import data
 import { data } from '../data/data';
+//import images
 import largeImage from '../images/banner-empresa.png';
 import smallImage from '../images/banner-empresa-mobile.png'
+//styles
 import { BannerPathEmpresa } from '../styles/NavEmpresa'
 
 const BannerEmpresa = () => {

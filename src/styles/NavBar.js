@@ -123,29 +123,29 @@ export const MenuPcLaptop = styled.span`
     }
 `
 export const BtnBase = styled(Button)`
-        &&{
-            /* border: 1px solid red;//................. */
+    &&{
+        /* border: 1px solid red;//................. */
+        color: var(--color4);
+        font-weight:600;
+        border-radius: 1.6em;
+        padding: .7em;
+        img{
+            margin: 0 1em 0 0;
+        }
+        a{
+            text-decoration: none;
             color: var(--color4);
             font-weight:600;
-            border-radius: 1.6em;
-            padding: .7em;
-            img{
-                margin: 0 1em 0 0;
-            }
-            a{
-                text-decoration: none;
-                color: var(--color4);
-                font-weight:600;
-                display: flex;
-                align-items: center;
-                font-size: clamp(11px, 1vmax, 22px);
-            }
-            &:hover{
-                background-color: var(--color10);
-                border-radius: 1.6em;
-            }
-            
+            display: flex;
+            align-items: center;
+            font-size: clamp(11px, 1vmax, 22px);
         }
+        &:hover{
+            background-color: var(--color10);
+            border-radius: 1.6em;
+        }
+        
+    }
 `
 export const MenuDrop = styled(Menu)`
     &&{

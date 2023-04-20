@@ -1,15 +1,19 @@
 import React from 'react';
+//import slider slick
 import Slider from 'react-slick';
+//import data
 import { data } from '../data/data';
+//styles
 import { CardCarousel, Cards03, ContcarouselPilares } from '../styles/CarouselPilares';
-import { Cards01 } from '../styles/Pilares';
 
 
 const CarouselPilares = () => {
 
     // get data
     const [datos] = data;
+    //destructuring data
     const { empresa: { dropDownMenu: { pilares: { cards0 } } } } = datos;
+    // extract values of object
     const card1 = Object.values(cards0);
 
 

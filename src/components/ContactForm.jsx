@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react'
+//import data
 import { data } from '../data/data';
+//import styled
 import styled from "styled-components";
 import { BtnFormContact, CheckboxInput, CheckboxLabel, FormContact, TextArea } from '../styles/Contact';
 // toastify alert
@@ -19,11 +21,8 @@ const ContactForm = (props) => {
 
     // get data
     const [datos] = data;
-    const { contacto: { contactanos: {
-        labelSolic,
-        placeholder_solic,
-        checkbox,
-        solicitud } } } = datos;
+    //destructuring data
+    const { contacto: { contactanos: { labelSolic, placeholder_solic, checkbox, solicitud } } } = datos;
 
     // ...dinamic class name
     const [classAlert0, setClassAlert0] = useState('form_input')
@@ -46,6 +45,7 @@ const ContactForm = (props) => {
     const [isErrorMail, setErrorMail] = useState(false)
     // console.log(isErrorName)
 
+    //styles errors
     const LabelName = styled.label`
         color: ${isErrorName === true ? 'red' : 'black'};
     `;
