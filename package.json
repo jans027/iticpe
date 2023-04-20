@@ -25,6 +25,7 @@
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9",
+    "viewerjs": "^1.11.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -4,6 +4,7 @@ import {
   Navigate,
   Route,
   Routes,
+  Switch
 } from "react-router-dom";
 import GlobalStyles from "./styles/GlobalStyles";
 import Home from "./pages/Home";
@@ -34,6 +35,7 @@ import Cookie from "./components/Cookie";
 import Cookies from "js-cookie";
 import LibroReclamaciones from "./pages/LibroReclamaciones";
 import Trabaja from "./pages/Trabaja";
+import PDFViewer from "./components/PDFViewer";
 
 
 function App() {
@@ -44,9 +46,11 @@ function App() {
   const industriales = "industriales";
   const personas = "personas";
 
+  
+
   //Button scroll to top........................
   const [showButton, setShowButton] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const position = window.pageYOffset;
@@ -85,12 +89,12 @@ function App() {
       <GlobalStyles />
       <Router>
 
-
+        
         <NavBar />
         <FloatingBtn />
         <ScrollToTop />
         {showButton && <ButtonToTop />}
-        {getCookie === true ? '' : showButton && <Cookie />} 
+        {getCookie === true ? '' : showButton && <Cookie />}
 
         <Routes>
           <Route path="*" element={<Navigate to="/" />} />
@@ -98,26 +102,21 @@ function App() {
           <Route path="/contacto" element={<Contact />} />
           <Route path="/cotizacion" element={<Cotizacion />} />
           <Route path="/Politicas de Navegacion" element={<PoliticasNavegacion />} />
-          <Route path="https//api.whatsapp.com/send?phone=573186396096"element={<FloatingBtn />}/>
+          <Route path="https//api.whatsapp.com/send?phone=573186396096" element={<FloatingBtn />} />
 
           <Route path="/servicios/gestion" element={<Gestion />} />
           <Route path="/servicios/producto" element={<Producto />} />
           <Route path="/servicios/industrial" element={<Industrial />} />
           <Route path="/servicios/personas" element={<Personas />} />
-          {/* <Route path="/servicios/documentos" element={<Documentos />} /> */}
 
           <Route path="/empresa/nosotros" element={<Nosotros />} />
-          {/* <Route path="/empresa/documentos" element={<Documentos />} /> */}
           <Route path="/empresa/pilares" element={<Pilares />} />
           <Route path="/empresa/acreditaciones" element={<Acreditaciones />} />
           <Route path="/empresa/certificaciones" element={<Certificaciones />} />
           <Route path="/empresa/equipo" element={<Equipo />} />
-          {/* <Route path="/empresa/Nuestras-Experiencias" element={<Clientes />} /> */}
           <Route path="/empresa/proyectos" element={<Proyectos />} />
           <Route path="/empresa/politicas" element={<Politicas />} />
           <Route path="/empresa/trabaja-con-nosotros" element={<Trabaja />} />
-
-
 
           <Route path="/servicios/gestion/:id" element={<DetallesServicios gestion={gestion} />} />
           <Route path="/servicios/producto/:id" element={<DetallesServicios producto={producto} />} />

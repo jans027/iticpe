@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import BannerEmpresa from '../components/BannerEmpresa'
 import NavEmpresa from '../components/NavEmpresa'
 import { data } from '../data/data'
@@ -21,9 +21,9 @@ import computo from '../documents/PSI-01-MANEJO-DE-EQUIPOS-DE-COMPUTO-Y-AYUDAS-I
 import testing_inspection from '../documents/RIT-APROBADO-018239-2023-INTERNATIONAL-TESTING-INSPECTION-&-CERTIFICATION-PERU-S.A.C..pdf';
 import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIONES-(R09).pdf';
 import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
-
-
+//import helmet
 import { Helmet } from 'react-helmet'
+import PDFViewer from '../components/PDFViewer'
 
 
 
@@ -33,8 +33,8 @@ const Politicas = () => {
 
   //get data
   const [datos] = data;
-  const { empresa: { dropDownMenu: { politicas: { helmet, name, cards } } } } = datos;
-  const card = Object.values(cards);
+  const { empresa: { dropDownMenu: { politicas: { helmet, name, documents } } } } = datos;
+  const card = Object.values(documents);
   // console.log(card)
 
   //.......................................................
@@ -51,7 +51,6 @@ const Politicas = () => {
   const itemsUrlDown = Object.values(itemsFind1)
   // console.log(itemsUrl)
   //.......................................................
-
 
   return (
     <>
@@ -89,7 +88,7 @@ const Politicas = () => {
 
             <ContCardPol>
 
-              <CardPol target='_blank' to={PolíticaProtecciónDatos} rel="noopener noreferrer">
+              <CardPol type="application/pdf" target='_blank' to={PolíticaProtecciónDatos} >
                 <div className='text_img_poli'><FileOpenOutlinedIcon /></div>
                 <div><div className='text_card_poli'><p>Política de Protección de Datos</p></div></div>
               </CardPol>
@@ -125,7 +124,6 @@ const Politicas = () => {
                 <div className='text_img_poli'><FileOpenOutlinedIcon /></div>
                 <div><div className='text_card_poli'><p>Quejas y Apelaciones</p></div></div>
               </CardPol>
-              
 
 
             </ContCardPol>

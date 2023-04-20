@@ -442,43 +442,13 @@ export const data = [
           helmet: "Políticas, códigos y reglamentos",
           url: "/empresa/politicas",
           banner1: "",
-          cards: {
-            card0: {
-              id: "politicas-card0",
-              img: "",
-              text: "CÓDIGO DE \nCONDUCTA CORPORATIVO",
-            },
-            card1: {
-              id: "politicas-card1",
-              img: "",
-              text: "CONDICIONES GENERALES \nDEL NEGOCIO",
-            },
-            card2: {
-              id: "politicas-card2",
-              img: "",
-              text: "DECLARACION DE INDEPENDENCIA \nIMPARCIALIDAD E INTEGRIDAD",
-            },
-            card3: {
-              id: "politicas-card3",
-              img: "",
-              text: "POLITICA DE SUSPENSIÓN \nDE TAREAS",
-            },
-            card4: {
-              id: "politicas-card4",
-              img: "",
-              text: "POLITICA INTEGRAL \nQHSE ITICPE",
-            },
-            card5: {
-              id: "politicas-card5",
-              img: "",
-              text: "MANEJO DE EQUIPOS \nDE COMPUTO Y AYUDAS \nINFORMÁTICAS",
-            },
-            card6: {
-              id: "politicas-card6",
-              img: "",
-              text: "INTERNATIONAL TESTING \nINSPECTION & CERTIFICATION \nPERU S.A.C.",
-            },
-          },
+          documents:{
+            doc1:{
+              id:'document1',
+              name:'Política de Protección de Datos',
+              url:'../documents/Política-de-protección-de-datos-ITICPE.pdf',
+            }
+          }
         },
         trabaja: {
           key: 8,
