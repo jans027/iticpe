@@ -310,7 +310,7 @@ export const data = [
             text1:'Nuestros servicios han llegado a diferentes partes del mundo',
             text2: '¡ y seguimos trabajando para llegar aún más lejos!',
             text3: '',
-            text4:'Departametnos donde se han prestado servicios en Peru:',
+            text4:'Departamentos donde se han prestado servicios en Peru:',
             text5: 'Valle, Cundinamarca, Antioquia, Boyacá, Atlántico, Meta, Cesar, Santander, Guainía, Norte de Santander, Huila, Tolima, Putumayo, Caldas, Córdoba, Risaralda, Casanare',
           },
           cards: {
