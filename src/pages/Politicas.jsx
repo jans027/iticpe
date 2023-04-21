@@ -18,7 +18,7 @@ import declaracion_independencia from '../documents/ITIC-DG-NA-DI-003-DECLARACIO
 import politica_suspension from '../documents/ITIC-DG-NA-DI-004-POLITICA-DE-SUSPENSION-DE-TAREAS-(R02).pdf';
 import politica_integral from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-QHSE-ITICPE-(R08).pdf';
 import computo from '../documents/PSI-01-MANEJO-DE-EQUIPOS-DE-COMPUTO-Y-AYUDAS-INFORMATICAS-(R01).pdf';
-import testing_inspection from '../documents/RIT-APROBADO-018239-2023-INTERNATIONAL-TESTING-INSPECTION-&-CERTIFICATION-PERU-S.A.C..pdf';
+import testing_inspection from '../documents/ITIC PERU_REGLAMENTO INTERNO DE TRABAJO 02.23.pdf';
 import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIONES-(R09).pdf';
 import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
 //import helmet
