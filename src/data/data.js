@@ -154,7 +154,7 @@ export const data = [
           documentOnac: {
             title: "ACREDITACIONES",
             subTitle:
-              "Nuestros reconocimientos son el resultado del compromiso con la excelencia y los altos estándares técnicos que nos impulsan a ofrecer lo mejor",
+              "Nuestros reconocimientos son el resultado del compromiso con la excelencia y los altos estándares técnicos que nos impulsan a ofrecer lo mejor. \nLos acuerdos de reconocimiento multilateral nos permiten brindar servicios de certificación en Perú con nuestras acreditaciones emitidas por el ONAC.",
             cards: {
               document1: {
                 id: "cardInspec",

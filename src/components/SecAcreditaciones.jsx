@@ -54,40 +54,47 @@ const SecAcreditaciones = () => {
         <>
             <ConSectionServicios>
                 <TitleSection>{title}</TitleSection>
-                <SubTitleSection>{subTitle}</SubTitleSection>
+                <SubTitleSection>{subTitle.split('\n').map((line, i) => {
+                    return (
+                        <React.Fragment key={i}>
+                            {line}
+                            <br />
+                        </React.Fragment>
+                    )
+                })}</SubTitleSection>
                 <ContSliderAcr>
                     <Slider {...settings}>
 
                         {
                             card.map((item) =>
-                                    <CardAcred key={item.id}>
-                                        <span>
-                                            <p>{item.textP.split('\n').map((line, i) => {
-                                                return (
-                                                    <React.Fragment key={i}>
-                                                        {line}
-                                                        <br />
-                                                    </React.Fragment>
-                                                )
-                                            })}</p>
-                                        </span>
+                                <CardAcred key={item.id}>
+                                    <span>
+                                        <p>{item.textP.split('\n').map((line, i) => {
+                                            return (
+                                                <React.Fragment key={i}>
+                                                    {line}
+                                                    <br />
+                                                </React.Fragment>
+                                            )
+                                        })}</p>
+                                    </span>
 
-                                        <span>
-                                            <img src={require(`../images/${item.img}`)} alt={item.name} />
-                                        </span>
+                                    <span>
+                                        <img src={require(`../images/${item.img}`)} alt={item.name} />
+                                    </span>
 
-                                        <Link to={item.url} target='_blank' >
-                                            {item.name.split('\n').map((line, i) => {
-                                                return (
-                                                    <React.Fragment key={i}>
-                                                        {line}
-                                                        <br />
-                                                    </React.Fragment>
-                                                )
-                                            })}
-                                            <AddCircleIcon />
-                                        </Link>
-                                    </CardAcred>
+                                    <Link to={item.url} target='_blank' >
+                                        {item.name.split('\n').map((line, i) => {
+                                            return (
+                                                <React.Fragment key={i}>
+                                                    {line}
+                                                    <br />
+                                                </React.Fragment>
+                                            )
+                                        })}
+                                        <AddCircleIcon />
+                                    </Link>
+                                </CardAcred>
                             )
                         }
 
