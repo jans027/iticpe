@@ -116,6 +116,21 @@ const NavBar = () => {
                         </DropdownContent>
                     </DropdownContainer>
 
+                    <DropdownContainer key={datos.certificaciones}>
+                        <DropdownButton>{servicios.name}<ArrowDropDownSharpIcon /></DropdownButton>
+                        <DropdownContent className='dropdown-content'>
+                            {
+                                serviciosSub.map((item, index) =>
+                                    <div key={item.id} onClick={(event) => handleClick2(event)} >
+                                        <Link id={item.name} name="certificaciones" to={item.url}>
+                                            {item.name}
+                                        </Link><br />
+                                    </div>
+                                )
+                            }
+                        </DropdownContent>
+                    </DropdownContainer>
+
                     <BtnBase id="inicio" className="inicio">
                         <Link to={cotizacion.url}>{cotizacion.name}</Link>
                     </BtnBase>

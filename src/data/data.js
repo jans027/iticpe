@@ -182,9 +182,9 @@ export const data = [
                 img: "ONAC_GESTION.png",
                 name: "SISTEMAS DE \nGESTIÓN",
                 acreditacion: 'gestion',
-                text0: 'En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
+                text0: 'Los acuerdos de reconocimiento multilateral nos permiten brindar servicios de certificación en Perú con nuestras acreditaciones emitidas por el ONAC.',
                 textP:
-                  "En ITICCOL contamos con acreditación ONAC, vigente a la \nfecha con código de acreditación \n12-CSG-001, bajo la norma \nISO/IEC 17021-1:2015 para la certificación de sistemas \nde gestión",
+                  "En ITICCOL contamos con acreditación ONAC, vigente a la fecha con código de acreditación 12-CSG-001, bajo la norma ISO/IEC 17021-1:2015 para la certificación de sistemas de gestión",
               },
             },
           },
@@ -805,7 +805,7 @@ export const data = [
               acreditacion: 'gestion',
               normaNumero: true,
               url: '/servicios/gestion/certificacion',
-              paragraph1: 'Ofrecemos la acreditación ONAC.\n\nLa certificación en Sistemas de Gestión por parte de ITICCOL le aporta los siguientes valores y beneficios a la empresa.\nISO 9001:2015 - Sistemas de Gestión de la Calidad\n• Imagen y reputación de buenos productos y servicios ante sus clientes y el mercado.\n• Eficacia y eficiencia de los procesos de la organización.\n• Credibilidad y confianza hacia clientes y proveedores.\n\nISO 14001: 2015 – Sistemas de Gestión Ambiental\n• Imagen y reputación de una organización comprometida con el medio ambiente.\n• Capacidad de la organización para cumplir con la legislación ambiental local.\n\nISO 45001: 2018 / OHSAS 18001: 2007 Sistema de Gestión de la Seguridad y Salud en el Trabajo \n-Espacios y lugares de trabajo seguros\n-Prevención de incidentes y enfermedades relacionadas con el trabajo\n-Control de los riesgos relacionados con el trabajo\n-Maximizar la productividad y desempeño de los trabajadores.\n',
+              paragraph1: 'Ofrecemos la acreditación ONAC.\n\nLa certificación en Sistemas de Gestión le aporta los siguientes valores y beneficios a la empresa.\nISO 9001:2015 - Sistemas de Gestión de la Calidad\n• Imagen y reputación de buenos productos y servicios ante sus clientes y el mercado.\n• Eficacia y eficiencia de los procesos de la organización.\n• Credibilidad y confianza hacia clientes y proveedores.\n\nISO 14001: 2015 – Sistemas de Gestión Ambiental\n• Imagen y reputación de una organización comprometida con el medio ambiente.\n• Capacidad de la organización para cumplir con la legislación ambiental local.\n\nISO 45001: 2018 / OHSAS 18001: 2007 Sistema de Gestión de la Seguridad y Salud en el Trabajo\n-Espacios y lugares de trabajo seguros\n-Prevención de incidentes y enfermedades relacionadas con el trabajo\n-Control de los riesgos relacionados con el trabajo\n-Maximizar la productividad y desempeño de los trabajadores.\n\n',
               btn1: "REGRESAR",
             },
             card2: {
@@ -819,7 +819,7 @@ export const data = [
               acreditacion: 'gestion',
               normaNumero: false,
               paragraph1:
-                'La auditoria interna es un examen critico pero objetivo de los procesos de la organizacion y de los requisitos contenidos en las normas del Sistema de Gestion Respectivo\n\nLa auditoría interna de ITICCO se enfoca en mejorar los sistemas y procesos de la organización para que sean más efectivos y eficientes. A través de estas auditorías, se buscan oportunidades de mejora para impulsar la excelencia y el mejoramiento continuo en la gestión de procesos. Este servicio se ofrece a empresas que no han sido certificadas previamente por ITICCOL.\n',
+                'La auditoria interna es un examen critico pero objetivo de los procesos de la organización y de los requisitos contenidos en las normas del Sistema de Gestión Respectivo.\n\nLa auditoría interna se enfoca en mejorar los sistemas y procesos de la organización para que sean más efectivos y eficientes. A través de estas auditorías, se buscan oportunidades de mejora para impulsar la excelencia y el mejoramiento continuo en la gestión de procesos. Este servicio se ofrece a empresas que no han sido certificadas previamente por ITIC.\n',
               btn1: "REGRESAR",
             },
             card1: {
@@ -845,7 +845,7 @@ export const data = [
               helmet: 'Evaluación de proveedores',
               acreditacion: 'gestion',
               normaNumero: false,
-              paragraph1: 'Las Auditorías de realizadas por ITICCOL permiten identificar oportunidades y riesgos potenciales en la cadena de suministro, optimizar el desempeño de los proveedores, también permiten prevenir afectaciones al Sistema de Gestión por fallas en la gestión de proveedores.\n\n• Identificación del status actual de sus proveedores existentes y potenciales e identificar proveedores críticos.\n• Crear relaciones sustentables y de largo plazo con sus proveedores.\n• Aumento de compromiso y desempeño de sus proveedores.\n• Prevenir riesgos de imagen y reputación que pueden derivarse por el desempeño ineficaz de sus proveedores.\n•Reducir costos de calidad y operación por óptimo desempeño de proveedores.\n',
+              paragraph1: 'Las Auditorías de realizadas permiten identificar oportunidades y riesgos potenciales en la cadena de suministro, optimizar el desempeño de los proveedores, también permiten prevenir afectaciones al Sistema de Gestión por fallas en la gestión de proveedores.\n\n• Identificación del status actual de sus proveedores existentes y potenciales e identificar proveedores críticos.\n• Crear relaciones sustentables y de largo plazo con sus proveedores.\n• Aumento de compromiso y desempeño de sus proveedores.\n• Prevenir riesgos de imagen y reputación que pueden derivarse por el desempeño ineficaz de sus proveedores.\n•Reducir costos de calidad y operación por óptimo desempeño de proveedores.',
               btn1: "REGRESAR",
             },
           },
