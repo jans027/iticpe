@@ -20,7 +20,7 @@ import politica_integral from '../documents/ITIC-DG-NA-PI-001-POLITICA-INTEGRAL-
 import computo from '../documents/PSI-01-MANEJO-DE-EQUIPOS-DE-COMPUTO-Y-AYUDAS-INFORMATICAS-(R01).pdf';
 import testing_inspection from '../documents/ITIC PERU_REGLAMENTO INTERNO DE TRABAJO 02.23.pdf';
 import quejas_apelaciones from '../documents/ITIC-Q&A-C-PR-005-QUEJAS-Y-APELACIONES-(R09).pdf';
-import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
+import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
 //import helmet
 import { Helmet } from 'react-helmet'
 

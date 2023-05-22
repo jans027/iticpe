@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 //styles
 import { ButtonCookie, ContInfo, ContModalCookie, TextInfo } from '../styles/Cookie';
 //import cocuments
-import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
+import PolíticaProtecciónDatos from '../documents/Política-de-protección-de-datos-ITICPE.pdf'
 
 
 const Cookie = () => {
