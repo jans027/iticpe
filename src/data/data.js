@@ -162,7 +162,7 @@ export const data = [
                 img: "Inspeccion_peru.png",
                 name: "INSPECCIÓN",
                 acreditacion: 'inspeccion',
-                text0: 'En ITICPE contamos con acreditación ONAC, vigente a la fecha con código de acreditación:',
+                text0: 'En ITICPE contamos con acreditación INACAL , vigente a la fecha con código de acreditación:',
                 textP:
                   "INTERNATIONAL TESTING INSPECTION &CERTIFICATION PERU S.A.C Organismo de inspección acreditado por el organismo de acreditación \nINACAL-DA con \nRegistro No. OI-018",
               },
@@ -308,9 +308,9 @@ export const data = [
           textMap: {
             id: 'text_map',
             text1:'Nuestros servicios han llegado a diferentes partes del mundo',
-            text2: '¡ y seguimos trabajando para llegar aún más lejos!',
+            text2: '¡y seguimos trabajando para llegar aún más lejos!',
             text3: '',
-            text4:'Departamentos donde se han prestado servicios en Peru:',
+            text4:'Regiones donde se han prestado servicios en Perú',
             text5: 'Valle, Cundinamarca, Antioquia, Boyacá, Atlántico, Meta, Cesar, Santander, Guainía, Norte de Santander, Huila, Tolima, Putumayo, Caldas, Córdoba, Risaralda, Casanare',
           },
           cards: {
@@ -541,7 +541,7 @@ export const data = [
               acreditacion: 'inspeccion',
               normaNumero: false,
               paragraph1:
-                "Ofrecemos servicios de seguimiento técnico, legal, ambiental y financiero a contratos firmados entre partes para la construcción de obras eléctricas, mecánicas y civiles.\n \nContamos con un equipo especializado para identificar oportunamente posibles desviaciones contractuales, evitando sobrecostos y entregas extemporáneas de los proyectos\n\nSupervisión Off-shore - On shore\nSupervisión de obras de construcción\nIngeniería eléctrica & Tecnología de construcción\n·Inspecciones industriales & ensayo de materiais\n·Interventoria, Gerenciamiento de Proyectos\n·Energía y medio ambiente\n·Cybersecurity & Functional Safety",
+                "Ofrecemos servicios de seguimiento técnico, legal, ambiental y financiero a contratos firmados entre partes para la construcción de obras eléctricas, mecánicas y civiles.\n \nContamos con un equipo especializado para identificar oportunamente posibles desviaciones contractuales, evitando sobrecostos y entregas extemporáneas de los proyectos.\n\nSupervisión Off-shore - On shore\nSupervisión de obras de construcción\nIngeniería eléctrica & Tecnología de construcción\n·Inspecciones industriales & ensayo de materiais\n·Interventoria, Gerenciamiento de Proyectos\n·Energía y medio ambiente\n·Cybersecurity & Functional Safety",
               btn1: "REGRESAR",
             },
             card4: {
@@ -611,7 +611,7 @@ export const data = [
               acreditacion: 'inspeccion',
               normaNumero: false,
               paragraph1:
-                'A través del Expediting, se busca garantizar el cumplimiento de las condiciones estipuladas asegurando sus plazos de entrega.\n\nAsegurando la disponibilidad del producto cuando sea necesario mediante el monitoreo de los cronogramas y tomando acciones correctivas ayudará a  cumplir con las expectativas de las adquisiciones desde sus plazos de entregas hasta las especificaciones necesarias que requiere para sus productos.\n\nNos encargaremos de ayudarlo con sus objetivos con nuestra experiencia y cooperación de nuestros inspectores presentes en más de 65 países con el soporte de nuestros aliados estratégicos.\n\nExpediting: Asegúrese de que sus equipos, materiales y suministros cumplan con lo especificado, funcionen correctamente y estén listos en el tiempo pactado.\n\nInspecciónes de Fabricación y Verificación : Las inspecciones realizadas durante esta etapa, asegura que el equipo adquirido cumpla las normativas y estándares de calidad, así le brindará mayor confianza a sus compras en el exterior.\n\nPruebas de Aceptación en Fábrica FAT: Mediante las pruebas FAT se realiza la verificación de los requisitos técnicos y funcionamiento de cada uno de los componentes en el momento de la producción de los mismos y antes de salir de fabrica.\n\nInspección de Proveedores: A lo largo de su cadena de suministro, lo ayudamos en todo momento con la inspección de los procesos y cumplimientos normativos de sus proveedores, garantizando la calidad de sus suministros y brindando mayor confianza a cada cliente desde la inspección en origen, supervisión de pruebas FAT y embarque.\n\nInspecciones Pre Embarque, Carga y Descarga: Acompañamos desde el proceso de verificación, aseguramiento y embalaje de la mercancia final previo a su carga y traslado a puerto. La inspección de la carga consiste en velar por la integridad con una inspección detallada de los equipos o materiales previo a su envío, de igual forma en la recepción de la mercadería en el país de destino.',
+                'A través del Expediting, se busca garantizar el cumplimiento de las condiciones estipuladas asegurando sus plazos de entrega.\n\nAsegurando la disponibilidad del producto cuando sea necesario mediante el monitoreo de los cronogramas y tomando acciones correctivas ayudará a  cumplir con las expectativas de las adquisiciones desde sus plazos de entregas hasta las especificaciones necesarias que requiere para sus productos.\n\nNos encargaremos de ayudarlo con sus objetivos con nuestra experiencia y cooperación de nuestros inspectores presentes en más de 65 países con el soporte de nuestros aliados estratégicos.\n\nExpediting: Asegúrese de que sus equipos, materiales y suministros cumplan con lo especificado, funcionen correctamente y estén listos en el tiempo pactado.\n\nInspecciónes de Fabricación y Verificación Las inspecciones realizadas durante esta etapa aseguran que el equipo adquirido cumpla con las normativas y estándares de calidad. Esto le brindará mayor confianza a sus compras en el exterior.\n\nPruebas de Aceptación en Fábrica FAT: Mediante las pruebas FAT se realiza la verificación de los requisitos técnicos y funcionamiento de cada uno de los componentes en el momento de la producción de los mismos y antes de salir de fábrica.\n\nInspección de Proveedores: A lo largo de su cadena de suministro, lo ayudamos en todo momento con la inspección de los procesos y cumplimientos normativos de sus proveedores, garantizando la calidad de sus suministros y brindando mayor confianza a cada cliente desde la inspección en origen, supervisión de pruebas FAT y embarque.\n\nInspecciones Pre Embarque, Carga y Descarga: Acompañamos desde el proceso de verificación, aseguramiento y embalaje de la mercancia final previo a su carga y traslado a puerto. La inspección de la carga consiste en velar por la integridad con una inspección detallada de los equipos o materiales previo a su envío, de igual forma en la recepción de la mercadería en el país de destino.',
               btn1: "REGRESAR",
             },
             card9: {
@@ -633,8 +633,8 @@ export const data = [
               img: "servicios-industriales/si-drones.png",
               imgPc: "servicios-industriales/si-drones-dk.png",
               imgMobile: "servicios-industriales/si-drones-mb.png",
-              text1: "INSPECCION \nMEDIANTE \nDRONES",
-              text2: "INSPECCION MEDIANTE DRONES A PARQUES FOTOVOLTAICOS",
+              text1: "INSPECCIÓN \nMEDIANTE \nDRONES",
+              text2: "INSPECCIÓN MEDIANTE DRONES A PARQUES FOTOVOLTAICOS",
               helmet: 'Gerencia de proyectos',
               acreditacion: 'inspeccion',
               normaNumero: false,

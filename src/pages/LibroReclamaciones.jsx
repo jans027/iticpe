@@ -455,7 +455,7 @@ const LibroReclamaciones = (props) => {
                             </label>
                         </ContCheck>
 
-                        <label className='form_label'>Por favor, elija su tema de interés!<span>*</span></label>
+                        <label className='form_label'>Por favor, elija su tema de interés<span>*</span></label>
                         <select onChange={handleOptionChange} name="seleccion" required>
                             <option value="" hidden>Por favor, seleccione</option>
                             {
@@ -465,7 +465,7 @@ const LibroReclamaciones = (props) => {
                             }
                         </select>
 
-                        <label className='form_label'>Descripcion <span>*</span></label>
+                        <label className='form_label'>Descripción<span>*</span></label>
                         <TextAreaLibro
                             rows="5"
                             // placeholder='Escribe aqui tu mensaje'
@@ -487,7 +487,7 @@ const LibroReclamaciones = (props) => {
                             </label>
                         </ContCheck>
 
-                        <label className='form_label'>Descripcion <span>*</span></label>
+                        <label className='form_label'>Descripción<span>*</span></label>
                         <TextAreaLibro
                             rows="5"
                             // placeholder='Escribe aqui tu mensaje'

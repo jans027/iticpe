@@ -75,12 +75,13 @@ export const ParagraphPi = styled.div`
     flex-direction: column;
     justify-content: space-between;
     .title_card{
-        font-size: clamp(16px, 1.8vw, 40px);
-        font-weight: 900;
-        margin-bottom: 1rem;
+        font-size: clamp(30px, 2.5vw, 57px);
+        font-weight:900;
+        padding-bottom: 1em;
     }
     .p_card{
-        font-size: clamp(14px, 1.3vw, 27px);
+        font-size: clamp(16px, 1.2vw, 23px);
+        text-align: left;
     }
     }
     @media (max-width:568px) {
